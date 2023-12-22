@@ -1,8 +1,10 @@
+import Header from "../../components/Header";
+import { WholePage } from "./styles";
+
 export default function Home() {
   return (
-    <>
-      <h1>Home</h1>
-      <p>Home page</p>
-    </>
+    <WholePage>
+      <Header />
+    </WholePage>
   );
 }
