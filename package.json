@@ -1,4 +1,5 @@
 {
+  "homepage": "https://brasequip.github.io/brasequip/",
   "name": "brasequip",
   "private": true,
   "version": "0.0.0",
@@ -7,11 +8,14 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.21.1"
   },
   "devDependencies": {
     "@types/react": "^18.2.43",
@@ -22,6 +26,7 @@
     "eslint": "^8.55.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.5",
+    "gh-pages": "^6.1.0",
     "typescript": "^5.2.2",
     "vite": "^5.0.8"
   }
