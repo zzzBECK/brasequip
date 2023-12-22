@@ -7,7 +7,7 @@ function App() {
       <nav>
         <Link to="/brasequip/">Home</Link>
         {" | "}
-        <Link to="/vite-react-router/teste">Contact</Link>
+        <Link to="/brasequip/teste">Contact</Link>
       </nav>
 
       <Outlet />
