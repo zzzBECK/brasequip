@@ -1,4 +1,6 @@
 import { SlClock } from "react-icons/sl";
+import { CiMail } from "react-icons/ci";
+import { PiPhoneThin } from "react-icons/pi";
 import {
   Column,
   ContainerHeader,
@@ -26,11 +28,7 @@ export default function Header() {
         <Column width="80%">
           <ItemContainer>
             <IconContainer>
-              <SlClock
-                color={"red"}
-                size={"35%"}
-                style={{ fontWeight: "10px" }}
-              />
+              <SlClock color={"red"} size={"35%"} />
             </IconContainer>
 
             <ItemContent>
@@ -41,7 +39,7 @@ export default function Header() {
 
           <ItemContainer>
             <IconContainer>
-              <SlClock />
+              <CiMail color={"red"} size={"45%"} />
             </IconContainer>
 
             <ItemContent>
@@ -52,7 +50,7 @@ export default function Header() {
 
           <ItemContainer>
             <IconContainer>
-              <SlClock />
+              <PiPhoneThin color={"red"} size={"50%"} />
             </IconContainer>
             <ItemContent>
               <p>Ligue para gente</p>
