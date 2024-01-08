@@ -15,8 +15,9 @@ export const ContainerHeader = styled.div`
   height: 70%;
   background-color: ${theme.colors.darkBlue};
   padding: 0 18vw;
+  justify-content: space-between;
 
-  @media (max-width: 1000px) {
+  @media (max-width: 1280px) {
     padding: 0 10vw;
   }
 `;
@@ -37,13 +38,13 @@ export const Column = styled.div<IColumn>`
   display: flex;
   width: ${({ width }) => width};
   height: 100%;
-  justify-content: space-between;
   align-items: center;
+  min-width: 120px;
 `;
 
 export const ImageContainer = styled.div`
   display: flex;
-  width: 30%;
+  width: 100%;
   height: 100%;
   cursor: pointer;
   user-select: none;
@@ -62,12 +63,15 @@ export const ItemContainer = styled.div`
   height: 100%;
   justify-content: center;
   align-items: center;
-  gap: 1%;
+  gap: 4%;
+  padding-right: 12px;
 `;
 
 export const IconContainer = styled.div`
   display: flex;
-  min-width: 72px;
+  max-width: 72px;
+  min-width: 60px;
+  width: 4vw;
   height: 50%;
   justify-content: center;
   align-items: center;

@@ -18,17 +18,17 @@ export default function Header() {
   return (
     <WholeHeader>
       <ContainerHeader>
-        <Column width="30%">
+        <Column width="10%">
           <ImageContainer>
             <Image src={Logo} />
           </ImageContainer>
         </Column>
-        <Column width="70%">
+        <Column width="80%">
           <ItemContainer>
             <IconContainer>
               <SlClock
                 color={"red"}
-                size={"40%"}
+                size={"35%"}
                 style={{ fontWeight: "10px" }}
               />
             </IconContainer>
