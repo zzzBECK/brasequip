@@ -9,12 +9,16 @@ export const WholeHeader = styled.div`
   position: absolute;
 `;
 
-export const ContainerHader = styled.div`
+export const ContainerHeader = styled.div`
   display: flex;
   width: 100%;
   height: 70%;
   background-color: ${theme.colors.darkBlue};
   padding: 0 18vw;
+
+  @media (max-width: 1000px) {
+    padding: 0 10vw;
+  }
 `;
 
 export const ContainerSubHeader = styled.div`
@@ -41,6 +45,8 @@ export const ImageContainer = styled.div`
   display: flex;
   width: 30%;
   height: 100%;
+  cursor: pointer;
+  user-select: none;
 `;
 
 export const Image = styled.img`
@@ -54,8 +60,33 @@ export const ItemContainer = styled.div`
   display: flex;
   width: 33.33%;
   height: 100%;
-  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  gap: 1%;
+`;
+
+export const IconContainer = styled.div`
+  display: flex;
+  min-width: 72px;
+  height: 50%;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  background-color: ${theme.colors.blue};
+  border-radius: 50%;
+`;
+
+export const ItemContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 66.66%;
+  height: 100%;
+  justify-content: center;
+  overflow-wrap: break-word;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 interface ISubHeaderItem {
@@ -69,4 +100,6 @@ export const SubHeaderItem = styled.div<ISubHeaderItem>`
   border-right: ${({ border }) => (border ? "1px solid white" : "none")};
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+  user-select: none;
 `;
