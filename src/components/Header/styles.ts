@@ -40,6 +40,7 @@ export const Column = styled.div<IColumn>`
   height: 100%;
   align-items: center;
   min-width: 120px;
+  justify-content: flex-end;
 `;
 
 export const ImageContainer = styled.div`
@@ -65,19 +66,35 @@ export const ItemContainer = styled.div`
   align-items: center;
   gap: 4%;
   padding-right: 12px;
+
+  @media (max-width: 768px) {
+    width: fit-content;
+  }
 `;
 
 export const IconContainer = styled.div`
   display: flex;
   max-width: 72px;
-  min-width: 60px;
-  width: 4vw;
-  height: 50%;
+  min-width: 50px;
+  width: 5vw;
+  height: 55%;
   justify-content: center;
   align-items: center;
   user-select: none;
   background-color: ${theme.colors.blue};
   border-radius: 50%;
+
+  @media (max-width: 1440px) {
+    height: 50%;
+  }
+
+  @media (max-width: 1280px) {
+    height: 45%;
+  }
+
+  @media (max-width: 960px) {
+    height: 40%;
+  }
 `;
 
 export const ItemContent = styled.div`
