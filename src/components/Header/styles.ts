@@ -20,6 +20,18 @@ export const ContainerHeader = styled.div`
   @media (max-width: 1280px) {
     padding: 0 10vw;
   }
+
+  @media (max-width: 768px) {
+    padding: 0 8vw;
+  }
+
+  @media (max-width: 480px) {
+    padding: 0 4vw;
+  }
+
+  @media (max-width: 340px) {
+    padding: 0;
+  }
 `;
 
 export const ContainerSubHeader = styled.div`
@@ -28,6 +40,22 @@ export const ContainerSubHeader = styled.div`
   height: 30%;
   padding: 0 18vw;
   background-color: rgba(9, 18, 66, 0.1);
+
+  @media (max-width: 1280px) {
+    padding: 0 10vw;
+  }
+
+  @media (max-width: 768px) {
+    padding: 0 8vw;
+  }
+
+  @media (max-width: 480px) {
+    padding: 0 4vw;
+  }
+
+  @media (max-width: 340px) {
+    padding: 0;
+  }
 `;
 
 interface IColumn {
@@ -41,6 +69,7 @@ export const Column = styled.div<IColumn>`
   align-items: center;
   min-width: 120px;
   justify-content: flex-end;
+  overflow: auto;
 `;
 
 export const ImageContainer = styled.div`
@@ -56,6 +85,8 @@ export const Image = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
+
+  background-color: ${theme.colors.blue};
 `;
 
 export const ItemContainer = styled.div`
@@ -74,17 +105,19 @@ export const ItemContainer = styled.div`
 
 export const IconContainer = styled.div`
   display: flex;
-  max-width: 72px;
   min-width: 50px;
+  max-width: 72px;
+  min-height: 50px;
+  max-height: 72px;
   width: 5vw;
-  height: 55%;
+  height: 5vw;
   justify-content: center;
   align-items: center;
   user-select: none;
   background-color: ${theme.colors.blue};
   border-radius: 50%;
 
-  @media (max-width: 1440px) {
+  /* @media (max-width: 1440px) {
     height: 50%;
   }
 
@@ -95,6 +128,10 @@ export const IconContainer = styled.div`
   @media (max-width: 960px) {
     height: 40%;
   }
+
+  @media (max-height: 768px) {
+    height: 60%;
+  } */
 `;
 
 export const ItemContent = styled.div`
