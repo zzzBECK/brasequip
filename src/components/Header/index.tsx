@@ -1,6 +1,6 @@
-import { SlClock } from "react-icons/sl";
 import { CiMail } from "react-icons/ci";
 import { PiPhoneThin } from "react-icons/pi";
+import { SlClock } from "react-icons/sl";
 import {
   Column,
   ContainerHeader,
@@ -10,12 +10,12 @@ import {
   ImageContainer,
   ItemContainer,
   ItemContent,
-  SubHeaderItem,
   WholeHeader,
 } from "./styles";
 
-import Logo from "../../assets/RASTER_LOGO.png";
 import { useRef } from "react";
+import Logo from "../../assets/RASTER_LOGO.png";
+import SubHeader from "../SubHeader";
 
 export default function Header() {
   const windowSize = useRef([window.innerWidth, window.innerHeight]);
@@ -68,21 +68,7 @@ export default function Header() {
         </Column>
       </ContainerHeader>
       <ContainerSubHeader>
-        <Column width="50%">
-          <SubHeaderItem border>
-            <p>Página inicial</p>
-          </SubHeaderItem>
-          <SubHeaderItem border>
-            <p>Sobre nós</p>
-          </SubHeaderItem>
-          <SubHeaderItem border>
-            <p>Serviços</p>
-          </SubHeaderItem>
-          <SubHeaderItem>
-            <p>Contato</p>
-          </SubHeaderItem>
-        </Column>
-        <Column width="50%"></Column>
+        <SubHeader />
       </ContainerSubHeader>
     </WholeHeader>
   );

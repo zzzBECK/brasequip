@@ -146,18 +146,3 @@ export const ItemContent = styled.div`
     display: none;
   }
 `;
-
-interface ISubHeaderItem {
-  border?: boolean;
-}
-
-export const SubHeaderItem = styled.div<ISubHeaderItem>`
-  display: flex;
-  width: 25%;
-  height: 30%;
-  border-right: ${({ border }) => (border ? "1px solid white" : "none")};
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  user-select: none;
-`;
