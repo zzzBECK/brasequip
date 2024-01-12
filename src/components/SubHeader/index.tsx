@@ -6,34 +6,54 @@ export default function SubHeader() {
   return (
     <>
       <Column width="50%">
-        <SubHeaderItem
-          borderRight="true"
-          borderHeight="30%"
-          borderBottom={path === "/brasequip/"}
-        >
-          <p>Página inicial</p>
+        <SubHeaderItem borderRight="true" borderHeight="30%">
+          <p
+            style={{
+              borderBottom: path === "/brasequip/" ? "1px solid white" : "none",
+              height: "100%",
+              alignItems: "center",
+              display: "flex",
+            }}
+          >
+            Página inicial
+          </p>
         </SubHeaderItem>
 
-        <SubHeaderItem
-          borderRight={"true"}
-          borderHeight="30%"
-          borderBottom={false}
-        >
-          <p>Sobre nós</p>
+        <SubHeaderItem borderRight={"true"} borderHeight="30%">
+          <p
+            style={{
+              borderBottom: path === "//" ? "1px solid white" : "none",
+              height: "100%",
+              alignItems: "center",
+              display: "flex",
+            }}
+          >
+            Sobre nós
+          </p>
         </SubHeaderItem>
-        <SubHeaderItem
-          borderRight={"true"}
-          borderHeight="30%"
-          borderBottom={false}
-        >
-          <p>Serviços</p>
+        <SubHeaderItem borderRight={"true"} borderHeight="30%">
+          <p
+            style={{
+              borderBottom: path === "//" ? "1px solid white" : "none",
+              height: "100%",
+              alignItems: "center",
+              display: "flex",
+            }}
+          >
+            Serviços
+          </p>
         </SubHeaderItem>
-        <SubHeaderItem
-          borderRight={"false"}
-          borderHeight="30%"
-          borderBottom={false}
-        >
-          <p>Contato</p>
+        <SubHeaderItem borderRight={"false"} borderHeight="30%">
+          <p
+            style={{
+              borderBottom: path === "//" ? "1px solid white" : "none",
+              height: "100%",
+              alignItems: "center",
+              display: "flex",
+            }}
+          >
+            Contato
+          </p>
         </SubHeaderItem>
       </Column>
       <Column width="50%"></Column>

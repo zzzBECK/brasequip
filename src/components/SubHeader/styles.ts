@@ -17,7 +17,6 @@ export const Column = styled.div<IColumn>`
 interface ISubHeaderItem {
   borderRight: string;
   borderHeight: string;
-  borderBottom: boolean;
 }
 
 export const SubHeaderItem = styled.div<ISubHeaderItem>`
@@ -48,8 +47,4 @@ export const SubHeaderItem = styled.div<ISubHeaderItem>`
     display: ${({ borderRight }) =>
       borderRight === "true" ? "block" : "none"};
   }
-
-  // You can keep or remove the border-bottom as needed
-  border-bottom: ${({ borderBottom }) =>
-    borderBottom ? "1px solid white" : "none"};
 `;
