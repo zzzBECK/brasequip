@@ -213,7 +213,7 @@ Error generating stack: `+l.message+`
     ); // Set the white color with 50% opacity
     display: ${({borderRight:e})=>e==="true"?"block":"none"};
   }
-`;function Zy(){const e=new URL(window.location.href).pathname;return j.jsxs(j.Fragment,{children:[j.jsxs(Rf,{width:"50%",children:[j.jsx(sl,{borderRight:"true",borderHeight:"30%",children:j.jsx("p",{style:{borderBottom:e==="/brasequip/"?"1px solid white":"none",height:"100%",alignItems:"center",display:"flex"},children:"Página inicial"})}),j.jsx(sl,{borderRight:"true",borderHeight:"30%",children:j.jsx("p",{style:{borderBottom:e==="//"?"1px solid white":"none",height:"100%",alignItems:"center",display:"flex"},children:"Sobre nós"})}),j.jsx(sl,{borderRight:"true",borderHeight:"30%",children:j.jsx("p",{style:{borderBottom:e==="//"?"1px solid white":"none",height:"100%",alignItems:"center",display:"flex"},children:"Serviços"})}),j.jsx(sl,{borderRight:"false",borderHeight:"30%",children:j.jsx("p",{style:{borderBottom:e==="//"?"1px solid white":"none",height:"100%",alignItems:"center",display:"flex"},children:"Contato"})})]}),j.jsx(Rf,{width:"50%"})]})}function Jy(){const e=D.useRef([window.innerWidth,window.innerHeight]);return j.jsxs(Wy,{children:[j.jsxs(Qy,{children:[j.jsx(Pf,{width:"16%",justifyContent:"flex-start",children:j.jsx(Yy,{children:j.jsx(Gy,{src:Xy})})}),j.jsxs(Pf,{width:"80%",children:[j.jsxs(da,{children:[j.jsx(pa,{children:j.jsx(Ug,{color:"red",size:"35%"})}),e.current[0]>1200&&j.jsxs(ha,{children:[j.jsx("p",{children:"Horário"}),j.jsx("p",{children:"Seg - Sex 9:00 às 18:00"})]})]}),j.jsxs(da,{children:[j.jsx(pa,{children:j.jsx(Fg,{color:"red",size:"45%"})}),e.current[0]>1200&&j.jsxs(ha,{children:[j.jsx("p",{children:"Email"}),j.jsx("p",{children:"contato@brasequip.com.br"})]})]}),j.jsxs(da,{children:[j.jsx(pa,{children:j.jsx(Ag,{color:"red",size:"50%"})}),e.current[0]>1200&&j.jsxs(ha,{children:[j.jsx("p",{children:"Ligue para gente"}),j.jsx("p",{children:"(61) 98175-0559"})]})]})]})]}),j.jsx(Ky,{children:j.jsx(Zy,{})})]})}const qy=xe.button`
+`;function Zy(){const e=new URL(window.location.href).pathname;return j.jsxs(j.Fragment,{children:[j.jsxs(Rf,{width:"50%",children:[j.jsx(sl,{borderRight:"true",borderHeight:"30%",children:j.jsx("p",{style:{borderBottom:e==="/brasequip/"?"1px solid white":"none",height:"100%",alignItems:"center",display:"flex"},children:"Página inicial"})}),j.jsx(sl,{borderRight:"true",borderHeight:"30%",children:j.jsx("p",{style:{borderBottom:e==="//"?"1px solid white":"none",height:"100%",alignItems:"center",display:"flex"},children:"Sobre nós"})}),j.jsx(sl,{borderRight:"true",borderHeight:"30%",children:j.jsx("p",{style:{borderBottom:e==="//"?"1px solid white":"none",height:"100%",alignItems:"center",display:"flex"},children:"Serviços"})}),j.jsx(sl,{borderRight:"false",borderHeight:"30%",children:j.jsx("p",{style:{borderBottom:e==="//"?"1px solid white":"none",height:"100%",alignItems:"center",display:"flex"},children:"Contato"})})]}),j.jsx(Rf,{width:"50%"})]})}function Jy(){const e=D.useRef([window.innerWidth,window.innerHeight]);return j.jsxs(Wy,{children:[j.jsxs(Qy,{children:[j.jsx(Pf,{width:"16%",justifyContent:"flex-start",children:j.jsx(Yy,{children:j.jsx(Gy,{src:Xy})})}),j.jsxs(Pf,{width:"80%",children:[j.jsxs(da,{children:[j.jsx(pa,{children:j.jsx(Ug,{color:"red",size:"35%"})}),e.current[0]>1200&&j.jsxs(ha,{children:[j.jsx("p",{style:{userSelect:"none"},children:"Horário"}),j.jsx("p",{children:"Seg - Sex 9:00 às 18:00"})]})]}),j.jsxs(da,{children:[j.jsx(pa,{children:j.jsx(Fg,{color:"red",size:"45%"})}),e.current[0]>1200&&j.jsxs(ha,{children:[j.jsx("p",{style:{userSelect:"none"},children:"Email"}),j.jsx("p",{children:"contato@brasequip.com.br"})]})]}),j.jsxs(da,{children:[j.jsx(pa,{children:j.jsx(Ag,{color:"red",size:"50%"})}),e.current[0]>1200&&j.jsxs(ha,{children:[j.jsx("p",{style:{userSelect:"none"},children:"Ligue para gente"}),j.jsx("p",{children:"(61) 98175-0559"})]})]})]})]}),j.jsx(Ky,{children:j.jsx(Zy,{})})]})}const qy=xe.button`
   display: flex;
   width: 12rem;
   height: 4rem;
@@ -222,6 +222,7 @@ Error generating stack: `+l.message+`
   font-size: 1rem;
   cursor: pointer;
   transition: background-color 0.2s;
+  color: #fff;
 
   justify-content: center;
   align-items: center;
@@ -235,7 +236,6 @@ Error generating stack: `+l.message+`
   min-height: 100vh;
   min-height: 100svh;
   flex-direction: column;
-  overflow-y: scroll;
 `,t1=xe.div`
   display: flex;
   width: 100%;
@@ -247,6 +247,7 @@ Error generating stack: `+l.message+`
 
   @media (max-width: 580px) {
     height: 100vh;
+    height: 100svh;
   }
 `,n1=xe.div`
   display: none;
@@ -268,10 +269,10 @@ Error generating stack: `+l.message+`
   width: 100%;
   min-height: 70vh;
   position: relative;
-  overflow-x: hidden;
 
   @media (max-width: 580px) {
-    min-height: 100vh;
+    height: 100vh;
+    height: 100svh;
   }
 `,i1=xe.div`
   display: flex;
@@ -366,4 +367,4 @@ Error generating stack: `+l.message+`
   @media (max-width: 768px) {
     width: 100%;
   }
-`;function o1(){return j.jsx(e1,{children:j.jsxs(r1,{children:[j.jsx(Jy,{}),j.jsxs(t1,{children:[j.jsx(n1,{}),j.jsxs(i1,{children:[j.jsx("h1",{style:{fontSize:"60px",lineHeight:"1",maxWidth:"600px"},children:"Elevando Padrões Alcançando Alturas"}),j.jsx("p",{children:"Especialistas em elevação, a BRASEQUIP oferece venda e locação de equipamentos de alta performance para sua obra. Nosso compromisso com a segurança e eficiência é inabalável. Descubra soluções ágeis para guindastes, mini-gruas e muito mais."}),j.jsx(by,{text:"Ver mais"})]})]}),j.jsxs(l1,{children:[j.jsxs(Tf,{children:[j.jsx(cl,{style:{backgroundColor:"blue"},children:"."}),j.jsx(cl,{style:{backgroundColor:"pink"},children:"."})]}),j.jsxs(Tf,{children:[j.jsx(cl,{style:{backgroundColor:"yellow"},children:"."}),j.jsx(cl,{style:{backgroundColor:"red"},children:"."})]})]})]})})}function a1(){return j.jsx(j.Fragment,{children:j.jsx("h1",{children:"Teste"})})}const u1=Cg([{path:"/brasequip/",element:j.jsx(Og,{}),children:[{path:"/brasequip/",element:j.jsx(o1,{})},{path:"/brasequip/teste",element:j.jsx(a1,{})}]}]);ma.createRoot(document.getElementById("root")).render(j.jsx(Je.StrictMode,{children:j.jsx(jg,{router:u1})}));
+`;function o1(){return j.jsxs(e1,{children:[j.jsxs(r1,{children:[j.jsx(Jy,{}),j.jsxs(t1,{children:[j.jsx(n1,{}),j.jsxs(i1,{children:[j.jsx("h1",{style:{fontSize:"60px",lineHeight:"1",maxWidth:"600px"},children:"Elevando Padrões Alcançando Alturas"}),j.jsx("p",{children:"Especialistas em elevação, a BRASEQUIP oferece venda e locação de equipamentos de alta performance para sua obra. Nosso compromisso com a segurança e eficiência é inabalável. Descubra soluções ágeis para guindastes, mini-gruas e muito mais."}),j.jsx(by,{text:"Ver mais"})]})]})]}),j.jsxs(l1,{children:[j.jsxs(Tf,{children:[j.jsx(cl,{style:{backgroundColor:"blue"},children:"."}),j.jsx(cl,{style:{backgroundColor:"pink"},children:"."})]}),j.jsxs(Tf,{children:[j.jsx(cl,{style:{backgroundColor:"yellow"},children:"."}),j.jsx(cl,{style:{backgroundColor:"red"},children:"."})]})]})]})}function a1(){return j.jsx(j.Fragment,{children:j.jsx("h1",{children:"Teste"})})}const u1=Cg([{path:"/brasequip/",element:j.jsx(Og,{}),children:[{path:"/brasequip/",element:j.jsx(o1,{})},{path:"/brasequip/teste",element:j.jsx(a1,{})}]}]);ma.createRoot(document.getElementById("root")).render(j.jsx(Je.StrictMode,{children:j.jsx(jg,{router:u1})}));
