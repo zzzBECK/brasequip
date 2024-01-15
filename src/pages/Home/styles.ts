@@ -6,7 +6,6 @@ export const WholePage = styled.div`
   min-height: 100vh;
   min-height: 100svh;
   flex-direction: column;
-  overflow-y: scroll;
 `;
 
 export const Image = styled.div`
@@ -20,6 +19,7 @@ export const Image = styled.div`
 
   @media (max-width: 580px) {
     height: 100vh;
+    height: 100svh;
   }
 `;
 
@@ -45,10 +45,10 @@ export const HeaderContainer = styled.div`
   width: 100%;
   min-height: 70vh;
   position: relative;
-  overflow-x: hidden;
 
   @media (max-width: 580px) {
-    min-height: 100vh;
+    height: 100vh;
+    height: 100svh;
   }
 `;
 
