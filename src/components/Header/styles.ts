@@ -7,6 +7,7 @@ export const WholeHeader = styled.div`
   height: 20vh;
   flex-direction: column;
   position: absolute;
+  z-index: 4;
 `;
 
 export const ContainerHeader = styled.div`
@@ -65,28 +66,30 @@ interface IColumn {
 export const Column = styled.div<IColumn>`
   display: flex;
   width: ${({ width }) => width};
-  height: 100%;
   align-items: center;
-  min-width: 120px;
-  justify-content: flex-end;
-  overflow: auto;
+  justify-content: flex-end; // Center the image horizontally within the column
+  min-width: 120px; // Ensures that the column doesn't shrink below 120px
+  position: relative; // To position the ImageContainer absolutely within
+  height: 100%; // Set the column to fill the height of the header
 `;
 
 export const ImageContainer = styled.div`
-  display: flex;
-  width: 100%;
-  height: 100%;
+  width: auto; // Width will be the same as height to keep aspect ratio
+  height: 90%; // Adjust this percentage to match your header's height
+  border-radius: 50%;
+  background-color: ${theme.colors.blue};
   cursor: pointer;
   user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 export const Image = styled.img`
-  display: flex;
-  width: 100%;
-  height: 100%;
+  /* width: 120%;  */
+  height: 120%;
   object-fit: cover;
-
-  background-color: ${theme.colors.blue};
+  border-radius: 50%; // Ensures the image itself also has rounded edges;
 `;
 
 export const ItemContainer = styled.div`
