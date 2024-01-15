@@ -28,10 +28,12 @@ export const ContainerHeader = styled.div`
 
   @media (max-width: 480px) {
     padding: 0 4vw;
+    padding-left: 6vw;
   }
 
   @media (max-width: 340px) {
     padding: 0;
+    padding-left: 6vw;
   }
 `;
 
