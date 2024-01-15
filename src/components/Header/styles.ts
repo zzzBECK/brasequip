@@ -63,35 +63,37 @@ export const ContainerSubHeader = styled.div`
 
 interface IColumn {
   width: string;
+  justifyContent?: string;
 }
 
 export const Column = styled.div<IColumn>`
   display: flex;
   width: ${({ width }) => width};
   align-items: center;
-  justify-content: flex-end; // Center the image horizontally within the column
-  min-width: 120px; // Ensures that the column doesn't shrink below 120px
-  position: relative; // To position the ImageContainer absolutely within
-  height: 100%; // Set the column to fill the height of the header
+  justify-content: ${({ justifyContent }) => justifyContent || "flex-end"};
+  padding-left: ${({ justifyContent }) =>
+    justifyContent == null ? null : "1.6vw"};
+  min-width: 140px;
+  position: relative;
+  height: 100%;
 `;
 
 export const ImageContainer = styled.div`
-  width: auto; // Width will be the same as height to keep aspect ratio
-  height: 90%; // Adjust this percentage to match your header's height
+  display: flex;
+  height: 90%;
+  width: auto;
   border-radius: 50%;
   background-color: ${theme.colors.blue};
   cursor: pointer;
   user-select: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 `;
 
 export const Image = styled.img`
-  /* width: 120%;  */
-  height: 120%;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  border-radius: 50%; // Ensures the image itself also has rounded edges;
+  border-radius: 50%;
+  scale: 1.4;
 `;
 
 export const ItemContainer = styled.div`
@@ -121,22 +123,6 @@ export const IconContainer = styled.div`
   user-select: none;
   background-color: ${theme.colors.blue};
   border-radius: 50%;
-
-  /* @media (max-width: 1440px) {
-    height: 50%;
-  }
-
-  @media (max-width: 1280px) {
-    height: 45%;
-  }
-
-  @media (max-width: 960px) {
-    height: 40%;
-  }
-
-  @media (max-height: 768px) {
-    height: 60%;
-  } */
 `;
 
 export const ItemContent = styled.div`

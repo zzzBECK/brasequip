@@ -4,6 +4,7 @@ import {
   HeaderContainer,
   Image,
   ImageOverlay,
+  Service,
   ServicesContainer,
   ServicesRow,
   TextPosition,
@@ -38,48 +39,36 @@ export default function Home() {
         </Image>
         <ServicesContainer>
           <ServicesRow>
-            <div
+            <Service
               style={{
                 backgroundColor: "blue",
-                display: "flex",
-                width: "50%",
-                height: "100%",
               }}
             >
               .
-            </div>
-            <div
+            </Service>
+            <Service
               style={{
                 backgroundColor: "pink",
-                display: "flex",
-                width: "50%",
-                height: "100%",
               }}
             >
               .
-            </div>
+            </Service>
           </ServicesRow>
           <ServicesRow>
-            <div
+            <Service
               style={{
                 backgroundColor: "yellow",
-                display: "flex",
-                width: "50%",
-                height: "100%",
               }}
             >
               .
-            </div>
-            <div
+            </Service>
+            <Service
               style={{
                 backgroundColor: "red",
-                display: "flex",
-                width: "50%",
-                height: "100%",
               }}
             >
               .
-            </div>
+            </Service>
           </ServicesRow>
         </ServicesContainer>
       </HeaderContainer>

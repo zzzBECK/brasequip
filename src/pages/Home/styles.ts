@@ -134,4 +134,21 @@ export const ServicesRow = styled.div`
   display: flex;
   width: 100%;
   height: 50%;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+`;
+
+export const Service = styled.div`
+  display: flex;
+  width: 50%;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;

@@ -23,7 +23,7 @@ export default function Header() {
   return (
     <WholeHeader>
       <ContainerHeader>
-        <Column width="16%">
+        <Column width="16%" justifyContent="flex-start">
           <ImageContainer>
             <Image src={Logo} />
           </ImageContainer>
