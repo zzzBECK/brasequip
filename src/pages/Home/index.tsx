@@ -37,41 +37,42 @@ export default function Home() {
             <Button text="Ver mais" />
           </TextPosition>
         </Image>
-        <ServicesContainer>
-          <ServicesRow>
-            <Service
-              style={{
-                backgroundColor: "blue",
-              }}
-            >
-              .
-            </Service>
-            <Service
-              style={{
-                backgroundColor: "pink",
-              }}
-            >
-              .
-            </Service>
-          </ServicesRow>
-          <ServicesRow>
-            <Service
-              style={{
-                backgroundColor: "yellow",
-              }}
-            >
-              .
-            </Service>
-            <Service
-              style={{
-                backgroundColor: "red",
-              }}
-            >
-              .
-            </Service>
-          </ServicesRow>
-        </ServicesContainer>
       </HeaderContainer>
+
+      <ServicesContainer>
+        <ServicesRow>
+          <Service
+            style={{
+              backgroundColor: "blue",
+            }}
+          >
+            .
+          </Service>
+          <Service
+            style={{
+              backgroundColor: "pink",
+            }}
+          >
+            .
+          </Service>
+        </ServicesRow>
+        <ServicesRow>
+          <Service
+            style={{
+              backgroundColor: "yellow",
+            }}
+          >
+            .
+          </Service>
+          <Service
+            style={{
+              backgroundColor: "red",
+            }}
+          >
+            .
+          </Service>
+        </ServicesRow>
+      </ServicesContainer>
     </WholePage>
   );
 }

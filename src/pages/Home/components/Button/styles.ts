@@ -9,6 +9,7 @@ export const ButtonStyle = styled.button`
   font-size: 1rem;
   cursor: pointer;
   transition: background-color 0.2s;
+  color: #fff;
 
   justify-content: center;
   align-items: center;
