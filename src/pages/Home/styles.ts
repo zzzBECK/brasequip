@@ -43,12 +43,12 @@ export const HeaderContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 70vh;
+  min-height: 70vh;
   position: relative;
   overflow-x: hidden;
 
   @media (max-width: 580px) {
-    height: 100vh;
+    min-height: 100vh;
   }
 `;
 
@@ -85,8 +85,53 @@ export const TextPosition = styled.div`
     text-align: center;
     right: 0;
     width: 100%;
-    padding: 0 2rem;
-
     top: 60%;
   }
+
+  @media (max-width: 1100px) {
+    padding: 0 10vw;
+  }
+
+  @media (max-width: 768px) {
+    padding: 0 8vw;
+  }
+
+  @media (max-width: 480px) {
+    padding: 0 4vw;
+  }
+
+  @media (max-width: 340px) {
+    padding: 0;
+  }
+`;
+
+export const ServicesContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 60vh;
+  background-color: #fff;
+  padding: 0 18vw;
+
+  @media (max-width: 1280px) {
+    padding: 0 10vw;
+  }
+
+  @media (max-width: 768px) {
+    padding: 0 8vw;
+  }
+
+  @media (max-width: 480px) {
+    padding: 0 4vw;
+  }
+
+  @media (max-width: 340px) {
+    padding: 0;
+  }
+`;
+
+export const ServicesRow = styled.div`
+  display: flex;
+  width: 100%;
+  height: 50%;
 `;
