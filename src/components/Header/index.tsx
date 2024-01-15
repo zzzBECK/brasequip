@@ -36,7 +36,7 @@ export default function Header() {
 
             {windowSize.current[0] > 1200 && (
               <ItemContent>
-                <p>Horário</p>
+                <p style={{ userSelect: "none" }}>Horário</p>
                 <p>Seg - Sex 9:00 às 18:00</p>
               </ItemContent>
             )}
@@ -48,7 +48,7 @@ export default function Header() {
             </IconContainer>
             {windowSize.current[0] > 1200 && (
               <ItemContent>
-                <p>Email</p>
+                <p style={{ userSelect: "none" }}>Email</p>
                 <p>contato@brasequip.com.br</p>
               </ItemContent>
             )}
@@ -60,7 +60,7 @@ export default function Header() {
             </IconContainer>
             {windowSize.current[0] > 1200 && (
               <ItemContent>
-                <p>Ligue para gente</p>
+                <p style={{ userSelect: "none" }}>Ligue para gente</p>
                 <p>(61) 98175-0559</p>
               </ItemContent>
             )}
