@@ -36,8 +36,6 @@ export default function Home() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  console.log(isThereFlag);
-
   return (
     <WholePage>
       <HeaderContainer>
