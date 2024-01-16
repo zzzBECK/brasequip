@@ -57,7 +57,7 @@ export const TextPosition = styled.div`
   width: 36%; // Width as a percentage works well for responsiveness
   position: absolute;
   right: 8%; // Use percentages to position from the right
-  top: 72%;
+  top: 64%;
   transform: translateY(-50%); // Adjust vertically by half its own height
   flex-direction: column;
   justify-content: space-between;
