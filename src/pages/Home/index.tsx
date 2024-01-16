@@ -1,5 +1,7 @@
+import { useEffect, useMemo, useRef, useState } from "react";
 import Header from "../../components/Header";
 import Button from "./components/Button";
+import Flag from "./components/Flag";
 import {
   HeaderContainer,
   Image,
@@ -12,6 +14,30 @@ import {
 } from "./styles";
 
 export default function Home() {
+  const [windowSize, setWindowSize] = useState({
+    width: window.innerWidth,
+    height: window.innerHeight,
+  });
+
+  const isThereFlag = windowSize.width > 1100;
+
+  useEffect(() => {
+    function handleResize() {
+      setWindowSize({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+    }
+
+    window.addEventListener("resize", handleResize);
+
+    handleResize();
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  console.log(isThereFlag);
+
   return (
     <WholePage>
       <HeaderContainer>
@@ -19,6 +45,7 @@ export default function Home() {
         <Image>
           <ImageOverlay />
           <TextPosition>
+            {isThereFlag && <Flag />}
             <h1
               style={{
                 fontSize: "60px",
@@ -45,32 +72,24 @@ export default function Home() {
             style={{
               backgroundColor: "blue",
             }}
-          >
-            .
-          </Service>
+          ></Service>
           <Service
             style={{
               backgroundColor: "pink",
             }}
-          >
-            .
-          </Service>
+          ></Service>
         </ServicesRow>
         <ServicesRow>
           <Service
             style={{
               backgroundColor: "yellow",
             }}
-          >
-            .
-          </Service>
+          ></Service>
           <Service
             style={{
               backgroundColor: "red",
             }}
-          >
-            .
-          </Service>
+          ></Service>
         </ServicesRow>
       </ServicesContainer>
     </WholePage>
