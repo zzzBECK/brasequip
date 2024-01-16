@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import Header from "../../components/Header";
 import Button from "./components/Button";
 import Flag from "./components/Flag";
