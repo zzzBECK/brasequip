@@ -9,6 +9,7 @@ import {
 import Button from "./components/Button";
 import Flag from "./components/Flag";
 import { Service, ServicesContainer, ServicesRow } from "./styles";
+import { IoMdBuild } from "react-icons/io";
 
 export default function Home() {
   const [windowSize, setWindowSize] = useState({
@@ -61,29 +62,141 @@ export default function Home() {
       </HeaderContainer>
 
       <ServicesContainer>
+        <h1
+          style={{
+            color: "black",
+            textAlign: "center",
+            margin: "2em 0",
+            fontWeight: "700",
+            lineHeight: "1.2",
+          }}
+        >
+          CONHEÇA OS
+          <br /> SERVIÇOS
+        </h1>
         <ServicesRow>
-          <Service
-            style={{
-              backgroundColor: "blue",
-            }}
-          ></Service>
-          <Service
-            style={{
-              backgroundColor: "pink",
-            }}
-          ></Service>
+          <Service>
+            <IoMdBuild
+              style={{
+                color: "black",
+                fontSize: "2.4em",
+                marginBottom: "0.8em",
+                opacity: "0.8",
+              }}
+            />
+            <h2
+              style={{
+                color: "black",
+                fontWeight: "500",
+                lineHeight: "1",
+                marginBottom: "0.5em",
+              }}
+            >
+              Montagem e desmontagem
+            </h2>
+            <p
+              style={{
+                color: "black",
+                textAlign: "inherit",
+              }}
+            >
+              Garantimos montagem e desmontagem eficientes de equipamentos,
+              assegurando a excelência e a segurança que construíram nossa
+              reputação sólida.
+            </p>
+          </Service>
+          <Service>
+            <IoMdBuild
+              style={{
+                color: "black",
+                fontSize: "2.4em",
+                marginBottom: "0.8em",
+                opacity: "0.8",
+              }}
+            />
+            <h2
+              style={{
+                color: "black",
+                fontWeight: "500",
+                lineHeight: "1",
+                marginBottom: "0.5em",
+              }}
+            >
+              Montagem e desmontagem
+            </h2>
+            <p
+              style={{
+                color: "black",
+                textAlign: "inherit",
+              }}
+            >
+              Garantimos montagem e desmontagem eficientes de equipamentos,
+              assegurando a excelência e a segurança que construíram nossa
+              reputação sólida.
+            </p>
+          </Service>
         </ServicesRow>
         <ServicesRow>
-          <Service
-            style={{
-              backgroundColor: "yellow",
-            }}
-          ></Service>
-          <Service
-            style={{
-              backgroundColor: "red",
-            }}
-          ></Service>
+          <Service>
+            <IoMdBuild
+              style={{
+                color: "black",
+                fontSize: "2.4em",
+                marginBottom: "0.8em",
+                opacity: "0.8",
+              }}
+            />
+            <h2
+              style={{
+                color: "black",
+                fontWeight: "500",
+                lineHeight: "1",
+                marginBottom: "0.5em",
+              }}
+            >
+              Montagem e desmontagem
+            </h2>
+            <p
+              style={{
+                color: "black",
+                textAlign: "inherit",
+              }}
+            >
+              Garantimos montagem e desmontagem eficientes de equipamentos,
+              assegurando a excelência e a segurança que construíram nossa
+              reputação sólida.
+            </p>
+          </Service>
+          <Service>
+            <IoMdBuild
+              style={{
+                color: "black",
+                fontSize: "2.4em",
+                marginBottom: "0.8em",
+                opacity: "0.8",
+              }}
+            />
+            <h2
+              style={{
+                color: "black",
+                fontWeight: "500",
+                lineHeight: "1",
+                marginBottom: "0.5em",
+              }}
+            >
+              Montagem e desmontagem
+            </h2>
+            <p
+              style={{
+                color: "black",
+                textAlign: "inherit",
+              }}
+            >
+              Garantimos montagem e desmontagem eficientes de equipamentos,
+              assegurando a excelência e a segurança que construíram nossa
+              reputação sólida.
+            </p>
+          </Service>
         </ServicesRow>
       </ServicesContainer>
     </WholePage>
