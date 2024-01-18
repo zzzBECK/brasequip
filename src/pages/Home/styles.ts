@@ -11,7 +11,7 @@ export const WholePage = styled.div`
 export const Image = styled.div`
   display: flex;
   width: 100%;
-  height: 70vh;
+  height: 40em;
   background-image: url("homeImage.jpg");
   background-size: cover;
   background-position-y: 20%;
@@ -43,7 +43,7 @@ export const HeaderContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  min-height: 70vh;
+  min-height: 40em;
   position: relative;
 
   @media (max-width: 580px) {
