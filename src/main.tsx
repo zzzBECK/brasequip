@@ -5,7 +5,8 @@ import App from "./App.tsx";
 import "./index.css";
 import Home from "./pages/Home/index.tsx";
 import Sobre from "./pages/Sobre/index.tsx";
-import Header from "./components/Header/index.tsx";
+import Servicos from "./pages/Servicos/index.tsx";
+import Contato from "./pages/Contato/index.tsx";
 
 const router = createBrowserRouter([
   {
@@ -20,13 +21,20 @@ const router = createBrowserRouter([
         path: "/brasequip/sobre",
         element: <Sobre />,
       },
+      {
+        path: "/brasequip/servicos",
+        element: <Servicos />,
+      },
+      {
+        path: "/brasequip/contato",
+        element: <Contato />,
+      },
     ],
   },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <Header />
     <RouterProvider router={router} />
   </React.StrictMode>
 );

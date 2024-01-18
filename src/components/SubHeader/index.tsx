@@ -1,72 +1,75 @@
+import { NavLink } from "react-router-dom";
 import { Column, SubHeaderItem } from "./styles";
 
 export default function SubHeader() {
-  const path = new URL(window.location.href).pathname;
-
-  const handeClick = (path: string) => () => {
-    window.location.href = `/brasequip/${path}`;
-  };
-
   return (
     <>
       <Column width="50%">
-        <SubHeaderItem
-          borderRight="true"
-          borderHeight="30%"
-          onClick={handeClick("")}
-        >
-          <p
-            style={{
-              borderBottom: path === "/brasequip/" ? "1px solid white" : "none",
+        <SubHeaderItem borderRight="true" borderHeight="30%">
+          <NavLink
+            to="/brasequip/"
+            end
+            style={({ isActive }) => ({
+              borderBottom: isActive ? "1px solid white" : "none",
               height: "100%",
               alignItems: "center",
               display: "flex",
-            }}
+              textDecoration: "none",
+              color: "white",
+              transition: "border-bottom 0.4s ease-in-out",
+            })}
           >
             Página inicial
-          </p>
+          </NavLink>
         </SubHeaderItem>
 
-        <SubHeaderItem
-          borderRight={"true"}
-          borderHeight="30%"
-          onClick={handeClick("sobre")}
-        >
-          <p
-            style={{
-              borderBottom:
-                path === "/brasequip/sobre" ? "1px solid white" : "none",
+        <SubHeaderItem borderRight="true" borderHeight="30%">
+          <NavLink
+            to="/brasequip/sobre"
+            style={({ isActive }) => ({
+              borderBottom: isActive ? "1px solid white" : "none",
               height: "100%",
               alignItems: "center",
               display: "flex",
-            }}
+              textDecoration: "none",
+              color: "white",
+              transition: "border-bottom 0.4s ease-in-out",
+            })}
           >
             Sobre nós
-          </p>
+          </NavLink>
         </SubHeaderItem>
         <SubHeaderItem borderRight={"true"} borderHeight="30%">
-          <p
-            style={{
-              borderBottom: path === "//" ? "1px solid white" : "none",
+          <NavLink
+            to="/brasequip/servicos"
+            style={({ isActive }) => ({
+              borderBottom: isActive ? "1px solid white" : "none",
               height: "100%",
               alignItems: "center",
               display: "flex",
-            }}
+              textDecoration: "none",
+              color: "white",
+              transition: "border-bottom 0.4s ease-in-out",
+            })}
           >
             Serviços
-          </p>
+          </NavLink>
         </SubHeaderItem>
         <SubHeaderItem borderRight={"false"} borderHeight="30%">
-          <p
-            style={{
-              borderBottom: path === "//" ? "1px solid white" : "none",
+          <NavLink
+            to="/brasequip/contato"
+            style={({ isActive }) => ({
+              borderBottom: isActive ? "1px solid white" : "none",
               height: "100%",
               alignItems: "center",
               display: "flex",
-            }}
+              textDecoration: "none",
+              color: "white",
+              transition: "border-bottom 0.4s ease-in-out",
+            })}
           >
             Contato
-          </p>
+          </NavLink>
         </SubHeaderItem>
       </Column>
       <Column width="50%"></Column>
