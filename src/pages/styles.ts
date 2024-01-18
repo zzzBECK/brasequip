@@ -20,6 +20,7 @@ export const Image = styled.div`
   @media (max-width: 580px) {
     height: 100vh;
     height: 100svh;
+    min-height: 45em;
   }
 `;
 
@@ -49,6 +50,7 @@ export const HeaderContainer = styled.div`
   @media (max-width: 580px) {
     height: 100vh;
     height: 100svh;
+    min-height: 45em;
   }
 `;
 
