@@ -8,8 +8,11 @@ import {
 } from "../styles";
 import Button from "./components/Button";
 import Flag from "./components/Flag";
-import { Service, ServicesContainer, ServicesRow } from "./styles";
+import { ServicesContainer, ServicesRow } from "./styles";
 import { IoMdBuild } from "react-icons/io";
+import ServiceCard from "./components/ServiceCard";
+import { MdSecurity } from "react-icons/md";
+import { MdBrush } from "react-icons/md";
 
 export default function Home() {
   const [windowSize, setWindowSize] = useState({
@@ -75,128 +78,30 @@ export default function Home() {
           <br /> SERVIÇOS
         </h1>
         <ServicesRow>
-          <Service>
-            <IoMdBuild
-              style={{
-                color: "black",
-                fontSize: "2.4em",
-                marginBottom: "0.8em",
-                opacity: "0.8",
-              }}
-            />
-            <h2
-              style={{
-                color: "black",
-                fontWeight: "500",
-                lineHeight: "1",
-                marginBottom: "0.5em",
-              }}
-            >
-              Montagem e desmontagem
-            </h2>
-            <p
-              style={{
-                color: "black",
-                textAlign: "inherit",
-              }}
-            >
-              Garantimos montagem e desmontagem eficientes de equipamentos,
+          <ServiceCard
+            title="Montagem e desmontagem"
+            description="Garantimos montagem e desmontagem eficientes de equipamentos,
               assegurando a excelência e a segurança que construíram nossa
-              reputação sólida.
-            </p>
-          </Service>
-          <Service>
-            <IoMdBuild
-              style={{
-                color: "black",
-                fontSize: "2.4em",
-                marginBottom: "0.8em",
-                opacity: "0.8",
-              }}
-            />
-            <h2
-              style={{
-                color: "black",
-                fontWeight: "500",
-                lineHeight: "1",
-                marginBottom: "0.5em",
-              }}
-            >
-              Montagem e desmontagem
-            </h2>
-            <p
-              style={{
-                color: "black",
-                textAlign: "inherit",
-              }}
-            >
-              Garantimos montagem e desmontagem eficientes de equipamentos,
-              assegurando a excelência e a segurança que construíram nossa
-              reputação sólida.
-            </p>
-          </Service>
+              reputação sólida."
+            Icon={IoMdBuild}
+          />
+          <ServiceCard
+            title="Manutenção preventiva e corretiva"
+            description="Com foco em durabilidade e performance, nossa manutenção preventiva e corretiva previne paradas não programadas, maximizando a produtividade de sua obra."
+            Icon={MdSecurity}
+          />
         </ServicesRow>
         <ServicesRow>
-          <Service>
-            <IoMdBuild
-              style={{
-                color: "black",
-                fontSize: "2.4em",
-                marginBottom: "0.8em",
-                opacity: "0.8",
-              }}
-            />
-            <h2
-              style={{
-                color: "black",
-                fontWeight: "500",
-                lineHeight: "1",
-                marginBottom: "0.5em",
-              }}
-            >
-              Montagem e desmontagem
-            </h2>
-            <p
-              style={{
-                color: "black",
-                textAlign: "inherit",
-              }}
-            >
-              Garantimos montagem e desmontagem eficientes de equipamentos,
-              assegurando a excelência e a segurança que construíram nossa
-              reputação sólida.
-            </p>
-          </Service>
-          <Service>
-            <IoMdBuild
-              style={{
-                color: "black",
-                fontSize: "2.4em",
-                marginBottom: "0.8em",
-                opacity: "0.8",
-              }}
-            />
-            <h2
-              style={{
-                color: "black",
-                fontWeight: "500",
-                lineHeight: "1",
-                marginBottom: "0.5em",
-              }}
-            >
-              Montagem e desmontagem
-            </h2>
-            <p
-              style={{
-                color: "black",
-                textAlign: "inherit",
-              }}
-            >
-              Garantimos montagem e desmontagem eficientes de equipamentos,
-              assegurando a excelência e a segurança que construíram nossa
-              reputação sólida.
-            </p>
-          </Service>
+          <ServiceCard
+            title="Reforma de equipamentos"
+            description="Revitalizamos seus equipamentos com reformas detalhadas, prolongando a vida útil e otimizando o desempenho para atender às demandas do seu projeto."
+            Icon={MdBrush}
+          />
+          <ServiceCard
+            title="SD WAN MPLS"
+            description="Integração de dados, voz e vídeo em uma rede privativa para maximizar a comunicação entre pontos"
+            Icon={IoMdBuild}
+          />
         </ServicesRow>
       </ServicesContainer>
     </WholePage>
