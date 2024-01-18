@@ -4,7 +4,8 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import App from "./App.tsx";
 import "./index.css";
 import Home from "./pages/Home/index.tsx";
-import Teste from "./pages/Teste/index.tsx";
+import Sobre from "./pages/Sobre/index.tsx";
+import Header from "./components/Header/index.tsx";
 
 const router = createBrowserRouter([
   {
@@ -16,8 +17,8 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "/brasequip/teste",
-        element: <Teste />,
+        path: "/brasequip/sobre",
+        element: <Sobre />,
       },
     ],
   },
@@ -25,6 +26,7 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
+    <Header />
     <RouterProvider router={router} />
   </React.StrictMode>
 );

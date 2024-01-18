@@ -1,17 +1,14 @@
 import { useEffect, useState } from "react";
-import Header from "../../components/Header";
-import Button from "./components/Button";
-import Flag from "./components/Flag";
 import {
   HeaderContainer,
   Image,
   ImageOverlay,
-  Service,
-  ServicesContainer,
-  ServicesRow,
   TextPosition,
   WholePage,
-} from "./styles";
+} from "../styles";
+import Button from "./components/Button";
+import Flag from "./components/Flag";
+import { Service, ServicesContainer, ServicesRow } from "./styles";
 
 export default function Home() {
   const [windowSize, setWindowSize] = useState({
@@ -39,7 +36,6 @@ export default function Home() {
   return (
     <WholePage>
       <HeaderContainer>
-        <Header />
         <Image>
           <ImageOverlay />
           <TextPosition>
