@@ -17,9 +17,10 @@ export const Image = styled.div`
   background-position-y: 20%;
   position: relative;
 
-  @media (max-width: 580px) {
+  @media (max-width: 620px) {
     height: 100vh;
     height: 100svh;
+    min-height: 45em;
   }
 `;
 
@@ -46,9 +47,10 @@ export const HeaderContainer = styled.div`
   min-height: 40em;
   position: relative;
 
-  @media (max-width: 580px) {
+  @media (max-width: 620px) {
     height: 100vh;
     height: 100svh;
+    min-height: 45em;
   }
 `;
 

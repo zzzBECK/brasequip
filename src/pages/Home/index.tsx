@@ -8,7 +8,11 @@ import {
 } from "../styles";
 import Button from "./components/Button";
 import Flag from "./components/Flag";
-import { Service, ServicesContainer, ServicesRow } from "./styles";
+import { ServicesContainer, ServicesRow } from "./styles";
+import { IoMdBuild } from "react-icons/io";
+import ServiceCard from "./components/ServiceCard";
+import { MdSecurity } from "react-icons/md";
+import { MdBrush } from "react-icons/md";
 
 export default function Home() {
   const [windowSize, setWindowSize] = useState({
@@ -61,29 +65,43 @@ export default function Home() {
       </HeaderContainer>
 
       <ServicesContainer>
+        <h1
+          style={{
+            color: "black",
+            textAlign: "center",
+            margin: "2em 0",
+            fontWeight: "700",
+            lineHeight: "1.2",
+          }}
+        >
+          CONHEÇA OS
+          <br /> SERVIÇOS
+        </h1>
         <ServicesRow>
-          <Service
-            style={{
-              backgroundColor: "blue",
-            }}
-          ></Service>
-          <Service
-            style={{
-              backgroundColor: "pink",
-            }}
-          ></Service>
+          <ServiceCard
+            title="Montagem e desmontagem"
+            description="Garantimos montagem e desmontagem eficientes de equipamentos,
+              assegurando a excelência e a segurança que construíram nossa
+              reputação sólida."
+            Icon={IoMdBuild}
+          />
+          <ServiceCard
+            title="Manutenção preventiva e corretiva"
+            description="Com foco em durabilidade e performance, nossa manutenção preventiva e corretiva previne paradas não programadas, maximizando a produtividade de sua obra."
+            Icon={MdSecurity}
+          />
         </ServicesRow>
         <ServicesRow>
-          <Service
-            style={{
-              backgroundColor: "yellow",
-            }}
-          ></Service>
-          <Service
-            style={{
-              backgroundColor: "red",
-            }}
-          ></Service>
+          <ServiceCard
+            title="Reforma de equipamentos"
+            description="Revitalizamos seus equipamentos com reformas detalhadas, prolongando a vida útil e otimizando o desempenho para atender às demandas do seu projeto."
+            Icon={MdBrush}
+          />
+          <ServiceCard
+            title="SD WAN MPLS"
+            description="Integração de dados, voz e vídeo em uma rede privativa para maximizar a comunicação entre pontos"
+            Icon={IoMdBuild}
+          />
         </ServicesRow>
       </ServicesContainer>
     </WholePage>

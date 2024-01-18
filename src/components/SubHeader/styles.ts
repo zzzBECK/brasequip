@@ -10,8 +10,7 @@ export const Column = styled.div<IColumn>`
   height: 100%;
   align-items: center;
   min-width: 120px;
-  justify-content: flex-end;
-  overflow: auto;
+  justify-content: space-between;
 `;
 
 interface ISubHeaderItem {

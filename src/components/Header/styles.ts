@@ -4,6 +4,7 @@ import theme from "../../theme/theme";
 export const WholeHeader = styled.div`
   display: flex;
   width: 100vw;
+  max-width: 100%;
   height: 12em;
   flex-direction: column;
   position: absolute;
