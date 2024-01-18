@@ -3,10 +3,18 @@ import { Column, SubHeaderItem } from "./styles";
 export default function SubHeader() {
   const path = new URL(window.location.href).pathname;
 
+  const handeClick = (path: string) => () => {
+    window.location.href = `/brasequip/${path}`;
+  };
+
   return (
     <>
       <Column width="50%">
-        <SubHeaderItem borderRight="true" borderHeight="30%">
+        <SubHeaderItem
+          borderRight="true"
+          borderHeight="30%"
+          onClick={handeClick("")}
+        >
           <p
             style={{
               borderBottom: path === "/brasequip/" ? "1px solid white" : "none",
@@ -19,10 +27,15 @@ export default function SubHeader() {
           </p>
         </SubHeaderItem>
 
-        <SubHeaderItem borderRight={"true"} borderHeight="30%">
+        <SubHeaderItem
+          borderRight={"true"}
+          borderHeight="30%"
+          onClick={handeClick("sobre")}
+        >
           <p
             style={{
-              borderBottom: path === "//" ? "1px solid white" : "none",
+              borderBottom:
+                path === "/brasequip/sobre" ? "1px solid white" : "none",
               height: "100%",
               alignItems: "center",
               display: "flex",
