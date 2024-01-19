@@ -1,6 +1,15 @@
 import { useState } from "react";
 import Flag from "../Flag";
-import { Column1, Column2, FormContainer, TitleContainer } from "./styles";
+import {
+  ButtonContainer,
+  Column1,
+  Column2,
+  FormContainer,
+  Input,
+  TextArea,
+  TitleContainer,
+} from "./styles";
+import Button from "../Button";
 
 export default function Form() {
   const [contact, setContact] = useState({
@@ -74,24 +83,22 @@ export default function Form() {
           method="post"
           onSubmit={handleSubmit}
         >
-          <div className="field">
-            <label className="label">Your Name</label>
-            <div className="control">
-              <input
-                className="input"
+          <div>
+            <label>Your Name</label>
+            <div>
+              <Input
                 type="text"
-                placeholder="Name"
+                placeholder="Nome"
                 name="name"
                 onChange={handleChange}
                 required
               />
             </div>
           </div>
-          <div className="field">
-            <label className="label">Your Email</label>
-            <div className="control">
-              <input
-                className="input"
+          <div>
+            <label>Your Email</label>
+            <div>
+              <Input
                 type="email"
                 placeholder="Email"
                 name="email"
@@ -100,9 +107,9 @@ export default function Form() {
               />
             </div>
           </div>
-          <div className="field" style={{ display: "none" }}>
-            <label className="label">Title</label>
-            <div className="control">
+          <div style={{ display: "none" }}>
+            <label>Title</label>
+            <div>
               <input
                 type="text"
                 name="honeypot"
@@ -112,24 +119,21 @@ export default function Form() {
               <input type="hidden" name="subject" onChange={handleChange} />
             </div>
           </div>
-          <div className="field">
-            <label className="label">Message</label>
-            <div className="control">
-              <textarea
-                className="textarea"
-                placeholder="Your Message"
+          <div>
+            <label>Message</label>
+            <div>
+              <TextArea
+                placeholder="Descrição"
                 name="message"
                 onChange={handleChange}
                 required
               />
             </div>
           </div>
-          <div className="field is-grouped">
-            <div className="control">
-              <button className="button is-primary" type="submit">
-                Submit
-              </button>
-            </div>
+          <div>
+            <ButtonContainer>
+              <Button type="submit" text="Enviar Pedido" />
+            </ButtonContainer>
           </div>
         </form>
       </Column2>
