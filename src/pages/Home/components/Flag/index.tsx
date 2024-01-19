@@ -1,6 +1,10 @@
 import { FlagContainer, LeftColor } from "./styles";
 
-export default function Flag() {
+interface IFlag {
+  text: string;
+}
+
+export default function Flag({ text }: IFlag) {
   return (
     <FlagContainer>
       <LeftColor />
@@ -9,7 +13,7 @@ export default function Flag() {
           whiteSpace: "nowrap",
         }}
       >
-        Brasequip - Venda e locação de equipamentos
+        {text}
       </p>
     </FlagContainer>
   );
