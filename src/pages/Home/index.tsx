@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { IoMdBuild } from "react-icons/io";
-import { MdMap, MdBrush, MdSecurity } from "react-icons/md";
+import { MdBrush, MdMap, MdSecurity } from "react-icons/md";
 import {
   HeaderContainer,
   Image,
@@ -11,9 +11,9 @@ import {
 import Button from "./components/Button";
 import Flag from "./components/Flag";
 import Form from "./components/Form";
+import Institucional from "./components/Institucional";
 import ServiceCard from "./components/ServiceCard";
 import { ServicesContainer, ServicesRow } from "./styles";
-import Institucional from "./components/Institucional";
 
 export default function Home() {
   const [windowSize, setWindowSize] = useState({
@@ -116,8 +116,8 @@ export default function Home() {
           <Button text="Ver mais" />
         </div>
       </ServicesContainer>
-      <Institucional />
       <Form />
+      <Institucional />
     </WholePage>
   );
 }
