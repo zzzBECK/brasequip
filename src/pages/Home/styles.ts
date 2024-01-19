@@ -5,7 +5,7 @@ export const ServicesContainer = styled.div`
   flex-direction: column;
   width: 100%;
   height: fit-content;
-  min-height: 60em;
+  min-height: 100vh;
   background-color: #fff;
   padding: 0 18vw;
   gap: 4em;

@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import { IoMdBuild } from "react-icons/io";
+import { MdMap, MdBrush, MdSecurity } from "react-icons/md";
 import {
   HeaderContainer,
   Image,
@@ -8,11 +10,10 @@ import {
 } from "../styles";
 import Button from "./components/Button";
 import Flag from "./components/Flag";
-import { ServicesContainer, ServicesRow } from "./styles";
-import { IoMdBuild } from "react-icons/io";
+import Form from "./components/Form";
 import ServiceCard from "./components/ServiceCard";
-import { MdSecurity } from "react-icons/md";
-import { MdBrush } from "react-icons/md";
+import { ServicesContainer, ServicesRow } from "./styles";
+import Institucional from "./components/Institucional";
 
 export default function Home() {
   const [windowSize, setWindowSize] = useState({
@@ -43,7 +44,9 @@ export default function Home() {
         <Image>
           <ImageOverlay />
           <TextPosition>
-            {isThereFlag && <Flag />}
+            {isThereFlag && (
+              <Flag text="Brasequip - Venda e locação de equipamentos" />
+            )}
             <h1
               style={{
                 fontSize: "60px",
@@ -63,7 +66,6 @@ export default function Home() {
           </TextPosition>
         </Image>
       </HeaderContainer>
-
       <ServicesContainer>
         <h1
           style={{
@@ -98,12 +100,24 @@ export default function Home() {
             Icon={MdBrush}
           />
           <ServiceCard
-            title="SD WAN MPLS"
-            description="Integração de dados, voz e vídeo em uma rede privativa para maximizar a comunicação entre pontos"
-            Icon={IoMdBuild}
+            title="lorem ipsum dolor sit amet"
+            description="lore ipsum dolor sit amet, consectetur adipiscing elit. Nullam a nunc eget odio aliquam facilisis. lore ipsum dolor sit amet, consectetur adipiscing elit."
+            Icon={MdMap}
           />
         </ServicesRow>
+
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            margin: "2em 0",
+          }}
+        >
+          <Button text="Ver mais" />
+        </div>
       </ServicesContainer>
+      <Institucional />
+      <Form />
     </WholePage>
   );
 }

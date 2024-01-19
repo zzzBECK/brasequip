@@ -100,6 +100,7 @@ export const TextPosition = styled.div`
 
   @media (max-width: 480px) {
     padding: 0 4vw;
+    top: 62%;
   }
 
   @media (max-width: 340px) {
