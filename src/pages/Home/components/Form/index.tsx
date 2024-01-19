@@ -97,7 +97,7 @@ export default function Form() {
           onSubmit={handleSubmit}
         >
           <div>
-            <label>Your Name</label>
+            <label>Nome</label>
             <div>
               <Input
                 type="text"
@@ -110,7 +110,7 @@ export default function Form() {
             </div>
           </div>
           <div>
-            <label>Your Email</label>
+            <label>Email</label>
             <div>
               <Input
                 type="email"
@@ -135,7 +135,7 @@ export default function Form() {
             </div>
           </div>
           <div>
-            <label>Message</label>
+            <label>Descrição</label>
             <div>
               <TextArea
                 placeholder="Descrição"
