@@ -46,11 +46,6 @@ export const TitleContainer = styled.div`
   height: 100%;
   justify-content: center;
   gap: 1em;
-
-  @media (max-width: 768px) {
-    align-items: center;
-    text-align: center;
-  }
 `;
 
 export const Column2 = styled.div`
