@@ -48,9 +48,9 @@ export const Column1 = styled.div`
   display: flex;
   flex-direction: column;
   width: 30%;
+  min-width: 176px;
   height: 100%;
   gap: 1%;
   padding-top: 2em;
-
   align-items: center;
 `;
