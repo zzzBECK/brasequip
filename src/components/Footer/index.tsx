@@ -43,7 +43,11 @@ export default function Footer() {
       </Row>
       <Content className="padding">
         <Column1>
-          <div>
+          <div
+            style={{
+              fontSize: "clamp(0.7rem, 1.2vw, 1em)",
+            }}
+          >
             <p>BRASEQUIP BRASILIA EQUIPAMENTOS </p>
             <p>LTDA - BR-070, KM 8.5, LOTE 454, </p>
             <p>Ceilândia-DF / Fones: (61) 3585-3900 / </p>
@@ -58,7 +62,7 @@ export default function Footer() {
           alignItems: "center",
           width: "100%",
           height: "10%",
-          fontSize: "clamp(0.6rem, 1.2vw, 1rem)",
+          fontSize: "clamp(0.8rem, 1.2vw, 1rem)",
           borderTop: "1px solid #4E5683",
         }}
       >
