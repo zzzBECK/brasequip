@@ -233,6 +233,10 @@ Error generating stack: `+o.message+`
     height: 100svh;
     min-height: 45em;
   }
+
+  @media (max-height: 700px) {
+    min-height: 40em;
+  }
 `,Fl=Y.div`
   display: none;
   position: absolute;
@@ -258,6 +262,10 @@ Error generating stack: `+o.message+`
     height: 100vh;
     height: 100svh;
     min-height: 45em;
+  }
+
+  @media (max-height: 700px) {
+    min-height: 40em;
   }
 `,Ly=Y.div`
   display: flex;
@@ -306,6 +314,11 @@ Error generating stack: `+o.message+`
   @media (max-width: 480px) {
     padding: 0 4vw;
     top: 62%;
+  }
+
+  @media (max-height: 700px) {
+    top: 64%;
+    gap: 0.4rem;
   }
 
   @media (max-width: 340px) {
