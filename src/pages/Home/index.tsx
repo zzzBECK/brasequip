@@ -13,6 +13,7 @@ import Flag from "./components/Flag";
 import Form from "./components/Form";
 import ServiceCard from "./components/ServiceCard";
 import { ServicesContainer, ServicesRow } from "./styles";
+import Institucional from "./components/Institucional";
 
 export default function Home() {
   const [windowSize, setWindowSize] = useState({
@@ -65,7 +66,6 @@ export default function Home() {
           </TextPosition>
         </Image>
       </HeaderContainer>
-
       <ServicesContainer>
         <h1
           style={{
@@ -116,7 +116,7 @@ export default function Home() {
           <Button text="Ver mais" />
         </div>
       </ServicesContainer>
-
+      <Institucional />
       <Form />
     </WholePage>
   );
