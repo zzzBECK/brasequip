@@ -22,6 +22,10 @@ export const Image = styled.div`
     height: 100svh;
     min-height: 45em;
   }
+
+  @media (max-height: 700px) {
+    min-height: 40em;
+  }
 `;
 
 export const ImageOverlay = styled.div`
@@ -51,6 +55,10 @@ export const HeaderContainer = styled.div`
     height: 100vh;
     height: 100svh;
     min-height: 45em;
+  }
+
+  @media (max-height: 700px) {
+    min-height: 40em;
   }
 `;
 
@@ -101,6 +109,11 @@ export const TextPosition = styled.div`
   @media (max-width: 480px) {
     padding: 0 4vw;
     top: 62%;
+  }
+
+  @media (max-height: 700px) {
+    top: 64%;
+    gap: 0.4rem;
   }
 
   @media (max-width: 340px) {
