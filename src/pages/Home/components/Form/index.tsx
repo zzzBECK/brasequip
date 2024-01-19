@@ -19,13 +19,16 @@ export default function Form() {
     honeypot: "", // if any value received in this field, form submission will be ignored.
     message: "",
     replyTo: "", // this will set replyTo of email to email address entered in the form
-    accessKey: "1fc123ac-e012-422c-89a9-0df3f612a9a9", // get your access key from https://www.staticforms.xyz
+    // accessKey: "1fc123ac-e012-422c-89a9-0df3f612a9a9", // get your access key from https://www.staticforms.xyz
+    accessKey: "4f712f04-032e-4484-95eb-7598e2f20544",
   });
 
-  const [, setResponse] = useState({
+  const [response, setResponse] = useState({
     type: "",
     message: "",
   });
+
+  console.log(response);
 
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-ignore
@@ -49,6 +52,16 @@ export default function Form() {
         setResponse({
           type: "success",
           message: "Thank you for reaching out to us.",
+        });
+
+        setContact({
+          name: "",
+          email: "",
+          subject: "StaticForms - Contact Form",
+          honeypot: "",
+          message: "",
+          replyTo: "",
+          accessKey: "4f712f04-032e-4484-95eb-7598e2f20544",
         });
       } else {
         setResponse({
@@ -89,6 +102,7 @@ export default function Form() {
               <Input
                 type="text"
                 placeholder="Nome"
+                value={contact.name}
                 name="name"
                 onChange={handleChange}
                 required
@@ -101,6 +115,7 @@ export default function Form() {
               <Input
                 type="email"
                 placeholder="Email"
+                value={contact.email}
                 name="email"
                 onChange={handleChange}
                 required
@@ -125,6 +140,7 @@ export default function Form() {
               <TextArea
                 placeholder="Descrição"
                 name="message"
+                value={contact.message}
                 onChange={handleChange}
                 required
               />
@@ -132,7 +148,11 @@ export default function Form() {
           </div>
           <div>
             <ButtonContainer>
-              <Button type="submit" text="Enviar Pedido" />
+              <Button
+                type="submit"
+                text="Enviar Pedido"
+                onClick={handleSubmit}
+              />
             </ButtonContainer>
           </div>
         </form>
