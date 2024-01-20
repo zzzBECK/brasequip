@@ -86,6 +86,11 @@ export const TextArea = styled.textarea`
   outline: none;
   padding: 1em 1em;
 
+  min-width: 100%;
+  max-width: 100%;
+
+  max-height: 10em;
+
   margin-bottom: 1em;
 `;
 
