@@ -10,7 +10,7 @@ import {
 } from "../styles";
 import Button from "./components/Button";
 import Flag from "./components/Flag";
-import Form from "./components/Form";
+import Form from "../../components/Form";
 import Institucional from "./components/Institucional";
 import ServiceCard from "./components/ServiceCard";
 import { ServicesContainer, ServicesRow } from "./styles";
