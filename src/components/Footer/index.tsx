@@ -45,13 +45,15 @@ export default function Footer() {
         <Column1>
           <div
             style={{
-              fontSize: "clamp(0.7rem, 1.2vw, 1em)",
+              display: "flex",
+              flexDirection: "column",
+              fontSize: "clamp(0.7rem, 0.8vw, 1em)",
+              gap: "0.6rem",
             }}
           >
             <p>BRASEQUIP BRASILIA EQUIPAMENTOS </p>
-            <p>LTDA - BR-070, KM 8.5, LOTE 454, </p>
-            <p>Ceilândia-DF / Fones: (61) 3585-3900 / </p>
-            <p>(61) 3585-3899</p>
+            <p>LTDA - BR-070, KM 8.5, LOTE 454, Ceilândia-DF</p>
+            <p>Fones: (61) 3585-3900 / (61) 3585-3899</p>
           </div>
         </Column1>
       </Content>
