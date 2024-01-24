@@ -1,6 +1,7 @@
 import Logo from "../../assets/RASTER_LOGO.png";
 import {
   Column1,
+  Column2,
   Container,
   Content,
   Image,
@@ -51,11 +52,29 @@ export default function Footer() {
               gap: "0.6rem",
             }}
           >
-            <p>BRASEQUIP BRASILIA EQUIPAMENTOS </p>
+            <p>BRASEQUIP BRASILIA EQUIPAMENTOS</p>
             <p>LTDA - BR-070, KM 8.5, LOTE 454, Ceilândia-DF</p>
             <p>Fones: (61) 3585-3900 / (61) 3585-3899</p>
           </div>
         </Column1>
+
+        <Column2>
+          <div
+            style={{
+              display: "flex",
+              width: "100%",
+              height: "100%",
+              flexDirection: "column",
+              fontSize: "clamp(0.8rem, 0.8vw, 1em)",
+              gap: "1rem",
+              paddingLeft: "3rem",
+            }}
+          >
+            <p>Contato</p>
+            <p>Serviços</p>
+            <p>Sobre Nós</p>
+          </div>
+        </Column2>
       </Content>
       <p
         style={{

@@ -38,7 +38,6 @@ export const Image = styled.img`
 
 export const Content = styled.div`
   display: flex;
-  flex-direction: column;
   width: 100%;
   height: 70%;
   background-color: ${theme.colors.darkBlue};
@@ -53,4 +52,34 @@ export const Column1 = styled.div`
   gap: 1%;
   padding-top: 2em;
   align-items: center;
+`;
+
+export const Column2 = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  min-width: 176px;
+  height: 100%;
+  gap: 1%;
+  padding-top: 2em;
+  align-items: center;
+`;
+
+export const Column3 = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 20vw;
+  min-width: 176px;
+  height: 100%;
+  gap: 1%;
+  padding-top: 2em;
+  align-items: center;
+`;
+
+export const ItemCoitainer = styled.div`
+  display: flex;
+  width: 100%;
+  gap: 1em;
+  align-items: center;
+  font-size: clamp(0.8rem, 1vw, 1rem);
 `;
