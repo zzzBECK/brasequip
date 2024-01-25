@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import theme from "../../theme/theme";
 
 export const Image = styled.div`
   display: flex;
@@ -155,4 +156,37 @@ export const TextContent = styled.div`
   flex-direction: column;
   width: 100%;
   gap: 1.2em;
+`;
+
+export const ServicosContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 30em;
+  background-color: ${theme.colors.white};
+  color: ${theme.colors.black};
+`;
+
+export const ServicosTitle = styled.div`
+  display: flex;
+  width: 100%;
+  height: fit-content;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const ServicosContent = styled.div`
+  display: flex;
+  width: 100%;
+  min-height: 30em;
+  height: 100%;
+  gap: 6em;
+
+  background-color: red;
+
+  align-items: center;
+
+  /* @media (max-width: 1100px) {
+    flex-direction: column;
+  } */
 `;

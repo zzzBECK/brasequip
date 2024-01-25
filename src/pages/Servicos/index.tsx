@@ -4,6 +4,9 @@ import { HeaderContainer, WholePage } from "../styles";
 import {
   Image,
   ImageOverlay,
+  ServicosContainer,
+  ServicosContent,
+  ServicosTitle,
   TextContent,
   TextPosition,
   VisaoGeralContainer,
@@ -32,6 +35,22 @@ export default function Servicos() {
           </TextPosition>
         </Image>
       </HeaderContainer>
+      <ServicosContainer>
+        <ServicosTitle>
+          <h1>Nossas Soluções</h1>
+        </ServicosTitle>
+        <ServicosContent>
+          <div
+            style={{
+              display: "flex",
+              minHeight: "30em",
+              minWidth: "20em",
+              backgroundImage: "url('montagem.jpg')",
+              backgroundSize: "contain",
+            }}
+          ></div>
+        </ServicosContent>
+      </ServicosContainer>
       <VisaoGeralContainer className="padding">
         <VisaoGeralContent>
           <VisaoGeralText>
