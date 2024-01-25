@@ -4,7 +4,9 @@ export const ButtonStyle = styled.button`
   display: flex;
   width: 12rem;
   height: 4rem;
-  background-color: #a72232;
+  min-height: 64px;
+  min-width: 192px;
+  background-color: #c71e23;
   border: none;
   font-size: 1rem;
   cursor: pointer;
@@ -14,7 +16,8 @@ export const ButtonStyle = styled.button`
   justify-content: center;
   align-items: center;
 
-  /* &:hover {
-    background-color: #a72232;
-  } */
+  &:disabled {
+    opacity: 0.8;
+    cursor: not-allowed; // Change cursor to indicate it's not clickable
+  }
 `;

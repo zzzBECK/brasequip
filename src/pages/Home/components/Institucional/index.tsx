@@ -16,7 +16,7 @@ export default function Institucional() {
       <ContentContainer>
         <Content>
           <Column1>
-            <Flag text="Quem somos" />
+            <Flag text="Quem somos" mode="light" />
             <h1>INSTITUCIONAL</h1>
             <p>
               Fundada em julho de 2005, a BRASEQUIP se destaca na venda e

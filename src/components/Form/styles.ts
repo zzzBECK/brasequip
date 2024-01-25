@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import theme from "../../../../theme/theme";
+import theme from "../../theme/theme";
 
 export const FormContainer = styled.div`
   display: flex;
@@ -85,6 +85,11 @@ export const TextArea = styled.textarea`
   color: white;
   outline: none;
   padding: 1em 1em;
+
+  min-width: 100%;
+  max-width: 100%;
+
+  max-height: 10em;
 
   margin-bottom: 1em;
 `;

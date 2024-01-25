@@ -24,7 +24,6 @@ export const SubHeaderItem = styled.div<ISubHeaderItem>`
   height: 100%;
   justify-content: center;
   align-items: center;
-  cursor: pointer;
   user-select: none;
   position: relative; // Needed for absolute positioning of the pseudo-element
 
