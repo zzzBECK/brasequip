@@ -1,6 +1,7 @@
 import Button from "../Home/components/Button";
 import Flag from "../Home/components/Flag";
 import { HeaderContainer, WholePage } from "../styles";
+import ServiceCard from "./components/ServiceCard";
 import {
   Image,
   ImageOverlay,
@@ -35,20 +36,36 @@ export default function Servicos() {
           </TextPosition>
         </Image>
       </HeaderContainer>
-      <ServicosContainer>
+      <ServicosContainer className="padding-services">
         <ServicosTitle>
           <h1>Nossas Soluções</h1>
         </ServicosTitle>
         <ServicosContent>
-          <div
-            style={{
-              display: "flex",
-              minHeight: "30em",
-              minWidth: "20em",
-              backgroundImage: "url('montagem.jpg')",
-              backgroundSize: "contain",
-            }}
-          ></div>
+          <ServiceCard
+            image="montagem.jpg"
+            title="Montagem e desmontagem"
+            description="Equipamentos para elevação"
+          />
+          <ServiceCard
+            image="manutencao.jpg"
+            title="Manutenção preventiva"
+            description="Preventiva e corretiva"
+          />
+          <ServiceCard
+            image="aguasclaras.jpeg"
+            title="Reforma de equipamentos"
+            description="Reforma de elevadores e gruas"
+          />
+          <ServiceCard
+            image="fixacao.jpg"
+            title="Projeto de Fixação"
+            description="Emissão de laudo ART e estrutural"
+          />
+          <ServiceCard
+            image="museu.jpg"
+            title="ART dos serviços contratados"
+            description="Seguro de responsabilidade civil"
+          />
         </ServicosContent>
       </ServicosContainer>
       <VisaoGeralContainer className="padding">
