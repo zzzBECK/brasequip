@@ -74,7 +74,7 @@ export default function Home() {
 
   return (
     <WholePage>
-      <HeaderContainer ref={headerRef}>
+      <HeaderContainer ref={headerRef} data-aos="fade-zoom-in">
         <Image>
           <ImageOverlay />
           <TextPosition>
@@ -87,11 +87,11 @@ export default function Home() {
                 lineHeight: "1",
                 maxWidth: "600px",
               }}
-              data-aos="fade-down"
+              data-aos="zoom-in"
             >
               Elevando Padrões Alcançando Alturas
             </h1>
-            <p data-aos="fade-up">
+            <p data-aos="zoom-in">
               Especialistas em elevação, a BRASEQUIP oferece venda e locação de
               equipamentos de alta performance para sua obra. Nosso compromisso
               com a segurança e eficiência é inabalável. Descubra soluções ágeis
@@ -113,7 +113,7 @@ export default function Home() {
             fontWeight: "700",
             lineHeight: "1.2",
           }}
-          data-aos="fade-up"
+          data-aos="fade-zoom-in"
         >
           CONHEÇA OS
           <br /> SERVIÇOS

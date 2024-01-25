@@ -15,7 +15,7 @@ export default function Institucional() {
       <Image />
       <ContentContainer>
         <Content>
-          <Column1>
+          <Column1 data-aos="fade-zoom-in">
             <Flag text="Quem somos" mode="light" />
             <h1>INSTITUCIONAL</h1>
             <p>
@@ -31,7 +31,7 @@ export default function Institucional() {
               segmento de equipamentos para construção.
             </p>
           </Column1>
-          <Column2>
+          <Column2 data-aos="fade-zoom-in">
             <ImagemColuna2 />
           </Column2>
         </Content>
