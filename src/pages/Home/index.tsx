@@ -87,10 +87,11 @@ export default function Home() {
                 lineHeight: "1",
                 maxWidth: "600px",
               }}
+              data-aos="fade-down"
             >
               Elevando Padrões Alcançando Alturas
             </h1>
-            <p>
+            <p data-aos="fade-up">
               Especialistas em elevação, a BRASEQUIP oferece venda e locação de
               equipamentos de alta performance para sua obra. Nosso compromisso
               com a segurança e eficiência é inabalável. Descubra soluções ágeis
@@ -112,6 +113,7 @@ export default function Home() {
             fontWeight: "700",
             lineHeight: "1.2",
           }}
+          data-aos="fade-up"
         >
           CONHEÇA OS
           <br /> SERVIÇOS
@@ -123,11 +125,13 @@ export default function Home() {
               assegurando a excelência e a segurança que construíram nossa
               reputação sólida."
             Icon={IoMdBuild}
+            fadeType="right"
           />
           <ServiceCard
             title="Manutenção preventiva e corretiva"
             description="Com foco em durabilidade e performance, nossa manutenção preventiva e corretiva previne paradas não programadas, maximizando a produtividade de sua obra."
             Icon={MdSecurity}
+            fadeType="left"
           />
         </ServicesRow>
         <ServicesRow>
@@ -135,11 +139,13 @@ export default function Home() {
             title="Reforma de equipamentos"
             description="Revitalizamos seus equipamentos com reformas detalhadas, prolongando a vida útil e otimizando o desempenho para atender às demandas do seu projeto."
             Icon={MdBrush}
+            fadeType="right"
           />
           <ServiceCard
             title="lorem ipsum dolor sit amet"
             description="lore ipsum dolor sit amet, consectetur adipiscing elit. Nullam a nunc eget odio aliquam facilisis. lore ipsum dolor sit amet, consectetur adipiscing elit."
             Icon={MdMap}
+            fadeType="left"
           />
         </ServicesRow>
 
