@@ -1,5 +1,6 @@
-import { HeaderContainer, Image, ImageOverlay, WholePage } from "../styles";
-import { Body } from "./styles";
+import Flag from "../Home/components/Flag";
+import { HeaderContainer, WholePage } from "../styles";
+import { Body, Image, TextPosition, ImageOverlay } from "./styles";
 
 export default function Servicos() {
   return (
@@ -7,6 +8,18 @@ export default function Servicos() {
       <HeaderContainer>
         <Image>
           <ImageOverlay />
+          <TextPosition>
+            <Flag text="Um pouco sobre nosso trabalho" />
+            <h1
+              style={{
+                fontSize: "60px",
+                lineHeight: "1",
+                maxWidth: "600px",
+              }}
+            >
+              Serviços
+            </h1>
+          </TextPosition>
         </Image>
       </HeaderContainer>
       <Body>
