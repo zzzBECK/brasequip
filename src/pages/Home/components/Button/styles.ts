@@ -4,7 +4,7 @@ export const ButtonStyle = styled.button`
   display: flex;
   width: 12rem;
   height: 4rem;
-  background-color: #a72232;
+  background-color: #c71e23;
   border: none;
   font-size: 1rem;
   cursor: pointer;

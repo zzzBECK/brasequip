@@ -4,28 +4,8 @@ export const Body = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 30em;
+  min-height: 30em;
   background-color: #fff;
-  padding: 0 18vw;
-
-  justify-content: center;
-  align-items: center;
-
-  @media (max-width: 1280px) {
-    padding: 0 10vw;
-  }
-
-  @media (max-width: 768px) {
-    padding: 0 8vw;
-  }
-
-  @media (max-width: 480px) {
-    padding: 0 4vw;
-  }
-
-  @media (max-width: 340px) {
-    padding: 0;
-  }
 `;
 
 export const Image = styled.div`
@@ -101,4 +81,46 @@ export const ImageOverlay = styled.div`
       rgba(0, 0, 0, 0) 100%
     ); // Gradient effect
   }
+`;
+
+export const VisaoGeralContent = styled.div`
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding: 10em 0;
+  gap: 6em;
+`;
+
+export const VisaoGeralContainer = styled.div`
+  display: flex;
+  width: 100%;
+  height: 50em;
+`;
+
+export const VisaoGeralImage = styled.div`
+  display: flex;
+  width: 40%;
+  height: 100%;
+
+  background-image: url("elevadores.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: 20%;
+`;
+
+export const VisaoGeralText = styled.div`
+  display: flex;
+  width: 60%;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #000;
+  text-align: justify;
+`;
+
+export const TextContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1.2em;
 `;

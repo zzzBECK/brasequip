@@ -12,5 +12,5 @@ export const LeftColor = styled.div`
   display: flex;
   min-width: 0.4em;
   min-height: 100%;
-  background-color: #a72232;
+  background-color: #c71e23;
 `;
