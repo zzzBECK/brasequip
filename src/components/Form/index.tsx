@@ -11,7 +11,7 @@ import {
 } from "./styles";
 import Button from "../../pages/Home/components/Button";
 
-const formatPhoneNumber = (value) => {
+const formatPhoneNumber = (value: string) => {
   if (!value) return value;
 
   // Remove all non-numeric characters
@@ -27,7 +27,7 @@ const formatPhoneNumber = (value) => {
   )}-${phoneNumber.slice(7, 11)}`;
 };
 
-const validateEmail = (email) => {
+const validateEmail = (email: string) => {
   const re = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
   return re.test(email);
 };
@@ -44,7 +44,7 @@ export default function Form() {
     accessKey: "4f712f04-032e-4484-95eb-7598e2f20544",
   });
 
-  const [response, setResponse] = useState({
+  const [, setResponse] = useState({
     type: "",
     message: "",
   });
