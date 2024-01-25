@@ -1,6 +1,7 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { IoMdBuild } from "react-icons/io";
 import { MdBrush, MdMap, MdSecurity } from "react-icons/md";
+import Form from "../../components/Form";
 import {
   HeaderContainer,
   Image,
@@ -10,7 +11,6 @@ import {
 } from "../styles";
 import Button from "./components/Button";
 import Flag from "./components/Flag";
-import Form from "../../components/Form";
 import Institucional from "./components/Institucional";
 import ServiceCard from "./components/ServiceCard";
 import { ServicesContainer, ServicesRow } from "./styles";
@@ -38,9 +38,43 @@ export default function Home() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  const headerRef = useRef(null);
+
+  const scrollToContent = (headerRef: React.RefObject<HTMLDivElement>) => {
+    if (!headerRef.current) return;
+
+    const targetPosition = headerRef.current.offsetHeight;
+    const startPosition = window.pageYOffset;
+    const distance = targetPosition - startPosition;
+    const startTime =
+      "now" in window.performance ? performance.now() : new Date().getTime();
+
+    const easeInOutQuad = (
+      time: number,
+      start: number,
+      distance: number,
+      duration: number
+    ) => {
+      time /= duration / 2;
+      if (time < 1) return (distance / 2) * time * time + start;
+      time--;
+      return (-distance / 2) * (time * (time - 2) - 1) + start;
+    };
+
+    const animation = (currentTime: number) => {
+      const timeElapsed = currentTime - startTime;
+      const run = easeInOutQuad(timeElapsed, startPosition, distance, 500);
+      window.scrollTo(0, run);
+
+      if (timeElapsed < 500) requestAnimationFrame(animation);
+    };
+
+    requestAnimationFrame(animation);
+  };
+
   return (
     <WholePage>
-      <HeaderContainer>
+      <HeaderContainer ref={headerRef}>
         <Image>
           <ImageOverlay />
           <TextPosition>
@@ -62,7 +96,10 @@ export default function Home() {
               com a segurança e eficiência é inabalável. Descubra soluções ágeis
               para guindastes, mini-gruas e muito mais.
             </p>
-            <Button text="Ver mais" />
+            <Button
+              text="Ver mais"
+              onClick={() => scrollToContent(headerRef)}
+            />
           </TextPosition>
         </Image>
       </HeaderContainer>
@@ -113,7 +150,11 @@ export default function Home() {
             margin: "2em 0",
           }}
         >
-          <Button text="Ver mais" />
+          <Button
+            text="Ver mais"
+            linkTo="/brasequip/servicos"
+            onClick={() => window.scrollTo(0, 0)}
+          />
         </div>
       </ServicesContainer>
       <Form />
