@@ -4,6 +4,8 @@ export const ButtonStyle = styled.button`
   display: flex;
   width: 12rem;
   height: 4rem;
+  min-height: 64px;
+  min-width: 192px;
   background-color: #c71e23;
   border: none;
   font-size: 1rem;

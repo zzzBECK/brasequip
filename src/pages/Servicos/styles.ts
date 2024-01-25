@@ -1,13 +1,5 @@
 import styled from "styled-components";
 
-export const Body = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  min-height: 30em;
-  background-color: #fff;
-`;
-
 export const Image = styled.div`
   display: flex;
   width: 100%;
@@ -89,33 +81,73 @@ export const VisaoGeralContent = styled.div`
   height: 100%;
   padding: 10em 0;
   gap: 6em;
+
+  align-items: center;
+
+  @media (max-width: 1100px) {
+    flex-direction: column;
+  }
+
+  @media (max-width: 768px) {
+    padding: 6em 0;
+  }
 `;
 
 export const VisaoGeralContainer = styled.div`
   display: flex;
   width: 100%;
-  height: 50em;
+  min-height: 55em;
+  background-color: #fff;
 `;
 
 export const VisaoGeralImage = styled.div`
   display: flex;
   width: 40%;
   height: 100%;
+  min-height: 30em;
 
   background-image: url("elevadores.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position-y: 20%;
+
+  @media (max-width: 1100px) {
+    width: 80%;
+    min-height: 24em;
+    background-position-y: 30%;
+  }
+
+  @media (max-width: 620px) {
+    min-height: 18em;
+  }
 `;
 
 export const VisaoGeralText = styled.div`
   display: flex;
   width: 60%;
   height: 100%;
+  min-height: 30em;
   flex-direction: column;
   justify-content: space-between;
   color: #000;
   text-align: justify;
+
+  @media (max-width: 1100px) {
+    width: 100%;
+    min-height: 24em;
+  }
+
+  @media (max-width: 900px) {
+    min-height: 28em;
+  }
+
+  @media (max-width: 620px) {
+    min-height: 34em;
+  }
+
+  @media (max-width: 500px) {
+    min-height: 38em;
+  }
 `;
 
 export const TextContent = styled.div`
