@@ -38,6 +38,17 @@
   }
 }
 
-.padding-services {
-  padding: 0 8vw;
+.crossfade-enter {
+  opacity: 0;
+}
+.crossfade-enter-active {
+  opacity: 1;
+  transition: opacity 300ms ease-in;
+}
+.crossfade-exit {
+  opacity: 1;
+}
+.crossfade-exit-active {
+  opacity: 0;
+  transition: opacity 300ms ease-in;
 }
