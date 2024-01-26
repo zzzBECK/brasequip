@@ -91,7 +91,7 @@ export default function Home() {
             >
               Elevando Padrões Alcançando Alturas
             </h1>
-            <p data-aos="zoom-in">
+            <p data-aos="zoom-in" data-aos-offset="-100">
               Especialistas em elevação, a BRASEQUIP oferece venda e locação de
               equipamentos de alta performance para sua obra. Nosso compromisso
               com a segurança e eficiência é inabalável. Descubra soluções ágeis
