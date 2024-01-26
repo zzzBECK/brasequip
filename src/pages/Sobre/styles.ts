@@ -8,6 +8,9 @@ export const SobreContainer = styled.div`
   min-height: 42em;
   background-color: ${theme.colors.white};
   color: ${theme.colors.black};
+  text-align: justify;
+  padding-top: 6em;
+  gap: 0.6em;
 `;
 
 export const TextPosition = styled.div`
