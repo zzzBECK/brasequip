@@ -1,5 +1,6 @@
-import { HeaderContainer, Image, ImageOverlay, WholePage } from "../styles";
-import { Body } from "./styles";
+import Flag from "../Home/components/Flag";
+import { HeaderContainer, WholePage } from "../styles";
+import { ImageOverlay, SobreContainer, TextPosition, Image } from "./styles";
 
 export default function Sobre() {
   return (
@@ -7,11 +8,22 @@ export default function Sobre() {
       <HeaderContainer>
         <Image>
           <ImageOverlay />
+          <TextPosition>
+            <Flag text="Saiba mais sobre nossa empresa" />
+            <h1
+              style={{
+                fontSize: "60px",
+                lineHeight: "1",
+                maxWidth: "600px",
+              }}
+            >
+              Sobre Nós
+            </h1>
+          </TextPosition>
         </Image>
       </HeaderContainer>
-      <Body>
-        <h1 style={{ color: "black" }}>Nada a exibir!</h1>
-      </Body>
+
+      <SobreContainer></SobreContainer>
     </WholePage>
   );
 }
