@@ -5,15 +5,17 @@ interface IServiceCard {
   title: string;
   description: string;
   Icon: IconType;
+  fadeType: "left" | "right";
 }
 
 export default function ServiceCard({
   title,
   description,
   Icon,
+  fadeType,
 }: IServiceCard) {
   return (
-    <Service>
+    <Service data-aos={`fade-${fadeType}`}>
       <Icon
         style={{
           color: "black",

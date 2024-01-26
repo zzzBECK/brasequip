@@ -140,7 +140,7 @@ export default function Form() {
   return (
     <FormContainer>
       <Column1>
-        <TitleContainer>
+        <TitleContainer data-aos="fade-zoom-in">
           <Flag text="Contato" />
           <h1 style={{ lineHeight: "1" }}>
             Solicite uma
@@ -154,6 +154,7 @@ export default function Form() {
           action="https://api.staticforms.xyz/submit"
           method="post"
           onSubmit={handleSubmit}
+          data-aos="fade-zoom-in"
         >
           <div style={{ display: "flex", gap: "4%" }}>
             <div style={{ width: "50%" }}>
