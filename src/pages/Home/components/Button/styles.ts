@@ -20,5 +20,13 @@ export const ButtonStyle = styled.button`
     opacity: 0.8;
     cursor: not-allowed; // Change cursor to indicate it's not clickable
     background-color: darkgray;
+
+    &:hover {
+      background-color: darkgray;
+    }
+  }
+
+  &:hover {
+    background-color: #b21b20;
   }
 `;
