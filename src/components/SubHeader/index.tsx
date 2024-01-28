@@ -4,7 +4,7 @@ import { Column, SubHeaderItem } from "./styles";
 export default function SubHeader() {
   return (
     <>
-      <Column width="100%">
+      <Column width="fit-content">
         <SubHeaderItem borderRight="true" borderHeight="30%">
           <NavLink
             to="/brasequip/"

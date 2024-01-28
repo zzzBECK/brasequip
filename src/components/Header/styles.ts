@@ -95,6 +95,7 @@ export const Image = styled.img`
   object-fit: cover;
   border-radius: 50%;
   scale: 1.4;
+  user-select: none;
 `;
 
 export const ItemContainer = styled.div`
