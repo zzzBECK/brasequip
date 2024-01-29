@@ -22,8 +22,8 @@ export default function Header() {
   const windowSize = useRef([window.innerWidth, window.innerHeight]);
 
   return (
-    <WholeHeader>
-      <ContainerHeader>
+    <WholeHeader >
+      <ContainerHeader className="padding">
         <Column width="16%" justifyContent="flex-start">
           <ImageContainer>
             <NavLink
@@ -80,7 +80,7 @@ export default function Header() {
           </ItemContainer>
         </Column>
       </ContainerHeader>
-      <ContainerSubHeader>
+      <ContainerSubHeader className="padding">
         <SubHeader />
       </ContainerSubHeader>
     </WholeHeader>

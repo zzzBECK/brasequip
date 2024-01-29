@@ -52,3 +52,9 @@
   opacity: 0;
   transition: opacity 300ms ease-in;
 }
+
+.icon:hover {
+  cursor: pointer;
+  color: #091242;
+  transition: color 300ms ease-in-out;
+}

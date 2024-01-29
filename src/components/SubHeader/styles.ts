@@ -4,6 +4,13 @@ interface IColumn {
   width: string;
 }
 
+export const SubHeaderContainer = styled.div`
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+`;
+
 export const Column = styled.div<IColumn>`
   display: flex;
   width: ${({ width }) => width};
@@ -48,4 +55,12 @@ export const SubHeaderItem = styled.div<ISubHeaderItem>`
     display: ${({ borderRight }) =>
       borderRight === "true" ? "block" : "none"};
   }
+`;
+
+export const IconsContainer = styled.div`
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  gap: 1em;
 `;

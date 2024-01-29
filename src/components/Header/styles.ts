@@ -16,50 +16,14 @@ export const ContainerHeader = styled.div`
   width: 100%;
   height: 70%;
   background-color: ${theme.colors.darkBlue};
-  padding: 0 18vw;
   justify-content: space-between;
-
-  @media (max-width: 1280px) {
-    padding: 0 10vw;
-  }
-
-  @media (max-width: 768px) {
-    padding: 0 8vw;
-  }
-
-  @media (max-width: 480px) {
-    padding: 0 4vw;
-    padding-left: 6vw;
-  }
-
-  @media (max-width: 340px) {
-    padding: 0;
-    padding-left: 6vw;
-  }
 `;
 
 export const ContainerSubHeader = styled.div`
   display: flex;
   width: 100%;
   height: 30%;
-  padding: 0 18vw;
   background-color: rgba(9, 18, 66, 0.1);
-
-  @media (max-width: 1280px) {
-    padding: 0 10vw;
-  }
-
-  @media (max-width: 768px) {
-    padding: 0 8vw;
-  }
-
-  @media (max-width: 480px) {
-    padding: 0 4vw;
-  }
-
-  @media (max-width: 340px) {
-    padding: 0;
-  }
 `;
 
 interface IColumn {
@@ -102,7 +66,7 @@ export const ItemContainer = styled.div`
   display: flex;
   width: 33.33%;
   height: 100%;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   gap: 4%;
   padding-right: 12px;

@@ -1,9 +1,11 @@
+import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { MdDarkMode } from "react-icons/md";
 import { NavLink } from "react-router-dom";
-import { Column, SubHeaderItem } from "./styles";
+import { Column, IconsContainer, SubHeaderContainer, SubHeaderItem } from "./styles";
 
 export default function SubHeader() {
   return (
-    <>
+    <SubHeaderContainer>
       <Column width="fit-content">
         <SubHeaderItem borderRight="true" borderHeight="30%">
           <NavLink
@@ -72,6 +74,24 @@ export default function SubHeader() {
           </NavLink>
         </SubHeaderItem>
       </Column>
-    </>
+      <Column width="fit-content">
+        <IconsContainer>
+          <FaInstagram
+            size="1.4em"
+            className="icon"
+            onClick={() => window.open("https://www.instagram.com", "_blank")}
+          />
+          <FaFacebook size="1.4em"
+            className="icon"
+            onClick={() => window.open("https://www.instagram.com", "_blank")}
+          />
+          <FaLinkedin size="1.4em"
+            className="icon"
+            onClick={() => window.open("https://www.instagram.com", "_blank")}
+          />
+          <MdDarkMode size="1.6em" className="icon" />
+        </IconsContainer>
+      </Column>
+    </SubHeaderContainer>
   );
 }
