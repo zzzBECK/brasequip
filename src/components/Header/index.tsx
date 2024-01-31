@@ -16,16 +16,29 @@ import {
 import { useRef } from "react";
 import Logo from "../../assets/RASTER_LOGO.png";
 import SubHeader from "../SubHeader";
+import { NavLink } from "react-router-dom";
 
 export default function Header() {
   const windowSize = useRef([window.innerWidth, window.innerHeight]);
 
   return (
-    <WholeHeader>
-      <ContainerHeader>
+    <WholeHeader >
+      <ContainerHeader className="padding">
         <Column width="16%" justifyContent="flex-start">
           <ImageContainer>
-            <Image src={Logo} />
+            <NavLink
+              to="/brasequip/"
+              end
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                height: "100%",
+                width: "100%",
+              }}
+            >
+              <Image src={Logo} />
+            </NavLink>
           </ImageContainer>
         </Column>
         <Column width="80%">
@@ -67,7 +80,7 @@ export default function Header() {
           </ItemContainer>
         </Column>
       </ContainerHeader>
-      <ContainerSubHeader>
+      <ContainerSubHeader className="padding">
         <SubHeader />
       </ContainerSubHeader>
     </WholeHeader>

@@ -4,13 +4,19 @@ interface IColumn {
   width: string;
 }
 
+export const SubHeaderContainer = styled.div`
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+`;
+
 export const Column = styled.div<IColumn>`
   display: flex;
   width: ${({ width }) => width};
   height: 100%;
   align-items: center;
   min-width: 120px;
-  justify-content: space-between;
 `;
 
 interface ISubHeaderItem {
@@ -20,12 +26,16 @@ interface ISubHeaderItem {
 
 export const SubHeaderItem = styled.div<ISubHeaderItem>`
   display: flex;
-  width: 25%;
+  width: 10em;
   height: 100%;
   justify-content: center;
   align-items: center;
   user-select: none;
   position: relative; // Needed for absolute positioning of the pseudo-element
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 
   &::after {
     content: "";
@@ -45,4 +55,12 @@ export const SubHeaderItem = styled.div<ISubHeaderItem>`
     display: ${({ borderRight }) =>
       borderRight === "true" ? "block" : "none"};
   }
+`;
+
+export const IconsContainer = styled.div`
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  gap: 1em;
 `;

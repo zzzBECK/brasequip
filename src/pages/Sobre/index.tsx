@@ -22,7 +22,6 @@ export default function Sobre() {
           </TextPosition>
         </Image>
       </HeaderContainer>
-
       <SobreContainer className="padding">
         <h1>Quem somos nós</h1>
         <p>

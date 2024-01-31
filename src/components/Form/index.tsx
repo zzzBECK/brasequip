@@ -131,7 +131,7 @@ export default function Form() {
   const canSubmit = useMemo(() => {
     return (
       contact?.name?.length < 3 ||
-      !contact?.email ||
+      !validateEmail(contact.email) ||
       contact?.phone?.length < 15 ||
       contact?.message?.length < 10
     );
