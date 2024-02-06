@@ -1,21 +1,28 @@
 import styled from "styled-components";
 import theme from "../../theme/theme";
 
-export const WholeHeader = styled.div`
+interface IWholeHeader {
+  isScrolled: boolean;
+}
+
+export const WholeHeader = styled.div<IWholeHeader>`
   display: flex;
   width: 100vw;
   max-width: 100%;
-  height: 12em;
+  height: ${({ isScrolled }) => (isScrolled ? "4em" : "6em")};
   flex-direction: column;
-  position: absolute;
-  z-index: 4;
+  z-index: 100;
+  background-color: ${({ isScrolled }) =>
+    isScrolled ? "rgba(9, 18, 66, 1)" : "rgba(9, 18, 66, 0.1)"};
+  position: ${({ isScrolled }) => (isScrolled ? "fixed" : "absolute")};
+
+  transition: background-color 0.4s ease-in-out;
 `;
 
 export const ContainerHeader = styled.div`
   display: flex;
   width: 100%;
-  height: 70%;
-  background-color: ${theme.colors.darkBlue};
+  height: 100%;
   justify-content: space-between;
 `;
 
@@ -48,7 +55,7 @@ export const ImageContainer = styled.div`
   height: 90%;
   width: auto;
   border-radius: 50%;
-  background-color: ${theme.colors.blue};
+  /* background-color: ${theme.colors.blue}; */
   cursor: pointer;
   user-select: none;
 `;
@@ -58,7 +65,7 @@ export const Image = styled.img`
   height: 100%;
   object-fit: cover;
   border-radius: 50%;
-  scale: 1.4;
+  scale: 2.5;
   user-select: none;
 `;
 
@@ -79,15 +86,16 @@ export const ItemContainer = styled.div`
 export const IconContainer = styled.div`
   display: flex;
   min-width: 50px;
-  max-width: 72px;
+  /* max-width: 72px; */
   min-height: 50px;
-  max-height: 72px;
-  width: 5vw;
-  height: 5vw;
+  /* max-height: 72px; */
+  width: 4vw;
+  height: 4vw;
   justify-content: center;
   align-items: center;
   user-select: none;
-  background-color: ${theme.colors.blue};
+  /* background-color: ${theme.colors.blue}; */
+  border: 2px solid #ff2222;
   border-radius: 50%;
 `;
 

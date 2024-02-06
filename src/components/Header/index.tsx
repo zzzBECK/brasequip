@@ -1,28 +1,37 @@
-import { CiMail } from "react-icons/ci";
-import { PiPhoneThin } from "react-icons/pi";
-import { SlClock } from "react-icons/sl";
+import { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
+import Logo from "../../assets/RASTER_LOGO.png";
+import SubHeader from "../SubHeader";
 import {
   Column,
   ContainerHeader,
-  ContainerSubHeader,
-  IconContainer,
   Image,
   ImageContainer,
-  ItemContainer,
-  ItemContent,
   WholeHeader,
 } from "./styles";
 
-import { useRef } from "react";
-import Logo from "../../assets/RASTER_LOGO.png";
-import SubHeader from "../SubHeader";
-import { NavLink } from "react-router-dom";
-
 export default function Header() {
-  const windowSize = useRef([window.innerWidth, window.innerHeight]);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const isScrolled = window.scrollY > 500;
+      setIsScrolled(isScrolled);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
 
   return (
-    <WholeHeader >
+    <WholeHeader isScrolled={isScrolled}>
       <ContainerHeader className="padding">
         <Column width="16%" justifyContent="flex-start">
           <ImageContainer>
@@ -36,53 +45,16 @@ export default function Header() {
                 height: "100%",
                 width: "100%",
               }}
+              onClick={() => scrollToTop()}
             >
               <Image src={Logo} />
             </NavLink>
           </ImageContainer>
         </Column>
         <Column width="80%">
-          <ItemContainer>
-            <IconContainer>
-              <SlClock color={"red"} size={"35%"} />
-            </IconContainer>
-
-            {windowSize.current[0] > 1200 && (
-              <ItemContent>
-                <p style={{ userSelect: "none" }}>Horário</p>
-                <p>Seg - Sex 9:00 às 18:00</p>
-              </ItemContent>
-            )}
-          </ItemContainer>
-
-          <ItemContainer>
-            <IconContainer>
-              <CiMail color={"red"} size={"45%"} />
-            </IconContainer>
-            {windowSize.current[0] > 1200 && (
-              <ItemContent>
-                <p style={{ userSelect: "none" }}>Email</p>
-                <p>contato@brasequip.com.br</p>
-              </ItemContent>
-            )}
-          </ItemContainer>
-
-          <ItemContainer>
-            <IconContainer>
-              <PiPhoneThin color={"red"} size={"50%"} />
-            </IconContainer>
-            {windowSize.current[0] > 1200 && (
-              <ItemContent>
-                <p style={{ userSelect: "none" }}>Ligue para gente</p>
-                <p>(61) 98175-0559</p>
-              </ItemContent>
-            )}
-          </ItemContainer>
+          <SubHeader />
         </Column>
       </ContainerHeader>
-      <ContainerSubHeader className="padding">
-        <SubHeader />
-      </ContainerSubHeader>
     </WholeHeader>
   );
 }
