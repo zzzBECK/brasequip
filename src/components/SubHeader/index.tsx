@@ -1,9 +1,21 @@
 import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { MdDarkMode } from "react-icons/md";
 import { NavLink } from "react-router-dom";
-import { Column, IconsContainer, SubHeaderContainer, SubHeaderItem } from "./styles";
+import {
+  Column,
+  IconsContainer,
+  SubHeaderContainer,
+  SubHeaderItem,
+} from "./styles";
 
 export default function SubHeader() {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "auto",
+    });
+  };
+
   return (
     <SubHeaderContainer>
       <Column width="fit-content">
@@ -20,6 +32,7 @@ export default function SubHeader() {
               color: "white",
               transition: "border-bottom 0.4s ease-in-out",
             })}
+            onClick={() => scrollToTop()}
           >
             Página inicial
           </NavLink>
@@ -28,6 +41,7 @@ export default function SubHeader() {
         <SubHeaderItem borderRight="true" borderHeight="30%">
           <NavLink
             to="/brasequip/sobre"
+            end
             style={({ isActive }) => ({
               borderBottom: isActive ? "1px solid white" : "none",
               height: "100%",
@@ -37,6 +51,7 @@ export default function SubHeader() {
               color: "white",
               transition: "border-bottom 0.4s ease-in-out",
             })}
+            onClick={() => scrollToTop()}
           >
             Sobre nós
           </NavLink>
@@ -44,6 +59,7 @@ export default function SubHeader() {
         <SubHeaderItem borderRight={"true"} borderHeight="30%">
           <NavLink
             to="/brasequip/servicos"
+            end
             style={({ isActive }) => ({
               borderBottom: isActive ? "1px solid white" : "none",
               height: "100%",
@@ -53,6 +69,7 @@ export default function SubHeader() {
               color: "white",
               transition: "border-bottom 0.4s ease-in-out",
             })}
+            onClick={() => scrollToTop()}
           >
             Serviços
           </NavLink>
@@ -60,6 +77,7 @@ export default function SubHeader() {
         <SubHeaderItem borderRight={"false"} borderHeight="30%">
           <NavLink
             to="/brasequip/contato"
+            end
             style={({ isActive }) => ({
               borderBottom: isActive ? "1px solid white" : "none",
               height: "100%",
@@ -69,6 +87,7 @@ export default function SubHeader() {
               color: "white",
               transition: "border-bottom 0.4s ease-in-out",
             })}
+            onClick={() => scrollToTop()}
           >
             Contato
           </NavLink>
@@ -81,11 +100,13 @@ export default function SubHeader() {
             className="icon"
             onClick={() => window.open("https://www.instagram.com", "_blank")}
           />
-          <FaFacebook size="1.4em"
+          <FaFacebook
+            size="1.4em"
             className="icon"
             onClick={() => window.open("https://www.instagram.com", "_blank")}
           />
-          <FaLinkedin size="1.4em"
+          <FaLinkedin
+            size="1.4em"
             className="icon"
             onClick={() => window.open("https://www.instagram.com", "_blank")}
           />
