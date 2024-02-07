@@ -5,11 +5,11 @@ export const SobreContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  min-height: 42em;
   background-color: ${theme.colors.white};
   color: ${theme.colors.black};
   text-align: justify;
   padding-top: 6em;
+  padding-bottom: 6em;
   gap: 0.6em;
 `;
 
