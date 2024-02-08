@@ -15,7 +15,7 @@ export default function ServiceCard({
   fadeType,
 }: IServiceCard) {
   return (
-    <Service data-aos={`fade-${fadeType}`}>
+    <Service data-aos={`fade-${fadeType}`} data-aos-duration="1000">
       <Icon
         style={{
           color: "black",

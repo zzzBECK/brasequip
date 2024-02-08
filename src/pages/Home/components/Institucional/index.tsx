@@ -15,7 +15,7 @@ export default function Institucional() {
       <Image />
       <ContentContainer>
         <Content>
-          <Column1 data-aos="fade-zoom-in">
+          <Column1 data-aos="fade-zoom-in" data-aos-duration="800">
             <Flag text="Quem somos" mode="light" />
             <h1>INSTITUCIONAL</h1>
             <p>
