@@ -1,4 +1,5 @@
-import { useMemo, useState } from "react";
+import { useState } from "react";
+import Button from "../../pages/Home/components/Button";
 import Flag from "../../pages/Home/components/Flag";
 import {
   ButtonContainer,
@@ -9,7 +10,7 @@ import {
   TextArea,
   TitleContainer,
 } from "./styles";
-import Button from "../../pages/Home/components/Button";
+import { Modal } from "./components/Modal";
 
 const formatPhoneNumber = (value: string) => {
   if (!value) return value;
@@ -44,8 +45,17 @@ export default function Form() {
     accessKey: "4f712f04-032e-4484-95eb-7598e2f20544",
   });
 
+  const [showSuccessModal, setShowSuccessModal] = useState(false);
+
   const [, setResponse] = useState({
     type: "",
+    message: "",
+  });
+
+  const [errors, setErrors] = useState({
+    name: "",
+    email: "",
+    phone: "",
     message: "",
   });
 
@@ -58,6 +68,7 @@ export default function Form() {
     } else {
       setContact({ ...contact, [e.target.name]: e.target.value });
     }
+    setErrors({ ...errors, [e.target.name]: "" });
   };
 
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
@@ -65,27 +76,28 @@ export default function Form() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Check for empty fields
-    if (
-      contact?.name?.length < 3 ||
-      !contact.email ||
-      contact?.phone?.length < 15 ||
-      contact?.message?.length < 10
-    ) {
-      setResponse({
-        type: "error",
-        message: "Please fill in all fields.",
-      });
-      return;
+    e.preventDefault();
+    const newErrors = { name: "", email: "", phone: "", message: "" };
+
+    // Validação de campos individuais com mensagens de erro específicas
+    if (contact.name.length < 3) {
+      newErrors.name = "O nome deve ter pelo menos 3 caracteres.";
+    }
+    if (!validateEmail(contact.email)) {
+      newErrors.email = "Por favor, insira um endereço de e-mail válido.";
+    }
+    if (contact.phone.length < 15) {
+      newErrors.phone = "Por favor, insira um número de telefone válido.";
+    }
+    if (contact.message.length < 10) {
+      newErrors.message = "A mensagem deve ter pelo menos 10 caracteres.";
     }
 
-    // Validate email
-    if (!validateEmail(contact.email)) {
-      setResponse({
-        type: "error",
-        message: "Please enter a valid email address.",
-      });
-      return;
+    setErrors(newErrors);
+
+    // Verifique se há algum erro antes de enviar
+    if (Object.values(newErrors).some((error) => error !== "")) {
+      return; // Interrompe a submissão se houver erros
     }
 
     try {
@@ -102,6 +114,8 @@ export default function Form() {
           type: "success",
           message: "Thank you for reaching out to us.",
         });
+
+        setShowSuccessModal(true);
 
         setContact({
           name: "",
@@ -127,15 +141,6 @@ export default function Form() {
       });
     }
   };
-
-  const canSubmit = useMemo(() => {
-    return (
-      contact?.name?.length < 3 ||
-      !validateEmail(contact.email) ||
-      contact?.phone?.length < 15 ||
-      contact?.message?.length < 10
-    );
-  }, [contact]);
 
   return (
     <FormContainer>
@@ -168,6 +173,9 @@ export default function Form() {
                   onChange={handleChange}
                   required
                 />
+                <div style={{ fontSize: "0.8rem", color: "red" }}>
+                  {errors.name}
+                </div>
               </div>
             </div>
             <div style={{ width: "50%" }}>
@@ -176,11 +184,14 @@ export default function Form() {
                 <Input
                   type="tel"
                   placeholder="Telefone"
-                  value={contact.phone} // updated to use phone field
-                  name="phone" // updated to use phone field
+                  value={contact.phone}
+                  name="phone"
                   onChange={handleChange}
                   required
                 />
+                <div style={{ fontSize: "0.8rem", color: "red" }}>
+                  {errors.phone}
+                </div>
               </div>
             </div>
           </div>
@@ -194,19 +205,11 @@ export default function Form() {
               onChange={handleChange}
               required
             />
-          </div>
-          <div style={{ display: "none" }}>
-            <label>Title</label>
-            <div>
-              <input
-                type="text"
-                name="honeypot"
-                style={{ display: "none" }}
-                onChange={handleChange}
-              />
-              <input type="hidden" name="subject" onChange={handleChange} />
+            <div style={{ fontSize: "0.8rem", color: "red" }}>
+              {errors.email}
             </div>
           </div>
+          {/* Remova a exibição de erro do campo honeypot e subject pois eles são ocultos e não precisam de validação visual */}
           <div>
             <label>Descrição</label>
             <div>
@@ -217,6 +220,9 @@ export default function Form() {
                 onChange={handleChange}
                 required
               />
+              <div style={{ fontSize: "0.8rem", color: "red" }}>
+                {errors.message}
+              </div>
             </div>
           </div>
           <div>
@@ -224,13 +230,16 @@ export default function Form() {
               <Button
                 type="submit"
                 text="Enviar Pedido"
-                onClick={handleSubmit}
-                disabled={canSubmit}
+                // Removido onClick={handleSubmit}
               />
             </ButtonContainer>
           </div>
         </form>
       </Column2>
+      <Modal
+        isOpen={showSuccessModal}
+        onClose={() => setShowSuccessModal(false)}
+      />
     </FormContainer>
   );
 }
