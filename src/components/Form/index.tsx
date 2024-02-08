@@ -145,7 +145,7 @@ export default function Form() {
   return (
     <FormContainer>
       <Column1>
-        <TitleContainer data-aos="fade-zoom-in">
+        <TitleContainer data-aos="fade-zoom-in" data-aos-duration="800">
           <Flag text="Contato" />
           <h1 style={{ lineHeight: "1" }}>
             Solicite uma
@@ -160,6 +160,7 @@ export default function Form() {
           method="post"
           onSubmit={handleSubmit}
           data-aos="fade-zoom-in"
+          data-aos-duration="800"
         >
           <div style={{ display: "flex", gap: "4%" }}>
             <div style={{ width: "50%" }}>
