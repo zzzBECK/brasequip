@@ -79,7 +79,7 @@ export default function Home() {
           <ImageOverlay />
           <TextPosition>
             {isThereFlag && (
-              <Flag text="Brasequip - Venda e locação de equipamentos" />
+              <Flag text={"Brasequip - Máquinas e equipamentos de elevação"} />
             )}
             <h1
               style={{
