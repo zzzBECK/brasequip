@@ -7,6 +7,7 @@ import {
   SubHeaderContainer,
   SubHeaderItem,
 } from "./styles";
+import { IoIosArrowDown } from "react-icons/io";
 
 export default function SubHeader() {
   const scrollToTop = () => {
@@ -31,6 +32,7 @@ export default function SubHeader() {
               textDecoration: "none",
               color: "white",
               transition: "border-bottom 0.4s ease-in-out",
+              fontSize: "clamp(0.7rem, 0.8vw, 1rem)",
             })}
             onClick={() => scrollToTop()}
           >
@@ -50,6 +52,7 @@ export default function SubHeader() {
               textDecoration: "none",
               color: "white",
               transition: "border-bottom 0.4s ease-in-out",
+              fontSize: "clamp(0.7rem, 0.8vw, 1rem)",
             })}
             onClick={() => scrollToTop()}
           >
@@ -68,6 +71,8 @@ export default function SubHeader() {
               textDecoration: "none",
               color: "white",
               transition: "border-bottom 0.4s ease-in-out",
+              fontSize: "clamp(0.7rem, 1.2vw, 1rem)",
+              wordBreak: "break-word",
             })}
             onClick={() => scrollToTop()}
           >
@@ -86,12 +91,17 @@ export default function SubHeader() {
               textDecoration: "none",
               color: "white",
               transition: "border-bottom 0.4s ease-in-out",
+              fontSize: "clamp(0.7rem, 0.8vw, 1rem)",
             })}
             onClick={() => scrollToTop()}
           >
             Contato
           </NavLink>
         </SubHeaderItem>
+        <IoIosArrowDown
+          size="1.2em"
+          style={{ cursor: "pointer", minWidth: "1em" }}
+        />
       </Column>
       <Column width="fit-content">
         <IconsContainer>

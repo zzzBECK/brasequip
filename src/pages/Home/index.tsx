@@ -157,7 +157,7 @@ export default function Home() {
           }}
         >
           <Button
-            text="Ver mais"
+            text="Ver todos"
             linkTo="/brasequip/servicos"
             onClick={() => window.scrollTo(0, 0)}
           />

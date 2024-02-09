@@ -9,18 +9,35 @@ import {
   ImageContainer,
   WholeHeader,
 } from "./styles";
+import SubHeaderMobile from "../SubHeaderMobile";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
 
+  const [windowSize, setWindowSize] = useState({
+    width: window.innerWidth,
+    height: window.innerHeight,
+  });
+
   useEffect(() => {
     const handleScroll = () => {
-      const isScrolled = window.scrollY > 500;
-      setIsScrolled(isScrolled);
+      setIsScrolled(window.scrollY > 500);
+    };
+
+    const handleResize = () => {
+      setWindowSize({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
     };
 
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
 
   const scrollToTop = () => {
@@ -52,7 +69,11 @@ export default function Header() {
           </ImageContainer>
         </Column>
         <Column width="80%">
-          <SubHeader />
+          {windowSize.width > 800 ? (
+            <SubHeader />
+          ) : (
+            <SubHeaderMobile height={isScrolled ? "4em" : "6em"} />
+          )}
         </Column>
       </ContainerHeader>
     </WholeHeader>
