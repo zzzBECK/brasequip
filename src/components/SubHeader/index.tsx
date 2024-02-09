@@ -1,4 +1,5 @@
-import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaFacebook, FaInstagram } from "react-icons/fa";
+import { IoIosArrowDown } from "react-icons/io";
 import { MdDarkMode } from "react-icons/md";
 import { NavLink } from "react-router-dom";
 import {
@@ -7,7 +8,6 @@ import {
   SubHeaderContainer,
   SubHeaderItem,
 } from "./styles";
-import { IoIosArrowDown } from "react-icons/io";
 
 export default function SubHeader() {
   const scrollToTop = () => {
@@ -40,25 +40,6 @@ export default function SubHeader() {
           </NavLink>
         </SubHeaderItem>
 
-        <SubHeaderItem borderRight="true" borderHeight="30%">
-          <NavLink
-            to="/brasequip/sobre"
-            end
-            style={({ isActive }) => ({
-              borderBottom: isActive ? "1px solid white" : "none",
-              height: "100%",
-              alignItems: "center",
-              display: "flex",
-              textDecoration: "none",
-              color: "white",
-              transition: "border-bottom 0.4s ease-in-out",
-              fontSize: "clamp(0.7rem, 0.8vw, 1rem)",
-            })}
-            onClick={() => scrollToTop()}
-          >
-            Sobre nós
-          </NavLink>
-        </SubHeaderItem>
         <SubHeaderItem borderRight={"true"} borderHeight="30%">
           <NavLink
             to="/brasequip/servicos"
@@ -77,6 +58,25 @@ export default function SubHeader() {
             onClick={() => scrollToTop()}
           >
             Serviços
+          </NavLink>
+        </SubHeaderItem>
+        <SubHeaderItem borderRight="true" borderHeight="30%">
+          <NavLink
+            to="/brasequip/sobre"
+            end
+            style={({ isActive }) => ({
+              borderBottom: isActive ? "1px solid white" : "none",
+              height: "100%",
+              alignItems: "center",
+              display: "flex",
+              textDecoration: "none",
+              color: "white",
+              transition: "border-bottom 0.4s ease-in-out",
+              fontSize: "clamp(0.7rem, 0.8vw, 1rem)",
+            })}
+            onClick={() => scrollToTop()}
+          >
+            Sobre nós
           </NavLink>
         </SubHeaderItem>
         <SubHeaderItem borderRight={"false"} borderHeight="30%">
@@ -111,11 +111,6 @@ export default function SubHeader() {
             onClick={() => window.open("https://www.instagram.com", "_blank")}
           />
           <FaFacebook
-            size="1.4em"
-            className="icon"
-            onClick={() => window.open("https://www.instagram.com", "_blank")}
-          />
-          <FaLinkedin
             size="1.4em"
             className="icon"
             onClick={() => window.open("https://www.instagram.com", "_blank")}

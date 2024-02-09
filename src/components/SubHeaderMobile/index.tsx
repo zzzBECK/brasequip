@@ -1,5 +1,9 @@
-import React, { useCallback, useEffect, useState } from "react";
-import { IoMdMenu } from "react-icons/io";
+import { useCallback, useEffect, useState } from "react";
+import { FaFacebook, FaInstagram } from "react-icons/fa";
+import { IoIosArrowDown, IoMdMenu } from "react-icons/io";
+import { MdDarkMode } from "react-icons/md";
+import { NavLink } from "react-router-dom";
+import theme from "../../theme/theme";
 
 interface ISubHeaderMobile {
   height: string;
@@ -32,14 +36,23 @@ export default function SubHeaderMobile({ height }: ISubHeaderMobile) {
     };
   }, [isMenuOpen, closeMenuOnScroll]); // Dependências do useEffect
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "auto",
+    });
+
+    setIsMenuOpen(false);
+  };
+
   return (
     <div>
       <IoMdMenu size="2em" onClick={toggleMenu} style={{ cursor: "pointer" }} />
       {isMenuOpen && (
         <div
           style={{
-            position: "fixed", // Agora é fixo em relação à janela do navegador
-            top: height, // Ajuste isso para a altura do seu cabeçalho
+            position: "fixed", // Fixo em relação à janela do navegador
+            top: height, // Ajustado para a altura do cabeçalho
             left: 0,
             right: 0, // Estende da esquerda para a direita
             backgroundColor: "white",
@@ -47,40 +60,140 @@ export default function SubHeaderMobile({ height }: ISubHeaderMobile) {
             zIndex: 1,
             display: "flex",
             flexDirection: "column", // Os links são dispostos em coluna
+            maxHeight: "70vh", // Define a altura máxima para 100% da altura da viewport
+            overflowY: "auto", // Permite rolagem vertical se o conteúdo exceder a altura da viewport
           }}
         >
-          <a
-            href="#"
-            style={{
-              padding: "12px",
+          <NavLink
+            to="/brasequip/"
+            end
+            style={({ isActive }) => ({
+              height: "4em",
+              width: "100%",
+              justifyContent: "center",
+              alignItems: "center",
+              display: "flex",
               textDecoration: "none",
-              color: "black",
-              borderBottom: "1px solid #ccc", // Adiciona uma linha entre os links
+              color: "white",
+              backgroundColor: isActive
+                ? theme.colors.darkBlue
+                : theme.colors.blue,
+              transition: "border-bottom 0.4s ease-in-out",
+              fontSize: "clamp(0.8rem, 1vw, 1.2rem)",
+              borderTop: "2px solid" + theme.colors.blue,
+            })}
+            onClick={() => scrollToTop()}
+          >
+            Página Inicial
+          </NavLink>
+          <NavLink
+            to="/brasequip/servicos"
+            end
+            style={({ isActive }) => ({
+              height: "4em",
+              width: "100%",
+              justifyContent: "center",
+              alignItems: "center",
+              display: "flex",
+              textDecoration: "none",
+              color: "white",
+              backgroundColor: isActive
+                ? theme.colors.darkBlue
+                : theme.colors.blue,
+              transition: "border-bottom 0.4s ease-in-out",
+              fontSize: "clamp(0.8rem, 1vw, 1.2rem)",
+            })}
+            onClick={() => scrollToTop()}
+          >
+            Serviços
+          </NavLink>
+          <NavLink
+            to="/brasequip/sobre"
+            end
+            style={({ isActive }) => ({
+              height: "4em",
+              width: "100%",
+              justifyContent: "center",
+              alignItems: "center",
+              display: "flex",
+              textDecoration: "none",
+              color: "white",
+              backgroundColor: isActive
+                ? theme.colors.darkBlue
+                : theme.colors.blue,
+              transition: "border-bottom 0.4s ease-in-out",
+              fontSize: "clamp(0.8rem, 1vw, 1.2rem)",
+            })}
+            onClick={() => scrollToTop()}
+          >
+            Sobre nós
+          </NavLink>
+          <NavLink
+            to="/brasequip/contato"
+            end
+            style={({ isActive }) => ({
+              height: "4em",
+              width: "100%",
+              justifyContent: "center",
+              alignItems: "center",
+              display: "flex",
+              textDecoration: "none",
+              color: "white",
+              backgroundColor: isActive
+                ? theme.colors.darkBlue
+                : theme.colors.blue,
+              transition: "border-bottom 0.4s ease-in-out",
+              fontSize: "clamp(0.8rem, 1vw, 1.2rem)",
+            })}
+            onClick={() => scrollToTop()}
+          >
+            Contato
+          </NavLink>
+          <NavLink
+            to="/brasequip"
+            end
+            style={({ isActive }) => ({
+              height: "4em",
+              width: "100%",
+              justifyContent: "center",
+              alignItems: "center",
+              display: "flex",
+              textDecoration: "none",
+              color: "white",
+              gap: "0.5em",
+              backgroundColor: isActive
+                ? theme.colors.darkBlue
+                : theme.colors.blue,
+              transition: "border-bottom 0.4s ease-in-out",
+              fontSize: "clamp(0.8rem, 1vw, 1.2rem)",
+            })}
+            onClick={() => scrollToTop()}
+          >
+            Outros
+            <IoIosArrowDown />
+          </NavLink>
+          <div
+            style={{
+              display: "flex",
+              height: "4em",
+              width: "100%",
+              backgroundColor: theme.colors.blue,
+              justifyContent: "space-evenly",
+              alignItems: "center",
             }}
           >
-            Link 1
-          </a>
-          <a
-            href="#"
-            style={{
-              padding: "12px",
-              textDecoration: "none",
-              color: "black",
-              borderBottom: "1px solid #ccc",
-            }}
-          >
-            Link 2
-          </a>
-          <a
-            href="#"
-            style={{
-              padding: "12px",
-              textDecoration: "none",
-              color: "black",
-            }}
-          >
-            Link 3
-          </a>
+            <FaInstagram
+              size="1.4em"
+              className="icon"
+              onClick={() => window.open("https://www.instagram.com", "_blank")}
+            />
+            <FaFacebook
+              size="1.4em"
+              className="icon"
+              onClick={() => window.open("https://www.instagram.com", "_blank")}
+            />
+            <MdDarkMode size="1.6em" className="icon" />
+          </div>
         </div>
       )}
     </div>
