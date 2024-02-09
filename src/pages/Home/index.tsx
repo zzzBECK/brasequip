@@ -79,7 +79,7 @@ export default function Home() {
           <ImageOverlay />
           <TextPosition>
             {isThereFlag && (
-              <Flag text="Brasequip - Venda e locação de equipamentos" />
+              <Flag text={"Brasequip - Máquinas e equipamentos de elevação"} />
             )}
             <h1
               style={{
@@ -157,7 +157,7 @@ export default function Home() {
           }}
         >
           <Button
-            text="Ver mais"
+            text="Ver todos"
             linkTo="/brasequip/servicos"
             onClick={() => window.scrollTo(0, 0)}
           />

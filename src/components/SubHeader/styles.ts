@@ -9,6 +9,7 @@ export const SubHeaderContainer = styled.div`
   width: 100%;
   height: 100%;
   justify-content: space-between;
+  gap: 1em;
 `;
 
 export const Column = styled.div<IColumn>`
@@ -26,16 +27,17 @@ interface ISubHeaderItem {
 
 export const SubHeaderItem = styled.div<ISubHeaderItem>`
   display: flex;
-  width: 10em;
+  width: 8em;
   height: 100%;
   justify-content: center;
   align-items: center;
   user-select: none;
   position: relative; // Needed for absolute positioning of the pseudo-element
   text-align: center;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  /* text-overflow: ellipsis; */
+  /* white-space: nowrap; */
   overflow: hidden;
+  padding: 0 1em;
 
   &::after {
     content: "";

@@ -67,7 +67,7 @@ export const TextPosition = styled.div`
   width: 36%; // Width as a percentage works well for responsiveness
   position: absolute;
   right: 8%; // Use percentages to position from the right
-  top: 64%;
+  top: 55%;
   transform: translateY(-50%); // Adjust vertically by half its own height
   flex-direction: column;
   justify-content: space-between;
@@ -85,7 +85,7 @@ export const TextPosition = styled.div`
   @media (max-width: 1280px) {
     // Adjust for smaller screens
     width: 50%; // Increase the width on smaller screens
-    top: 65%;
+    top: 55%;
   }
 
   @media (max-width: 1100px) {
@@ -95,7 +95,7 @@ export const TextPosition = styled.div`
     text-align: center;
     right: 0;
     width: 100%;
-    top: 60%;
+    top: 50%;
   }
 
   @media (max-width: 1100px) {
@@ -108,11 +108,10 @@ export const TextPosition = styled.div`
 
   @media (max-width: 480px) {
     padding: 0 4vw;
-    top: 62%;
+    top: 50%;
   }
 
   @media (max-height: 700px) {
-    top: 64%;
     gap: 0.4rem;
   }
 
