@@ -5,15 +5,13 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  min-height: 30em;
-  height: 30em;
   background-color: ${theme.colors.darkBlue};
 `;
 
 export const Row = styled.div`
   display: flex;
   width: 100%;
-  height: 20%;
+  height: 6em;
   background-color: ${theme.colors.blue};
 
   gap: 4%;
@@ -39,41 +37,28 @@ export const Image = styled.img`
 export const Content = styled.div`
   display: flex;
   width: 100%;
-  height: 70%;
+  min-height: 70%;
   background-color: ${theme.colors.darkBlue};
+
+  @media (max-width: 910px) {
+    flex-direction: column;
+  }
 `;
 
-export const Column1 = styled.div`
+export const Column = styled.div`
   display: flex;
   flex-direction: column;
-  width: 30%;
-  min-width: 176px;
-  height: 100%;
+  min-width: 33%;
+  min-height: 100%;
   gap: 1%;
-  padding-top: 2em;
-  align-items: center;
-`;
+  padding: 2em 0;
 
-export const Column2 = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 20%;
-  min-width: 176px;
-  height: 100%;
-  gap: 1%;
-  padding-top: 2em;
-  align-items: center;
-`;
+  @media (max-width: 910px) {
+    width: 100%;
+    align-items: flex-start;
 
-export const Column3 = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 20vw;
-  min-width: 176px;
-  height: 100%;
-  gap: 1%;
-  padding-top: 2em;
-  align-items: center;
+    border-bottom: 1px solid ${theme.colors.blue};
+  }
 `;
 
 export const ItemCoitainer = styled.div`
@@ -82,4 +67,49 @@ export const ItemCoitainer = styled.div`
   gap: 1em;
   align-items: center;
   font-size: clamp(0.8rem, 1vw, 1rem);
+`;
+
+export const ItemContainer = styled.div`
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 4%;
+`;
+
+export const IconContainer = styled.div`
+  display: flex;
+  min-width: 50px;
+  /* max-width: 72px; */
+  min-height: 50px;
+  /* max-height: 72px; */
+  width: 4vw;
+  height: 4vw;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  /* background-color: ${theme.colors.blue}; */
+  border: 1px solid #ff2222;
+  border-radius: 50%;
+`;
+
+export const ItemContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 66.66%;
+  height: 100%;
+  justify-content: center;
+  overflow-wrap: break-word;
+`;
+
+export const RoutesContainer = styled.div`
+  display: flex;
+  width: 40%;
+  height: 100%;
+  flex-direction: column;
+  font-size: clamp(0.8rem, 0.8vw, 1em);
+  align-items: flex-end;
+
+  @media (max-width: 910px) {
+    align-items: flex-start;
+  }
 `;
