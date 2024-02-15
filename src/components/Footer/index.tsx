@@ -17,12 +17,23 @@ import {
 import theme from "../../theme/theme";
 
 export default function Footer() {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <>
       <Container>
         <Row className="padding">
           <LogoContainer>
-            <Image src={Logo} />
+            <Image
+              src={Logo}
+              style={{ cursor: "pointer" }}
+              onClick={() => scrollToTop()}
+            />
           </LogoContainer>
           <h3
             style={{
@@ -60,6 +71,7 @@ export default function Footer() {
                 gap: "0.6rem",
               }}
             >
+              <h3>Endereço</h3>
               <p>BRASEQUIP BRASILIA EQUIPAMENTOS</p>
               <p>LTDA - BR-070, KM 8.5, LOTE 454, Ceilândia-DF</p>
               <p>Fones: (61) 3585-3900 / (61) 3585-3899</p>
@@ -97,7 +109,9 @@ export default function Footer() {
                 </IconContainer>
 
                 <ItemContent>
-                  <p style={{ userSelect: "none" }}>Horário</p>
+                  <p style={{ userSelect: "none", fontWeight: "bold" }}>
+                    Horário
+                  </p>
                   <p>Seg - Sex 9:00 às 18:00</p>
                 </ItemContent>
               </ItemContainer>
@@ -107,7 +121,9 @@ export default function Footer() {
                   <CiMail color={"red"} size={"45%"} />
                 </IconContainer>
                 <ItemContent>
-                  <p style={{ userSelect: "none" }}>Email</p>
+                  <p style={{ userSelect: "none", fontWeight: "bold" }}>
+                    Email
+                  </p>
                   <p>contato@brasequip.com.br</p>
                 </ItemContent>
               </ItemContainer>
@@ -117,7 +133,9 @@ export default function Footer() {
                   <PiPhoneThin color={"red"} size={"50%"} />
                 </IconContainer>
                 <ItemContent>
-                  <p style={{ userSelect: "none" }}>Ligue para gente</p>
+                  <p style={{ userSelect: "none", fontWeight: "bold" }}>
+                    Ligue para gente
+                  </p>
                   <p>(61) 98175-0559</p>
                 </ItemContent>
               </ItemContainer>
