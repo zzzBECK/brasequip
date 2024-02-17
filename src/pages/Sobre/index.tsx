@@ -65,17 +65,6 @@ export default function Sobre() {
 
         <h1 style={{ marginTop: "1em" }}>Compromisso com a Excelência</h1>
         <p>
-          Estamos localizados às margens da BR-070, em Ceilândia-DF, em uma área
-          de 10.000 m², onde nossos clientes podem visitar nosso pátio de
-          montagem e conhecer nossa gama de equipamentos para pronta entrega. A
-          BRASEQUIP possui seguro de responsabilidade civil para todos os seus
-          equipamentos e serviços, além de seguro de vida para todos os seus
-          colaboradores, refletindo nosso compromisso com a responsabilidade e a
-          excelência.
-        </p>
-
-        <h1 style={{ marginTop: "1em" }}>Venha nos Conhecer</h1>
-        <p>
           Convidamos você a fazer-nos uma visita e conhecer de perto tudo que a
           BRASEQUIP tem a oferecer. Nossa equipe está pronta para atendê-lo e
           encontrar as melhores soluções para suas necessidades de elevação e
@@ -90,6 +79,17 @@ export default function Sobre() {
           e montagem, incluindo os avançados Testes de END para garantir a
           máxima segurança e desempenho, a BRASEQUIP é sua parceira de
           confiança.
+        </p>
+
+        <h1 style={{ marginTop: "1em" }}>Venha nos Conhecer</h1>
+        <p>
+          Estamos localizados às margens da BR-070, em Ceilândia-DF, em uma área
+          de 10.000 m², onde nossos clientes podem visitar nosso pátio de
+          montagem e conhecer nossa gama de equipamentos para pronta entrega. A
+          BRASEQUIP possui seguro de responsabilidade civil para todos os seus
+          equipamentos e serviços, além de seguro de vida para todos os seus
+          colaboradores, refletindo nosso compromisso com a responsabilidade e a
+          excelência.
         </p>
       </SobreContainer>
     </WholePage>

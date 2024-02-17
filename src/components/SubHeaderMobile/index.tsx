@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { FaFacebook, FaInstagram } from "react-icons/fa";
 import { IoIosArrowDown, IoMdMenu } from "react-icons/io";
 import { MdDarkMode } from "react-icons/md";
@@ -11,6 +11,7 @@ interface ISubHeaderMobile {
 
 export default function SubHeaderMobile({ height }: ISubHeaderMobile) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -24,17 +25,26 @@ export default function SubHeaderMobile({ height }: ISubHeaderMobile) {
     }
   }, [height]);
 
+  // Esta função verifica se o clique ocorreu fora do menu
+  const handleClickOutside = useCallback((event: MouseEvent) => {
+    if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+      setIsMenuOpen(false); // Fecha o menu se o clique foi fora
+    }
+  }, []);
+
   useEffect(() => {
-    // Verifique se o menu está aberto antes de adicionar o listener de scroll
     if (isMenuOpen) {
       window.addEventListener("scroll", closeMenuOnScroll);
+      // Adiciona o ouvinte de clique ao document
+      document.addEventListener("mousedown", handleClickOutside);
     }
 
-    // A função de limpeza remove o listener de scroll
     return () => {
       window.removeEventListener("scroll", closeMenuOnScroll);
+      // Remove o ouvinte de clique para evitar vazamentos de memória
+      document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, [isMenuOpen, closeMenuOnScroll]); // Dependências do useEffect
+  }, [isMenuOpen, closeMenuOnScroll, handleClickOutside]);
 
   const scrollToTop = () => {
     window.scrollTo({
@@ -50,6 +60,7 @@ export default function SubHeaderMobile({ height }: ISubHeaderMobile) {
       <IoMdMenu size="2em" onClick={toggleMenu} style={{ cursor: "pointer" }} />
       {isMenuOpen && (
         <div
+          ref={menuRef}
           style={{
             position: "fixed", // Fixo em relação à janela do navegador
             top: height, // Ajustado para a altura do cabeçalho

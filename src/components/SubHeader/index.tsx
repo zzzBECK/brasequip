@@ -32,7 +32,7 @@ export default function SubHeader() {
               textDecoration: "none",
               color: "white",
               transition: "border-bottom 0.4s ease-in-out",
-              fontSize: "clamp(0.7rem, 0.8vw, 1rem)",
+              fontSize: "clamp(0.7rem, 1.2vw, 1rem)",
             })}
             onClick={() => scrollToTop()}
           >
@@ -72,7 +72,7 @@ export default function SubHeader() {
               textDecoration: "none",
               color: "white",
               transition: "border-bottom 0.4s ease-in-out",
-              fontSize: "clamp(0.7rem, 0.8vw, 1rem)",
+              fontSize: "clamp(0.7rem, 1.2vw, 1rem)",
             })}
             onClick={() => scrollToTop()}
           >
@@ -91,7 +91,7 @@ export default function SubHeader() {
               textDecoration: "none",
               color: "white",
               transition: "border-bottom 0.4s ease-in-out",
-              fontSize: "clamp(0.7rem, 0.8vw, 1rem)",
+              fontSize: "clamp(0.7rem, 1.2vw, 1rem)",
             })}
             onClick={() => scrollToTop()}
           >
@@ -108,12 +108,16 @@ export default function SubHeader() {
           <FaInstagram
             size="1.4em"
             className="icon"
-            onClick={() => window.open("https://www.instagram.com", "_blank")}
+            onClick={() =>
+              window.open("https://www.instagram.com/brasequip/", "_blank")
+            }
           />
           <FaFacebook
             size="1.4em"
             className="icon"
-            onClick={() => window.open("https://www.instagram.com", "_blank")}
+            onClick={() =>
+              window.open("https://pt-br.facebook.com/brasequip/", "_blank")
+            }
           />
           <MdDarkMode size="1.6em" className="icon" />
         </IconsContainer>

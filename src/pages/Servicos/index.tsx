@@ -23,7 +23,7 @@ export default function Servicos() {
         <Image>
           <ImageOverlay />
           <TextPosition>
-            <Flag text="Um pouco sobre nosso trabalho" />
+            <Flag text="Conheça nossos serviços" />
             <h1
               style={{
                 fontSize: "60px",
@@ -38,9 +38,14 @@ export default function Servicos() {
       </HeaderContainer>
       <ServicosContainer className="padding-services">
         <ServicosTitle>
-          <h1>Nossas Soluções</h1>
+          <h1>Nossos Serviços</h1>
         </ServicosTitle>
         <ServicosContent>
+          <ServiceCard
+            image="locacao.jpeg"
+            title="Locação de equipamentos"
+            description="Máquinas e equipamentos para elevação"
+          />
           <ServiceCard
             image="montagem.jpg"
             title="Montagem e desmontagem"
@@ -48,7 +53,7 @@ export default function Servicos() {
           />
           <ServiceCard
             image="manutencao.jpg"
-            title="Manutenção preventiva"
+            title="Manutenção"
             description="Preventiva e corretiva"
           />
           <ServiceCard
@@ -65,6 +70,17 @@ export default function Servicos() {
             image="museu.jpg"
             title="ART dos serviços contratados"
             description="Seguro de responsabilidade civil"
+          />
+
+          <ServiceCard
+            image="end.jpeg"
+            title="Teste de END"
+            description="(Ensaios Não Destrutivos) com Laudo Técnico"
+          />
+          <ServiceCard
+            image="cremalheira.jpeg"
+            title="Elevador"
+            description="Cremalheira"
           />
         </ServicosContent>
       </ServicosContainer>
@@ -94,7 +110,11 @@ export default function Servicos() {
                 todo o território brasileiro.
               </p>
             </TextContent>
-            <Button text="Ver mais" />
+            <Button
+              text="Ver mais"
+              linkTo="/brasequip/sobre"
+              onClick={() => window.scrollTo(0, 0)}
+            />
           </VisaoGeralText>
           <VisaoGeralImage />
         </VisaoGeralContent>
