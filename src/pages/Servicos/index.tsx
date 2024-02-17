@@ -110,7 +110,11 @@ export default function Servicos() {
                 todo o território brasileiro.
               </p>
             </TextContent>
-            <Button text="Ver mais" />
+            <Button
+              text="Ver mais"
+              linkTo="/brasequip/sobre"
+              onClick={() => window.scrollTo(0, 0)}
+            />
           </VisaoGeralText>
           <VisaoGeralImage />
         </VisaoGeralContent>
