@@ -7,6 +7,7 @@ import Home from "./pages/Home/index.tsx";
 import Sobre from "./pages/Sobre/index.tsx";
 import Servicos from "./pages/Servicos/index.tsx";
 import Contato from "./pages/Contato/index.tsx";
+import Servico from "./pages/Servico/index.tsx";
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
       {
         path: "/brasequip/contato",
         element: <Contato />,
+      },
+      {
+        path: "/brasequip/servico",
+        element: <Servico />,
       },
     ],
   },

@@ -136,7 +136,7 @@ export default function Footer() {
                   <p style={{ userSelect: "none", fontWeight: "bold" }}>
                     Ligue para gente
                   </p>
-                  <p>(61) 98175-0559</p>
+                  <p>(61) 98175-0558</p>
                 </ItemContent>
               </ItemContainer>
             </div>

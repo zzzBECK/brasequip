@@ -1,6 +1,9 @@
 import { useEffect, useRef, useState } from "react";
-import { IoMdBuild } from "react-icons/io";
-import { MdBrush, MdMap, MdSecurity } from "react-icons/md";
+import { FaTools } from "react-icons/fa";
+import { GiGearHammer } from "react-icons/gi";
+import { MdSecurity } from "react-icons/md";
+import { SiGooglesearchconsole } from "react-icons/si";
+
 import Form from "../../components/Form";
 import {
   HeaderContainer,
@@ -124,7 +127,7 @@ export default function Home() {
             description="Garantimos montagem e desmontagem eficientes de equipamentos,
               assegurando a excelência e a segurança que construíram nossa
               reputação sólida."
-            Icon={IoMdBuild}
+            Icon={FaTools}
             fadeType="right"
           />
           <ServiceCard
@@ -138,13 +141,13 @@ export default function Home() {
           <ServiceCard
             title="Reforma de equipamentos"
             description="Revitalizamos seus equipamentos com reformas detalhadas, prolongando a vida útil e otimizando o desempenho para atender às demandas do seu projeto."
-            Icon={MdBrush}
+            Icon={GiGearHammer}
             fadeType="right"
           />
           <ServiceCard
-            title="lorem ipsum dolor sit amet"
-            description="lore ipsum dolor sit amet, consectetur adipiscing elit. Nullam a nunc eget odio aliquam facilisis. lore ipsum dolor sit amet, consectetur adipiscing elit."
-            Icon={MdMap}
+            title="Teste de END"
+            description="Os Ensaios Não Destrutivos (END), são técnicas de inspeção de peças e equipamentos que avaliam a existência de descontinuidades (mecanismos de falha) nas estruturas dos materiais sem danificá-los."
+            Icon={SiGooglesearchconsole}
             fadeType="left"
           />
         </ServicesRow>

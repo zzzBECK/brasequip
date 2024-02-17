@@ -4,12 +4,12 @@ import theme from "../../theme/theme";
 export const Image = styled.div`
   display: flex;
   width: 100%;
-  height: 40em;
-  background-image: url("servicos.jpg");
+  height: 24em;
+  background-image: url("aguasclaras.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
-  background-position: center;
+  background-position-y: -30em;
 
   @media (max-width: 620px) {
     height: 100vh;
@@ -18,7 +18,25 @@ export const Image = styled.div`
   }
 
   @media (max-height: 700px) {
-    min-height: 40em;
+    min-height: 24em;
+  }
+`;
+
+export const HeaderContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 24em;
+  position: relative;
+
+  @media (max-width: 620px) {
+    height: 100vh;
+    height: 100svh;
+    min-height: 45em;
+  }
+
+  @media (max-height: 700px) {
+    min-height: 24em;
   }
 `;
 
@@ -78,118 +96,13 @@ export const ImageOverlay = styled.div`
   }
 `;
 
-export const VisaoGeralContent = styled.div`
-  display: flex;
-  width: 100%;
-  height: 100%;
-  padding: 10em 0;
-  gap: 6em;
-
-  align-items: center;
-
-  @media (max-width: 1100px) {
-    flex-direction: column;
-  }
-
-  @media (max-width: 768px) {
-    padding: 6em 0;
-  }
-`;
-
-export const VisaoGeralContainer = styled.div`
-  display: flex;
-  width: 100%;
-  min-height: 55em;
-  background-color: #fff;
-`;
-
-export const VisaoGeralImage = styled.div`
-  display: flex;
-  width: 40%;
-  height: 100%;
-  min-height: 30em;
-
-  background-image: url("elevadores.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position-y: 20%;
-
-  @media (max-width: 1100px) {
-    width: 80%;
-    min-height: 24em;
-    background-position-y: 30%;
-  }
-
-  @media (max-width: 620px) {
-    min-height: 18em;
-  }
-`;
-
-export const VisaoGeralText = styled.div`
-  display: flex;
-  width: 60%;
-  height: 100%;
-  min-height: 30em;
-  flex-direction: column;
-  justify-content: space-between;
-  color: #000;
-  text-align: justify;
-
-  @media (max-width: 1100px) {
-    width: 100%;
-    min-height: 24em;
-  }
-
-  @media (max-width: 900px) {
-    min-height: 28em;
-  }
-
-  @media (max-width: 620px) {
-    min-height: 34em;
-  }
-
-  @media (max-width: 500px) {
-    min-height: 38em;
-  }
-`;
-
-export const TextContent = styled.div`
+export const Content = styled.div`
   display: flex;
   flex-direction: column;
-  width: 100%;
-  gap: 1.2em;
-`;
-
-export const ServicosContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  min-height: 42em;
   background-color: ${theme.colors.white};
+  min-height: 40em;
+  padding-top: 4em;
+  padding-bottom: 4em;
   color: ${theme.colors.black};
-  justify-content: center;
   gap: 2em;
-`;
-
-export const ServicosTitle = styled.div`
-  display: flex;
-  width: 100%;
-  height: fit-content;
-  align-items: center;
-  justify-content: center;
-  margin-top: 2em;
-`;
-
-export const ServicosContent = styled.div`
-  display: flex;
-  width: 100%;
-  min-height: 30em;
-  height: 100%;
-  gap: 1em;
-  flex-wrap: wrap;
-  justify-content: center;
-
-  align-items: center;
-
-  padding: 0 8vw;
 `;
