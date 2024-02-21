@@ -5,7 +5,7 @@ interface IWholeHeader {
   isScrolled: boolean;
 }
 
-export const WholeHeader = styled.div<IWholeHeader>`
+export const WholeHeader = styled.header<IWholeHeader>`
   display: flex;
   width: 100vw;
   max-width: 100%;
