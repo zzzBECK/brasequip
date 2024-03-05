@@ -26,7 +26,7 @@ export default function Institucional() {
               obra e gruas. Com foco na segurança e conforto dos clientes, nossa
               equipe é altamente qualificada, proporcionando serviços de
               manutenção preventiva e corretiva, além de inspeções técnicas.
-              Localizada em Ceilândia-DF, em uma área de 10.000 metros
+              Localizada em Ceilândia-DF, em uma área de 20.000 metros
               quadrados, a BRASEQUIP é sinônimo de qualidade e segurança no
               segmento de equipamentos para construção.
             </p>
