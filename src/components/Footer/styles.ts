@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import theme from "../../theme/theme";
 
-export const Container = styled.div`
+export const Container = styled.footer`
   display: flex;
   flex-direction: column;
   width: 100%;
