@@ -56,12 +56,6 @@ export const TextPosition = styled.div`
     left: 0;
     top: 50%;
   }
-
-  @media (max-width: 620px) {
-    justify-content: start;
-    padding-top: 18em;
-    top: 60%;
-  }
 `;
 
 export const ImageOverlay = styled.div`
