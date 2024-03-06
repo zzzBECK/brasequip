@@ -66,7 +66,7 @@ export default function Servico() {
             <Flag text="Informações gerais" />
             <h1
               style={{
-                fontSize: "60px",
+                fontSize: "clamp(2rem, 4vw, 3rem)",
                 lineHeight: "1",
                 maxWidth: "600px",
               }}

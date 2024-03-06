@@ -4,46 +4,26 @@ import theme from "../../theme/theme";
 export const Image = styled.div`
   display: flex;
   width: 100%;
-  height: 24em;
-  background-image: url("aguasclaras.jpeg");
+  height: 20em;
+  background-image: url("servico.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   position: relative;
-  background-position-y: -30em;
-
-  @media (max-width: 620px) {
-    height: 100vh;
-    height: 100svh;
-    min-height: 45em;
-  }
-
-  @media (max-height: 700px) {
-    min-height: 24em;
-  }
 `;
 
 export const HeaderContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  min-height: 24em;
+  min-height: 20em;
   position: relative;
-
-  @media (max-width: 620px) {
-    height: 100vh;
-    height: 100svh;
-    min-height: 45em;
-  }
-
-  @media (max-height: 700px) {
-    min-height: 24em;
-  }
 `;
 
 export const TextPosition = styled.div`
   display: flex;
-  width: 36%; // Width as a percentage works well for responsiveness
   position: absolute;
+  max-width: 80%; // Adjust the width to your preference
   left: 14%; // Use percentages to position from the right
   top: 60%;
   transform: translateY(-50%); // Adjust vertically by half its own height
@@ -58,16 +38,7 @@ export const TextPosition = styled.div`
   @media (max-width: 1100px) {
     width: 100%;
     height: 100%;
-    align-items: center;
     justify-content: center;
-    left: 0;
-    top: 50%;
-  }
-
-  @media (max-width: 620px) {
-    justify-content: start;
-    padding-top: 18em;
-    top: 60%;
   }
 `;
 
