@@ -1101,42 +1101,22 @@ Error generating stack: `+o.message+`
 `;function $w(){return c.jsxs(uo,{children:[c.jsx(el,{children:c.jsxs(Ow,{children:[c.jsx(Iw,{}),c.jsxs(Mw,{children:[c.jsx(rt,{text:"Fale Conosco"}),c.jsx("h1",{style:{fontSize:"60px",lineHeight:"1",maxWidth:"600px"},children:"Contato"})]})]})}),c.jsx(Dw,{className:"padding",children:c.jsx(Lw,{})})]})}function Aw(){return c.jsxs(c.Fragment,{children:[c.jsx(rt,{text:"ART e Seguro de Responsabilidade Civil: Compromisso e Proteção Total",mode:"light"}),c.jsxs("div",{style:{display:"flex",flexDirection:"column",gap:"1em"},children:[c.jsx("h2",{children:"Emissão de ART para Todos os Serviços"}),c.jsx("p",{children:"Nosso compromisso com a excelência e a legalidade se reflete na emissão de ART para todos os serviços contratados. Este documento, essencial para a regulamentação da atividade profissional, valida a responsabilidade técnica sobre a execução dos serviços, reforçando a seriedade e o profissionalismo de nosso trabalho."}),c.jsx("p",{children:"Com a ART e o seguro de responsabilidade civil, você tem a garantia de que cada projeto será realizado com o máximo de segurança e confiabilidade. Este é o nosso compromisso: oferecer serviços que vão além da técnica, proporcionando uma experiência de confiança completa para nossos clientes."})]})]})}function yf(){return c.jsxs(c.Fragment,{children:[c.jsx(rt,{text:"Teste de END: Prevenção e Segurança na Construção Civil",mode:"light"}),c.jsxs("div",{style:{display:"flex",flexDirection:"column",gap:"1em"},children:[c.jsx("h2",{children:"Teste de END"}),c.jsx("p",{children:"Nossa abordagem aos Ensaios Não Destrutivos (END) é baseada na prevenção e garantia da integridade estrutural de equipamentos de elevação. Com o uso de tecnologias avançadas e métodos comprovados, nossos especialistas realizam análises profundas para detectar qualquer irregularidade, promovendo a segurança e a longevidade dos seus equipamentos."}),c.jsx("h2",{children:"Tecnologias Avançadas para Diagnóstico Preciso"}),c.jsx("p",{children:"Utilizamos três métodos principais de END, que permitem uma avaliação precisa e detalhada:"}),c.jsx("p",{children:"- Ultrassom: Ideal para identificar falhas internas, este ensaio penetra profundamente nos materiais para revelar falhas ocultas."}),c.jsx("p",{children:"- Partículas Magnéticas: Este método é excelente para encontrar falhas intermediárias em materiais ferromagnéticos, destacando as menores fissuras."}),c.jsx("p",{children:"- Líquido Penetrante: Especialmente eficaz para detectar descontinuidades superficiais, mesmo as mais sutis, em uma variedade de materiais."}),c.jsx("h2",{children:"Conformidade e Excelência com Laudo Técnico"}),c.jsx("p",{children:"Em cumprimento à legislação do CPR-PE e normas vigentes, nossos serviços incluem a emissão de laudos técnicos detalhados. Estes documentos não apenas comprovam a qualidade dos testes realizados, mas também servem como uma garantia legal do comprometimento com as normas de segurança."}),c.jsx("h2",{children:"Comprometidos com a Prevenção de Acidentes"}),c.jsx("p",{children:"Através dos ensaios de END, somos capazes de prever e prevenir falhas que podem resultar em acidentes, salvaguardando não apenas os equipamentos mas, mais importante, a vida humana. Nossa meta é assegurar que todos os eixos de equipamentos de elevação operem dentro dos mais altos padrões de segurança e qualidade."}),c.jsx("h2",{children:"Sua Parceira na Manutenção Preditiva"}),c.jsx("p",{children:"Escolha nossos serviços de END e assegure a manutenção preditiva eficaz dos seus equipamentos de elevação. Com um histórico de excelência e inovação desde a origem do método, garantimos que sua obra esteja sempre à frente em segurança e conformidade técnica."})]})]})}function Fw(){return c.jsxs(c.Fragment,{children:[c.jsx(rt,{text:"Projeto de Fixação: Segurança e Conformidade Técnica",mode:"light"}),c.jsxs("div",{style:{display:"flex",flexDirection:"column",gap:"1em"},children:[c.jsx("h2",{children:"Engenharia Especializada em Projetos de Fixação"}),c.jsx("p",{children:"Nossos engenheiros são especializados em desenvolver projetos de fixação detalhados, que atendem às especificações técnicas de cada obra. Combinamos conhecimento técnico com experiência prática para entregar projetos que asseguram a integridade e a durabilidade das instalações."}),c.jsx("h2",{children:"Emissão de Laudos ART e Análises Estruturais"}),c.jsx("p",{children:"Acompanhando os projetos de fixação, emitimos laudos de Anotação de Responsabilidade Técnica (ART) e realizamos análises estruturais completas. Estes documentos são essenciais para a validação da segurança do projeto e para o cumprimento das normas técnicas e legislações vigentes."})]})]})}function Uw(){return c.jsxs(c.Fragment,{children:[c.jsx(rt,{text:"Manutenção: Garantia de Performance e Segurança",mode:"light"}),c.jsxs("div",{style:{display:"flex",flexDirection:"column",gap:"1em"},children:[c.jsx("h2",{children:"Serviços de Manutenção Especializados"}),c.jsx("p",{children:"Nossos serviços de manutenção preventiva e corretiva são desenhados para minimizar o risco de paradas inesperadas e prolongar a vida útil dos seus equipamentos. Por meio de inspeções regulares e manutenção programada, prevenimos problemas antes que eles ocorram."}),c.jsx("p",{children:"Contamos com uma equipe técnica altamente qualificada, pronta para atender às suas necessidades com eficácia. Oferecemos diagnósticos precisos, reparos especializados e substituição de peças, utilizando apenas componentes originais para garantir a máxima performance."})]})]})}function Bw(){return c.jsxs(c.Fragment,{children:[c.jsx(rt,{text:"Montagem e Desmontagem: Soluções Completas em Elevação",mode:"light"}),c.jsxs("div",{style:{display:"flex",flexDirection:"column",gap:"1em"},children:[c.jsx("h2",{children:"Variedade em Equipamentos de Elevação"}),c.jsx("p",{children:"Com mais de duas décadas de atuação no mercado, nossa empresa é sinônimo de excelência em serviços de montagem e desmontagem de máquinas e equipamentos para elevação. Entendemos a complexidade e a importância de cada projeto e, por isso, oferecemos um portfólio abrangente que inclui venda, locação e manutenção, garantindo soluções integradas que atendem às necessidades específicas de cada cliente."}),c.jsx("p",{children:"Nossa gama de equipamentos inclui andaimes Fachadeiro e Tubular, Bandejas do Tipo Aparalixo, Elevadores de Obra do Tipo Cremalheira, Gruas e Mini-Gruas, além de Plataformas Elevatórias Articuladas. Todos são projetados para oferecer eficiência e segurança em sua obra."})]})]})}function Hw(){return c.jsxs(c.Fragment,{children:[c.jsx(rt,{text:"Reforma de Equipamentos: Qualidade e Confiabilidade em Elevação",mode:"light"}),c.jsxs("div",{style:{display:"flex",flexDirection:"column",gap:"1em"},children:[c.jsx("h2",{children:"Especialistas em Renovação de Elevadores e Gruas"}),c.jsx("p",{children:"Nosso expertise se estende à reforma completa de elevadores e gruas, abrangendo desde a substituição de componentes até atualizações tecnológicas. Com técnicas avançadas e peças de alta qualidade, revitalizamos equipamentos para que eles operem como novos."}),c.jsx("p",{children:"Além de reparos e melhorias, nossa equipe se dedica a adequar seus elevadores e gruas às normas de segurança mais recentes. Com a reforma, seu equipamento não apenas ganha em desempenho, mas também em conformidade regulatória, proporcionando tranquilidade e segurança aos operadores e gestores de projeto."})]})]})}const Vw=L.div`
   display: flex;
   width: 100%;
-  height: 24em;
-  background-image: url("aguasclaras.jpeg");
+  height: 20em;
+  background-image: url("servico.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   position: relative;
-  background-position-y: -30em;
-
-  @media (max-width: 620px) {
-    height: 100vh;
-    height: 100svh;
-    min-height: 45em;
-  }
-
-  @media (max-height: 700px) {
-    min-height: 24em;
-  }
 `,Ww=L.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  min-height: 24em;
+  min-height: 20em;
   position: relative;
-
-  @media (max-width: 620px) {
-    height: 100vh;
-    height: 100svh;
-    min-height: 45em;
-  }
-
-  @media (max-height: 700px) {
-    min-height: 24em;
-  }
 `,qw=L.div`
   display: flex;
-  width: 36%; // Width as a percentage works well for responsiveness
   position: absolute;
+  max-width: 80%; // Adjust the width to your preference
   left: 14%; // Use percentages to position from the right
   top: 60%;
   transform: translateY(-50%); // Adjust vertically by half its own height
@@ -1151,16 +1131,7 @@ Error generating stack: `+o.message+`
   @media (max-width: 1100px) {
     width: 100%;
     height: 100%;
-    align-items: center;
     justify-content: center;
-    left: 0;
-    top: 50%;
-  }
-
-  @media (max-width: 620px) {
-    justify-content: start;
-    padding-top: 18em;
-    top: 60%;
   }
 `,Qw=L.div`
   display: flex;
@@ -1217,4 +1188,4 @@ Error generating stack: `+o.message+`
   :hover {
     color: ${({isThereHover:e})=>e?J.colors.red:J.colors.darkBlue};
   }
-`;function Xw({title:e}){return c.jsxs(Yw,{children:[c.jsx(lt,{to:"/brasequip/",style:{textDecoration:"none",color:"inherit"},children:c.jsx(Ql,{isThereHover:!0,children:c.jsx(Kw,{})})}),c.jsx("p",{style:{fontSize:"1.2rem"},children:">"}),c.jsx(lt,{to:"/brasequip/servicos",style:{textDecoration:"none",color:"inherit"},children:c.jsx(Ql,{isThereHover:!0,children:c.jsx("p",{children:"Serviços"})})}),c.jsx("p",{style:{fontSize:"1.2rem"},children:">"}),c.jsx(Ql,{children:e})]})}function Zw(e){switch(e){case"manutencao":return c.jsx(Uw,{});case"montagem":return c.jsx(Bw,{});case"reforma":return c.jsx(Hw,{});case"fixacao":return c.jsx(Fw,{});case"art":return c.jsx(Aw,{});case"end":return c.jsx(yf,{});default:return c.jsx(yf,{})}}function xf(e){switch(e){case"manutencao":return"Manutenção";case"montagem":return"Montagem e Desmontagem";case"reforma":return"Reforma de Equipamentos";case"fixacao":return"Projeto de Fixação";case"art":return"ART";case"end":return"Teste de END";default:return"Teste de END"}}function Jw(){const{type:e}=o1();return c.jsxs(uo,{children:[c.jsx(Ww,{children:c.jsxs(Vw,{children:[c.jsx(Qw,{}),c.jsxs(qw,{children:[c.jsx(rt,{text:"Informações gerais"}),c.jsx("h1",{style:{fontSize:"60px",lineHeight:"1",maxWidth:"600px"},children:xf(e)})]})]})}),c.jsxs(Gw,{className:"padding",children:[c.jsx(Xw,{title:xf(e)}),Zw(e)]})]})}const e2=j1([{path:"/brasequip/",element:c.jsx(Nx,{}),children:[{path:"/brasequip/",element:c.jsx(iw,{})},{path:"/brasequip/sobre",element:c.jsx(uw,{})},{path:"/brasequip/servicos",element:c.jsx(kw,{})},{path:"/brasequip/contato",element:c.jsx($w,{})},{path:"/brasequip/servico/:type",element:c.jsx(Jw,{})}]}]);Gl.createRoot(document.getElementById("root")).render(c.jsx(Se.StrictMode,{children:c.jsx(L1,{router:e2})}));
+`;function Xw({title:e}){return c.jsxs(Yw,{children:[c.jsx(lt,{to:"/brasequip/",style:{textDecoration:"none",color:"inherit"},children:c.jsx(Ql,{isThereHover:!0,children:c.jsx(Kw,{})})}),c.jsx("p",{style:{fontSize:"1.2rem"},children:">"}),c.jsx(lt,{to:"/brasequip/servicos",style:{textDecoration:"none",color:"inherit"},children:c.jsx(Ql,{isThereHover:!0,children:c.jsx("p",{children:"Serviços"})})}),c.jsx("p",{style:{fontSize:"1.2rem"},children:">"}),c.jsx(Ql,{children:e})]})}function Zw(e){switch(e){case"manutencao":return c.jsx(Uw,{});case"montagem":return c.jsx(Bw,{});case"reforma":return c.jsx(Hw,{});case"fixacao":return c.jsx(Fw,{});case"art":return c.jsx(Aw,{});case"end":return c.jsx(yf,{});default:return c.jsx(yf,{})}}function xf(e){switch(e){case"manutencao":return"Manutenção";case"montagem":return"Montagem e Desmontagem";case"reforma":return"Reforma de Equipamentos";case"fixacao":return"Projeto de Fixação";case"art":return"ART";case"end":return"Teste de END";default:return"Teste de END"}}function Jw(){const{type:e}=o1();return c.jsxs(uo,{children:[c.jsx(Ww,{children:c.jsxs(Vw,{children:[c.jsx(Qw,{}),c.jsxs(qw,{children:[c.jsx(rt,{text:"Informações gerais"}),c.jsx("h1",{style:{fontSize:"clamp(2rem, 4vw, 3rem)",lineHeight:"1",maxWidth:"600px"},children:xf(e)})]})]})}),c.jsxs(Gw,{className:"padding",children:[c.jsx(Xw,{title:xf(e)}),Zw(e)]})]})}const e2=j1([{path:"/brasequip/",element:c.jsx(Nx,{}),children:[{path:"/brasequip/",element:c.jsx(iw,{})},{path:"/brasequip/sobre",element:c.jsx(uw,{})},{path:"/brasequip/servicos",element:c.jsx(kw,{})},{path:"/brasequip/contato",element:c.jsx($w,{})},{path:"/brasequip/servico/:type",element:c.jsx(Jw,{})}]}]);Gl.createRoot(document.getElementById("root")).render(c.jsx(Se.StrictMode,{children:c.jsx(L1,{router:e2})}));
