@@ -196,12 +196,16 @@ export default function SubHeaderMobile({ height }: ISubHeaderMobile) {
             <FaInstagram
               size="1.4em"
               className="icon"
-              onClick={() => window.open("https://www.instagram.com", "_blank")}
+              onClick={() =>
+                window.open("https://www.instagram.com/brasequip/", "_blank")
+              }
             />
             <FaFacebook
               size="1.4em"
               className="icon"
-              onClick={() => window.open("https://www.instagram.com", "_blank")}
+              onClick={() =>
+                window.open("https://pt-br.facebook.com/brasequip/", "_blank")
+              }
             />
             <MdDarkMode size="1.6em" className="icon" />
           </div>
