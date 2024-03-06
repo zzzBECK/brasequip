@@ -64,7 +64,7 @@ export default function Servico() {
         <Image>
           <ImageOverlay />
           <BackgroundDark />
-          <TextPosition>
+          <TextPosition className="padding">
             <Flag text="Informações gerais" />
             <h1
               style={{
