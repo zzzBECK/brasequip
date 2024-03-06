@@ -24,7 +24,6 @@ export const TextPosition = styled.div`
   display: flex;
   position: absolute;
   max-width: 80%; // Adjust the width to your preference
-  left: 14%; // Use percentages to position from the right
   top: 60%;
   transform: translateY(-50%); // Adjust vertically by half its own height
   flex-direction: column;
