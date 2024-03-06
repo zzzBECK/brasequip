@@ -67,6 +67,22 @@ export const ImageOverlay = styled.div`
   }
 `;
 
+export const BackgroundDark = styled.div`
+  display: none;
+  position: absolute;
+  top: 0; // Ensures it starts from the very top of the Image container
+  left: 0; // Ensures it starts from the very left of the Image container
+  width: 100%; // Takes the full width of the Image container
+  height: 100%; // Takes the full height of the Image container
+  background-color: rgba(0, 0, 0, 0.5); // Adjust the opacity as needed
+  /* background-color: red; */
+  z-index: 2; // Higher than the image but lower than the text
+
+  @media (max-width: 1280px) {
+    display: flex;
+  }
+`;
+
 export const Content = styled.div`
   display: flex;
   flex-direction: column;

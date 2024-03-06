@@ -17,11 +17,13 @@ export default function BreadScrumb({ title }: BreadScrumbProps) {
         }}
       >
         <BreadItem isThereHover>
-          <IoHome />
+          <IoHome size={"1.2rem"} />
         </BreadItem>
       </NavLink>
 
-      <p style={{ fontSize: "1.2rem" }}>{">"}</p>
+      <p style={{ fontSize: "clamp(0.8rem, 1.5vw, 1.2rem)", opacity: "0.9" }}>
+        {">"}
+      </p>
 
       <NavLink
         to={"/brasequip/servicos"}
@@ -35,9 +37,17 @@ export default function BreadScrumb({ title }: BreadScrumbProps) {
         </BreadItem>
       </NavLink>
 
-      <p style={{ fontSize: "1.2rem" }}>{">"}</p>
+      <p style={{ fontSize: "clamp(0.8rem, 1.5vw, 1.2rem)", opacity: "0.9" }}>
+        {">"}
+      </p>
 
-      <BreadItem>{title}</BreadItem>
+      <BreadItem
+        style={{
+          opacity: "0.7",
+        }}
+      >
+        {title}
+      </BreadItem>
     </BreadContainer>
   );
 }

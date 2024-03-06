@@ -5,7 +5,7 @@ export const BreadContainer = styled.div`
   display: flex;
   align-items: center;
   gap: 1em;
-  font-size: 1.2rem;
+  font-size: clamp(0.8rem, 1.5vw, 1.2rem);
   font-weight: 500;
   /* background-color: darkgray; */
   color: ${theme.colors.darkBlue};

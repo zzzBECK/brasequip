@@ -12,6 +12,7 @@ import {
   HeaderContainer,
   Image,
   ImageOverlay,
+  BackgroundDark,
   TextPosition,
 } from "./styles";
 import BreadScrumb from "../../components/BreadScrumb";
@@ -62,6 +63,7 @@ export default function Servico() {
       <HeaderContainer>
         <Image>
           <ImageOverlay />
+          <BackgroundDark />
           <TextPosition>
             <Flag text="Informações gerais" />
             <h1
