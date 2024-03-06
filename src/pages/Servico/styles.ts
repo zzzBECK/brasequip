@@ -101,7 +101,7 @@ export const Content = styled.div`
   flex-direction: column;
   background-color: ${theme.colors.white};
   min-height: 40em;
-  padding-top: 4em;
+  padding-top: 2em;
   padding-bottom: 4em;
   color: ${theme.colors.black};
   gap: 2em;
