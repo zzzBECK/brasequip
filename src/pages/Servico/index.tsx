@@ -35,6 +35,25 @@ function selectService(type: string) {
   }
 }
 
+function selectTitle(type: string) {
+  switch (type) {
+    case "manutencao":
+      return "Manutenção";
+    case "montagem":
+      return "Montagem e Desmontagem";
+    case "reforma":
+      return "Reforma de Equipamentos";
+    case "fixacao":
+      return "Projeto de Fixação";
+    case "art":
+      return "ART";
+    case "end":
+      return "Teste de END";
+    default:
+      return "Teste de END";
+  }
+}
+
 export default function Servico() {
   const { type } = useParams();
 
@@ -52,14 +71,14 @@ export default function Servico() {
                 maxWidth: "600px",
               }}
             >
-              Reforma de Equipamentos
+              {selectTitle(type as string)}
             </h1>
           </TextPosition>
         </Image>
       </HeaderContainer>
 
       <Content className="padding">
-        <BreadScrumb />
+        <BreadScrumb title={selectTitle(type as string)} />
         {selectService(type as string)}
       </Content>
     </WholePage>

@@ -1,10 +1,12 @@
-import { NavLink, useParams } from "react-router-dom";
-import { BreadContainer, BreadItem } from "./styles";
 import { IoHome } from "react-icons/io5";
+import { NavLink } from "react-router-dom";
+import { BreadContainer, BreadItem } from "./styles";
 
-export default function BreadScrumb() {
-  const { type } = useParams();
+interface BreadScrumbProps {
+  title: string;
+}
 
+export default function BreadScrumb({ title }: BreadScrumbProps) {
   return (
     <BreadContainer>
       <NavLink
@@ -35,7 +37,7 @@ export default function BreadScrumb() {
 
       <p style={{ fontSize: "1.2rem" }}>{">"}</p>
 
-      <BreadItem>{type as string}</BreadItem>
+      <BreadItem>{title}</BreadItem>
     </BreadContainer>
   );
 }
