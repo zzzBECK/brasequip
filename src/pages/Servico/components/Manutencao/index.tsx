@@ -3,10 +3,7 @@ import Flag from "../../../Home/components/Flag";
 export default function Manutencao() {
   return (
     <>
-      <Flag
-        text="Manutenção: Garantia de Performance e Segurança"
-        mode="light"
-      />
+      <Flag text="Garantia de Performance e Segurança" mode="light" />
       <div
         style={{
           display: "flex",

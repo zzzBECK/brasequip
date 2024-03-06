@@ -3,10 +3,7 @@ import Flag from "../../../Home/components/Flag";
 export default function Montagem() {
   return (
     <>
-      <Flag
-        text="Montagem e Desmontagem: Soluções Completas em Elevação"
-        mode="light"
-      />
+      <Flag text="Soluções Completas em Elevação" mode="light" />
       <div
         style={{
           display: "flex",

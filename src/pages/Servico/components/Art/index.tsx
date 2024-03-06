@@ -3,10 +3,7 @@ import Flag from "../../../Home/components/Flag";
 export default function Art() {
   return (
     <>
-      <Flag
-        text="ART e Seguro de Responsabilidade Civil: Compromisso e Proteção Total"
-        mode="light"
-      />
+      <Flag text="Compromisso e Proteção Total" mode="light" />
       <div
         style={{
           display: "flex",
