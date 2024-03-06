@@ -31,7 +31,7 @@ const router = createBrowserRouter([
         element: <Contato />,
       },
       {
-        path: "/brasequip/servico",
+        path: "/brasequip/servico/:type",
         element: <Servico />,
       },
     ],

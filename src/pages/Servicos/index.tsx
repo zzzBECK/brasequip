@@ -45,42 +45,50 @@ export default function Servicos() {
             image="locacao.jpeg"
             title="Locação de equipamentos"
             description="Máquinas e equipamentos para elevação"
+            linkTo="/brasequip/servico/locacao"
           />
           <ServiceCard
             image="montagem.jpg"
             title="Montagem e desmontagem"
             description="Equipamentos para elevação"
+            linkTo="/brasequip/servico/montagem"
           />
           <ServiceCard
             image="manutencao.jpg"
             title="Manutenção"
             description="Preventiva e corretiva"
+            linkTo="/brasequip/servico/manutencao"
           />
           <ServiceCard
             image="aguasclaras.jpeg"
             title="Reforma de equipamentos"
             description="Reforma de elevadores e gruas"
+            linkTo="/brasequip/servico/reforma"
           />
           <ServiceCard
             image="fixacao.jpg"
             title="Projeto de Fixação"
             description="Emissão de laudo ART e estrutural"
+            linkTo="/brasequip/servico/fixacao"
           />
           <ServiceCard
             image="museu.jpg"
             title="ART dos serviços contratados"
             description="Seguro de responsabilidade civil"
+            linkTo="/brasequip/servico/art"
           />
 
           <ServiceCard
             image="end.jpeg"
             title="Teste de END"
             description="(Ensaios Não Destrutivos) com Laudo Técnico"
+            linkTo="/brasequip/servico/end"
           />
           <ServiceCard
             image="cremalheira.jpeg"
             title="Elevador"
             description="Cremalheira"
+            linkTo="/brasequip/servico/elevador"
           />
         </ServicosContent>
       </ServicosContainer>
