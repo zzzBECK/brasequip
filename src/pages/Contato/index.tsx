@@ -65,7 +65,7 @@ export default function Contato() {
   };
   return (
     <WholePage>
-      <HeaderContainer>
+      <HeaderContainer ref={headerRef}>
         <Image>
           <ImageOverlay />
           <TextPosition>
