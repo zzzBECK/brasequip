@@ -58,3 +58,8 @@
   color: #091242;
   transition: color 300ms ease-in-out;
 }
+
+.hover:hover {
+  color: #c71e23;
+  transition: color 300ms ease-in-out;
+}
