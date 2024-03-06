@@ -3,10 +3,7 @@ import Flag from "../../../Home/components/Flag";
 export default function End() {
   return (
     <>
-      <Flag
-        text="Teste de END: Prevenção e Segurança na Construção Civil"
-        mode="light"
-      />
+      <Flag text="Prevenção e Segurança na Construção Civil" mode="light" />
       <div
         style={{
           display: "flex",

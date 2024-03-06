@@ -3,10 +3,7 @@ import Flag from "../../../Home/components/Flag";
 export default function Fixacao() {
   return (
     <>
-      <Flag
-        text="Projeto de Fixação: Segurança e Conformidade Técnica"
-        mode="light"
-      />
+      <Flag text="Segurança e Conformidade Técnica" mode="light" />
       <div
         style={{
           display: "flex",

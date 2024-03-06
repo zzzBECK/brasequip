@@ -11,7 +11,7 @@ export const WholeHeader = styled.header<IWholeHeader>`
   max-width: 100%;
   height: ${({ isScrolled }) => (isScrolled ? "4em" : "6em")};
   flex-direction: column;
-  z-index: 1000;
+  z-index: 100000;
   background-color: ${({ isScrolled }) =>
     isScrolled ? "rgba(9, 18, 66, 1)" : "rgba(9, 18, 66, 0.1)"};
   position: ${({ isScrolled }) => (isScrolled ? "fixed" : "absolute")};

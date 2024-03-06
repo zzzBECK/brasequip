@@ -3,10 +3,7 @@ import Flag from "../../../Home/components/Flag";
 export default function Reforma() {
   return (
     <>
-      <Flag
-        text="Reforma de Equipamentos: Qualidade e Confiabilidade em Elevação"
-        mode="light"
-      />
+      <Flag text="Qualidade e Confiabilidade em Elevação" mode="light" />
       <div
         style={{
           display: "flex",

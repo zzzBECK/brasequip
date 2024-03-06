@@ -15,12 +15,12 @@ import {
   Row,
 } from "./styles";
 import theme from "../../theme/theme";
+import { NavLink } from "react-router-dom";
 
 export default function Footer() {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth",
     });
   };
 
@@ -88,9 +88,36 @@ export default function Footer() {
                 }}
               >
                 <h3>Páginas</h3>
-                <p>Contato</p>
-                <p>Serviços</p>
-                <p>Sobre Nós</p>
+                <NavLink
+                  to={"/brasequip/contato"}
+                  style={{
+                    textDecoration: "none",
+                    color: "inherit",
+                  }}
+                  onClick={() => scrollToTop()}
+                >
+                  <p className="hover">Contato</p>
+                </NavLink>
+                <NavLink
+                  to={"/brasequip/servicos"}
+                  style={{
+                    textDecoration: "none",
+                    color: "inherit",
+                  }}
+                  onClick={() => scrollToTop()}
+                >
+                  <p className="hover">Serviços</p>
+                </NavLink>
+                <NavLink
+                  to={"/brasequip/sobre"}
+                  style={{
+                    textDecoration: "none",
+                    color: "inherit",
+                  }}
+                  onClick={() => scrollToTop()}
+                >
+                  <p className="hover">Sobre Nós</p>
+                </NavLink>
               </div>
             </RoutesContainer>
           </Column>
