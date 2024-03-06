@@ -14,6 +14,7 @@ import {
   ImageOverlay,
   TextPosition,
 } from "./styles";
+import BreadScrumb from "../../components/BreadScrumb";
 
 function selectService(type: string) {
   switch (type) {
@@ -57,7 +58,10 @@ export default function Servico() {
         </Image>
       </HeaderContainer>
 
-      <Content className="padding">{selectService(type as string)}</Content>
+      <Content className="padding">
+        <BreadScrumb />
+        {selectService(type as string)}
+      </Content>
     </WholePage>
   );
 }
