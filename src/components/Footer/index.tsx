@@ -91,7 +91,7 @@ export default function Footer() {
               <h3>Endereço</h3>
               <p>BRASEQUIP BRASILIA EQUIPAMENTOS</p>
               <p>LTDA - BR-070, KM 8.5, LOTE 454, Ceilândia-DF</p>
-              <p>Fones: (61) 3585-3900 / (61) 3585-3899</p>
+              <p>Contato: (61) 98175-0558</p>
             </div>
           </Column>
 
