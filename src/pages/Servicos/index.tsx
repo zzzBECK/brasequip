@@ -117,10 +117,22 @@ export default function Servicos() {
         </ServicosTitle>
         <ServicosContent>
           <ServiceCard
+            image="end.jpeg"
+            title="Teste de END"
+            description="(Ensaios Não Destrutivos) com Laudo Técnico"
+            linkTo="/brasequip/servico/end"
+          />
+          <ServiceCard
             image="locacao.jpeg"
             title="Locação de equipamentos"
             description="Máquinas e equipamentos para elevação"
             linkTo="/brasequip/servico/locacao"
+          />
+          <ServiceCard
+            image="museu.jpg"
+            title="ART dos serviços contratados"
+            description="Seguro de responsabilidade civil"
+            linkTo="/brasequip/servico/art"
           />
           <ServiceCard
             image="montagem.jpg"
@@ -145,19 +157,6 @@ export default function Servicos() {
             title="Projeto de Fixação"
             description="Emissão de laudo ART e estrutural"
             linkTo="/brasequip/servico/fixacao"
-          />
-          <ServiceCard
-            image="museu.jpg"
-            title="ART dos serviços contratados"
-            description="Seguro de responsabilidade civil"
-            linkTo="/brasequip/servico/art"
-          />
-
-          <ServiceCard
-            image="end.jpeg"
-            title="Teste de END"
-            description="(Ensaios Não Destrutivos) com Laudo Técnico"
-            linkTo="/brasequip/servico/end"
           />
           <ServiceCard
             image="cremalheira.jpeg"

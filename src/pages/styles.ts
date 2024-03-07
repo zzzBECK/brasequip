@@ -20,7 +20,7 @@ export const Image = styled.div`
   @media (max-width: 620px) {
     height: 100vh;
     height: 100svh;
-    min-height: 45em;
+    min-height: 40em;
   }
 
   @media (max-height: 700px) {

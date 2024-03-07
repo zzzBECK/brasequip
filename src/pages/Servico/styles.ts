@@ -86,7 +86,7 @@ export const Content = styled.div`
   display: flex;
   flex-direction: column;
   background-color: ${theme.colors.white};
-  min-height: 40em;
+  min-height: 42em;
   padding-top: 2em;
   padding-bottom: 4em;
   color: ${theme.colors.black};

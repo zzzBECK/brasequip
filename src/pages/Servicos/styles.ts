@@ -158,7 +158,7 @@ export const ServicosContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  min-height: 42em;
+  min-height: 40em;
   background-color: ${theme.colors.white};
   color: ${theme.colors.black};
   justify-content: center;
@@ -168,6 +168,7 @@ export const ServicosContainer = styled.div`
 export const ServicosTitle = styled.div`
   display: flex;
   width: 100%;
+  height: 40em;
   height: fit-content;
   align-items: center;
   justify-content: center;

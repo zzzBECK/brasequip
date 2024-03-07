@@ -16,6 +16,8 @@ import {
   TextPosition,
 } from "./styles";
 import BreadScrumb from "../../components/BreadScrumb";
+import Elevador from "./components/Elevador";
+import Locacao from "./components/Locacao";
 
 function selectService(type: string) {
   switch (type) {
@@ -31,6 +33,10 @@ function selectService(type: string) {
       return <Art />;
     case "end":
       return <End />;
+    case "elevador":
+      return <Elevador />;
+    case "locacao":
+      return <Locacao />;
     default:
       return <End />;
   }
@@ -50,6 +56,10 @@ function selectTitle(type: string) {
       return "ART";
     case "end":
       return "Teste de END";
+    case "elevador":
+      return "Elevadores Cremalheira";
+    case "locacao":
+      return "Locação de Equipamentos";
     default:
       return "Teste de END";
   }
