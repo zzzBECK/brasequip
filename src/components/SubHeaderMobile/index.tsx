@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { FaFacebook, FaInstagram } from "react-icons/fa";
-import { IoIosArrowDown, IoMdMenu } from "react-icons/io";
+import { IoMdMenu } from "react-icons/io";
 import { MdDarkMode } from "react-icons/md";
 import { NavLink } from "react-router-dom";
 import theme from "../../theme/theme";
@@ -160,7 +160,7 @@ export default function SubHeaderMobile({ height }: ISubHeaderMobile) {
           >
             Contato
           </NavLink>
-          <NavLink
+          {/* <NavLink
             to="/brasequip"
             end
             style={({ isActive }) => ({
@@ -182,7 +182,7 @@ export default function SubHeaderMobile({ height }: ISubHeaderMobile) {
           >
             Outros
             <IoIosArrowDown />
-          </NavLink>
+          </NavLink> */}
           <div
             style={{
               display: "flex",

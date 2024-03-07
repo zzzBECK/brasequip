@@ -1,5 +1,4 @@
 import { FaFacebook, FaInstagram } from "react-icons/fa";
-import { IoIosArrowDown } from "react-icons/io";
 import { MdDarkMode } from "react-icons/md";
 import { NavLink } from "react-router-dom";
 import {
@@ -98,10 +97,10 @@ export default function SubHeader() {
             Contato
           </NavLink>
         </SubHeaderItem>
-        <IoIosArrowDown
+        {/* <IoIosArrowDown
           size="1.2em"
           style={{ cursor: "pointer", minWidth: "1em" }}
-        />
+        /> */}
       </Column>
       <Column width="fit-content">
         <IconsContainer>
