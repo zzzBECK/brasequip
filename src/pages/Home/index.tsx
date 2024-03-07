@@ -129,12 +129,14 @@ export default function Home() {
               reputação sólida."
             Icon={FaTools}
             fadeType="right"
+            linkTo={"servico/montagem"}
           />
           <ServiceCard
             title="Manutenção preventiva e corretiva"
             description="Com foco em durabilidade e performance, nossa manutenção preventiva e corretiva previne paradas não programadas, maximizando a produtividade de sua obra."
             Icon={MdSecurity}
             fadeType="left"
+            linkTo={"servico/manutencao"}
           />
         </ServicesRow>
         <ServicesRow>
@@ -143,12 +145,14 @@ export default function Home() {
             description="Revitalizamos seus equipamentos com reformas detalhadas, prolongando a vida útil e otimizando o desempenho para atender às demandas do seu projeto."
             Icon={GiGearHammer}
             fadeType="right"
+            linkTo={"servico/reforma"}
           />
           <ServiceCard
             title="Teste de END"
             description="Os Ensaios Não Destrutivos (END), são técnicas de inspeção de peças e equipamentos que avaliam a existência de descontinuidades (mecanismos de falha) nas estruturas dos materiais sem danificá-los."
             Icon={SiGooglesearchconsole}
             fadeType="left"
+            linkTo={"servico/end"}
           />
         </ServicesRow>
 

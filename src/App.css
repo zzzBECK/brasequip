@@ -63,3 +63,10 @@
   color: #c71e23;
   transition: color 300ms ease-in-out;
 }
+
+.whatsapp:hover {
+  cursor: pointer;
+  transform: scale(1.5);
+
+  transition: 300ms ease-in-out;
+}
