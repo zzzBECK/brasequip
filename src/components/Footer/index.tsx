@@ -1,7 +1,9 @@
 import { CiMail } from "react-icons/ci";
 import { PiPhoneThin } from "react-icons/pi";
 import { SlClock } from "react-icons/sl";
+import { NavLink } from "react-router-dom";
 import Logo from "../../assets/RASTER_LOGO.png";
+import theme from "../../theme/theme";
 import {
   Column,
   Container,
@@ -14,10 +16,15 @@ import {
   RoutesContainer,
   Row,
 } from "./styles";
-import theme from "../../theme/theme";
-import { NavLink } from "react-router-dom";
 
 export default function Footer() {
+  const scrollToTopSmoothly = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -32,21 +39,31 @@ export default function Footer() {
             <Image
               src={Logo}
               style={{ cursor: "pointer" }}
-              onClick={() => scrollToTop()}
+              onClick={() => scrollToTopSmoothly()}
             />
           </LogoContainer>
-          <h3
+          <NavLink
+            to={"contato"}
+            onClick={scrollToTop}
             style={{
-              cursor: "pointer",
-              height: "100%",
-              alignItems: "center",
-              display: "flex",
-              width: "fit-content",
-              fontSize: "clamp(0.8rem, 1.2vw, 1.5rem)",
+              textDecoration: "none",
+              color: "inherit",
             }}
           >
-            Fale Conosco
-          </h3>
+            <h3
+              style={{
+                cursor: "pointer",
+                height: "100%",
+                alignItems: "center",
+                display: "flex",
+                width: "fit-content",
+                fontSize: "clamp(0.8rem, 1.2vw, 1.5rem)",
+              }}
+              className="hover"
+            >
+              Fale Conosco
+            </h3>
+          </NavLink>
           <h3
             style={{
               cursor: "pointer",
@@ -151,7 +168,17 @@ export default function Footer() {
                   <p style={{ userSelect: "none", fontWeight: "bold" }}>
                     Email
                   </p>
-                  <p>contato@brasequip.com.br</p>
+                  <p
+                    style={{
+                      cursor: "pointer",
+                    }}
+                    className="hover"
+                    onClick={() =>
+                      window.open("mailto:contato@brasequip.com.br", "_blank")
+                    }
+                  >
+                    contato@brasequip.com.br
+                  </p>
                 </ItemContent>
               </ItemContainer>
 
@@ -163,7 +190,20 @@ export default function Footer() {
                   <p style={{ userSelect: "none", fontWeight: "bold" }}>
                     Ligue para gente
                   </p>
-                  <p>(61) 98175-0558</p>
+                  <p
+                    style={{
+                      cursor: "pointer",
+                    }}
+                    className="hover"
+                    onClick={() =>
+                      window.open(
+                        "https://wa.me//556181750558?text=Gostaria%20de%20fazer%20um%20orçamento%20por%20favor!",
+                        "_blank"
+                      )
+                    }
+                  >
+                    (61) 98175-0558
+                  </p>
                 </ItemContent>
               </ItemContainer>
             </div>
