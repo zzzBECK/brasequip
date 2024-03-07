@@ -48,7 +48,7 @@ export default function Home() {
 
     const targetPosition = headerRef.current.offsetHeight;
     const startPosition = window.pageYOffset;
-    const distance = targetPosition - startPosition;
+    const distance = targetPosition - startPosition - 50;
     const startTime =
       "now" in window.performance ? performance.now() : new Date().getTime();
 
