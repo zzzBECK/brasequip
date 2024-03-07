@@ -1,11 +1,13 @@
 import { IconType } from "react-icons";
 import { Service } from "./styles";
+import { NavLink } from "react-router-dom";
 
 interface IServiceCard {
   title: string;
   description: string;
   Icon: IconType;
   fadeType: "left" | "right";
+  linkTo: string;
 }
 
 export default function ServiceCard({
@@ -13,7 +15,13 @@ export default function ServiceCard({
   description,
   Icon,
   fadeType,
+  linkTo,
 }: IServiceCard) {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+    });
+  };
   return (
     <Service data-aos={`fade-${fadeType}`} data-aos-duration="1000">
       <Icon
@@ -24,16 +32,25 @@ export default function ServiceCard({
           opacity: "0.8",
         }}
       />
-      <h2
+      <NavLink
+        to={linkTo}
+        onClick={scrollToTop}
         style={{
-          color: "black",
-          fontWeight: "500",
-          lineHeight: "1",
-          marginBottom: "0.5em",
+          textDecoration: "none",
+          color: "inherit",
         }}
       >
-        {title}
-      </h2>
+        <h2
+          style={{
+            color: "black",
+            fontWeight: "500",
+            lineHeight: "1",
+            marginBottom: "0.5em",
+          }}
+        >
+          {title}
+        </h2>
+      </NavLink>
       <p
         style={{
           color: "black",
