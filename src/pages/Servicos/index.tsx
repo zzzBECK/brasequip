@@ -158,7 +158,6 @@ export default function Servicos() {
             description="Emissão de laudo ART e estrutural"
             linkTo="/brasequip/servico/fixacao"
           />
-
           <ServiceCard
             image="cremalheira.jpeg"
             title="Elevador"
