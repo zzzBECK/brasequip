@@ -188,7 +188,7 @@ export default function Footer() {
                 </IconContainer>
                 <ItemContent>
                   <p style={{ userSelect: "none", fontWeight: "bold" }}>
-                    Ligue para gente
+                    Entre em contato
                   </p>
                   <p
                     style={{
