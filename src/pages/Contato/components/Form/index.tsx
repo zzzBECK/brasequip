@@ -105,6 +105,7 @@ export default function Form() {
         method: "POST",
         body: JSON.stringify(contact),
         headers: { "Content-Type": "application/json" },
+        mode: "no-cors",
       });
 
       const json = await res.json();
