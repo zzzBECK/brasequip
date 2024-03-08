@@ -21,7 +21,7 @@ export default function SubHeader() {
       <Column width="fit-content">
         <SubHeaderItem borderRight="true" borderHeight="30%">
           <NavLink
-            to="/"
+            to="/brasequip/"
             end
             style={({ isActive }) => ({
               borderBottom: isActive ? "1px solid white" : "none",
@@ -41,7 +41,7 @@ export default function SubHeader() {
 
         <SubHeaderItem borderRight={"true"} borderHeight="30%">
           <NavLink
-            to="/servicos"
+            to="/brasequip/servicos"
             end
             style={({ isActive }) => ({
               borderBottom: isActive ? "1px solid white" : "none",
@@ -61,7 +61,7 @@ export default function SubHeader() {
         </SubHeaderItem>
         <SubHeaderItem borderRight="true" borderHeight="30%">
           <NavLink
-            to="/sobre"
+            to="/brasequip/sobre"
             end
             style={({ isActive }) => ({
               borderBottom: isActive ? "1px solid white" : "none",
@@ -80,7 +80,7 @@ export default function SubHeader() {
         </SubHeaderItem>
         <SubHeaderItem borderRight={"false"} borderHeight="30%">
           <NavLink
-            to="/contato"
+            to="/brasequip/contato"
             end
             style={({ isActive }) => ({
               borderBottom: isActive ? "1px solid white" : "none",

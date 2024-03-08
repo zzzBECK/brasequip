@@ -76,7 +76,7 @@ export default function SubHeaderMobile({ height }: ISubHeaderMobile) {
           }}
         >
           <NavLink
-            to="/"
+            to="/brasequip/"
             end
             style={({ isActive }) => ({
               height: "4em",
@@ -98,7 +98,7 @@ export default function SubHeaderMobile({ height }: ISubHeaderMobile) {
             Página Inicial
           </NavLink>
           <NavLink
-            to="/servicos"
+            to="/brasequip/servicos"
             end
             style={({ isActive }) => ({
               height: "4em",
@@ -119,7 +119,7 @@ export default function SubHeaderMobile({ height }: ISubHeaderMobile) {
             Serviços
           </NavLink>
           <NavLink
-            to="/sobre"
+            to="/brasequip/sobre"
             end
             style={({ isActive }) => ({
               height: "4em",
@@ -140,7 +140,7 @@ export default function SubHeaderMobile({ height }: ISubHeaderMobile) {
             Sobre nós
           </NavLink>
           <NavLink
-            to="/contato"
+            to="/brasequip/contato"
             end
             style={({ isActive }) => ({
               height: "4em",

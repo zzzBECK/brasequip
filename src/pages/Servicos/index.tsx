@@ -120,49 +120,49 @@ export default function Servicos() {
             image="end.jpeg"
             title="Teste de END"
             description="(Ensaios Não Destrutivos) com Laudo Técnico"
-            linkTo="/servico/end"
+            linkTo="/brasequip/servico/end"
           />
           <ServiceCard
             image="locacao.jpeg"
             title="Locação de equipamentos"
             description="Máquinas e equipamentos para elevação"
-            linkTo="/servico/locacao"
+            linkTo="/brasequip/servico/locacao"
           />
           <ServiceCard
             image="museu.jpg"
             title="ART dos serviços contratados"
             description="Seguro de responsabilidade civil"
-            linkTo="/servico/art"
+            linkTo="/brasequip/servico/art"
           />
           <ServiceCard
             image="montagem.jpg"
             title="Montagem e desmontagem"
             description="Equipamentos para elevação"
-            linkTo="/servico/montagem"
+            linkTo="/brasequip/servico/montagem"
           />
           <ServiceCard
             image="manutencao.jpg"
             title="Manutenção"
             description="Preventiva e corretiva"
-            linkTo="/servico/manutencao"
+            linkTo="/brasequip/servico/manutencao"
           />
           <ServiceCard
             image="aguasclaras.jpeg"
             title="Reforma de equipamentos"
             description="Reforma de elevadores e gruas"
-            linkTo="/servico/reforma"
+            linkTo="/brasequip/servico/reforma"
           />
           <ServiceCard
             image="fixacao.jpg"
             title="Projeto de Fixação"
             description="Emissão de laudo ART e estrutural"
-            linkTo="/servico/fixacao"
+            linkTo="/brasequip/servico/fixacao"
           />
           <ServiceCard
             image="cremalheira.jpeg"
             title="Elevador"
             description="Cremalheira"
-            linkTo="/servico/elevador"
+            linkTo="/brasequip/servico/elevador"
           />
         </ServicosContent>
       </ServicosContainer>
@@ -194,7 +194,7 @@ export default function Servicos() {
             </TextContent>
             <Button
               text="Ver mais"
-              linkTo="/sobre"
+              linkTo="/brasequip/sobre"
               onClick={() => window.scrollTo(0, 0)}
             />
           </VisaoGeralText>

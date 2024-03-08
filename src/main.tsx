@@ -11,27 +11,27 @@ import Servico from "./pages/Servico/index.tsx";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/brasequip/",
     element: <App />,
     children: [
       {
-        path: "/",
+        path: "/brasequip/",
         element: <Home />,
       },
       {
-        path: "/sobre",
+        path: "/brasequip/sobre",
         element: <Sobre />,
       },
       {
-        path: "/servicos",
+        path: "/brasequip/servicos",
         element: <Servicos />,
       },
       {
-        path: "/contato",
+        path: "/brasequip/contato",
         element: <Contato />,
       },
       {
-        path: "/servico/:type",
+        path: "/brasequip/servico/:type",
         element: <Servico />,
       },
     ],

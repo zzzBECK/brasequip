@@ -106,7 +106,7 @@ export default function Footer() {
               >
                 <h3>Páginas</h3>
                 <NavLink
-                  to={"/contato"}
+                  to={"/brasequip/contato"}
                   style={{
                     textDecoration: "none",
                     color: "inherit",
@@ -116,7 +116,7 @@ export default function Footer() {
                   <p className="hover">Contato</p>
                 </NavLink>
                 <NavLink
-                  to={"/servicos"}
+                  to={"/brasequip/servicos"}
                   style={{
                     textDecoration: "none",
                     color: "inherit",
@@ -126,7 +126,7 @@ export default function Footer() {
                   <p className="hover">Serviços</p>
                 </NavLink>
                 <NavLink
-                  to={"/sobre"}
+                  to={"/brasequip/sobre"}
                   style={{
                     textDecoration: "none",
                     color: "inherit",
