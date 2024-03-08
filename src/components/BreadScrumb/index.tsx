@@ -10,7 +10,7 @@ export default function BreadScrumb({ title }: BreadScrumbProps) {
   return (
     <BreadContainer>
       <NavLink
-        to={"/brasequip/"}
+        to={"/"}
         style={{
           textDecoration: "none",
           color: "inherit",
@@ -26,7 +26,7 @@ export default function BreadScrumb({ title }: BreadScrumbProps) {
       </p>
 
       <NavLink
-        to={"/brasequip/servicos"}
+        to={"/servicos"}
         style={{
           textDecoration: "none",
           color: "inherit",
