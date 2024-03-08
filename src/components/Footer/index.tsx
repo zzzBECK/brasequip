@@ -174,10 +174,10 @@ export default function Footer() {
                     }}
                     className="hover"
                     onClick={() =>
-                      window.open("mailto:contato@brasequip.com.br", "_blank")
+                      window.open("mailto:adm@brasequip.com.br", "_blank")
                     }
                   >
-                    contato@brasequip.com.br
+                    adm@brasequip.com.br
                   </p>
                 </ItemContent>
               </ItemContainer>
