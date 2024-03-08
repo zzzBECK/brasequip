@@ -53,7 +53,7 @@ export default function Header() {
         <Column width="16%" justifyContent="flex-start">
           <ImageContainer>
             <NavLink
-              to="/brasequip/"
+              to="/"
               end
               style={{
                 display: "flex",

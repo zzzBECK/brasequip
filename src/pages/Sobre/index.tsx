@@ -156,7 +156,7 @@ export default function Sobre() {
         </p>
 
         <h1 style={{ marginTop: "1em" }}>Venha nos Conhecer</h1>
-        <p>
+        <p data-nosnippet>
           Estamos localizados às margens da BR-070, em Ceilândia-DF, em uma área
           de 10.000 m², onde nossos clientes podem visitar nosso pátio de
           montagem e conhecer nossa gama de equipamentos para pronta entrega. A
