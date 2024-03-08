@@ -42,9 +42,6 @@ export default function Form() {
     honeypot: "",
     message: "",
     replyTo: "",
-    // accessKey: "4f712f04-032e-4484-95eb-7598e2f20544",
-    // alexandrebeck2003
-    // accessKey: "73bf9903-cf45-4178-b35a-09ba82bc5ce8",
     accessKey: "1fc123ac-e012-422c-89a9-0df3f612a9a9",
   });
 
