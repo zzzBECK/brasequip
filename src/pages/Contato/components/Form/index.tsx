@@ -42,7 +42,7 @@ export default function Form() {
     honeypot: "",
     message: "",
     replyTo: "",
-    accessKey: "1fc123ac-e012-422c-89a9-0df3f612a9a9",
+    accessKey: "73bf9903-cf45-4178-b35a-09ba82bc5ce8",
   });
 
   const [showSuccessModal, setShowSuccessModal] = useState(false);
@@ -105,7 +105,6 @@ export default function Form() {
         method: "POST",
         body: JSON.stringify(contact),
         headers: { "Content-Type": "application/json" },
-        mode: "no-cors",
       });
 
       const json = await res.json();
@@ -126,7 +125,7 @@ export default function Form() {
           honeypot: "",
           message: "",
           replyTo: "",
-          accessKey: "1fc123ac-e012-422c-89a9-0df3f612a9a9",
+          accessKey: "73bf9903-cf45-4178-b35a-09ba82bc5ce8",
         });
       } else {
         setResponse({
