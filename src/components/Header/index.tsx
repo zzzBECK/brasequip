@@ -3,7 +3,6 @@ import { NavLink } from "react-router-dom";
 import SubHeader from "../SubHeader";
 import SubHeaderMobile from "../SubHeaderMobile";
 import { Column, ContainerHeader } from "./styles";
-import Logo from "../../../public/logo.png";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -75,7 +74,7 @@ export default function Header() {
                 height: "100%",
                 width: windowSize.width > 800 ? "10em" : "8em",
                 cursor: "pointer",
-                backgroundImage: `url(${Logo})`,
+                backgroundImage: `url('logo.png')`,
                 backgroundSize: isScrolled ? "100%" : "140%",
                 backgroundPosition: "center",
                 backgroundRepeat: "no-repeat",
