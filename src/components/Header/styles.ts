@@ -67,8 +67,8 @@ export const Image = styled.img`
   border-radius: 50%;
   scale: 2.5;
   user-select: none;
-  min-width: 80px;
-  max-width: 86px;
+  min-width: 100%;
+  max-width: 100%;
 `;
 
 export const ItemContainer = styled.div`
