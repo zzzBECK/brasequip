@@ -621,27 +621,10 @@ Error generating stack: `+i.message+`
   flex-direction: column;
   width: 100%;
   height: fit-content;
-  min-height: 100vh;
   background-color: #fff;
-  padding: 0 18vw;
   gap: 4em;
-
-  @media (max-width: 1280px) {
-    padding: 0 10vw;
-  }
-
-  @media (max-width: 768px) {
-    padding: 0 8vw;
-    gap: 0;
-  }
-
-  @media (max-width: 480px) {
-    padding: 0 4vw;
-  }
-
-  @media (max-width: 340px) {
-    padding: 0;
-  }
+  padding-top: 4em;
+  padding-bottom: 4em;
 `,yf=D.div`
   display: flex;
   width: 100%;
@@ -650,9 +633,9 @@ Error generating stack: `+i.message+`
   @media (max-width: 768px) {
     flex-direction: column;
   }
-`;function tw(){const[e,t]=j.useState({width:window.innerWidth,height:window.innerHeight}),n=e.width>1100;j.useEffect(()=>{function i(){t({width:window.innerWidth,height:window.innerHeight})}return window.addEventListener("resize",i),i(),()=>window.removeEventListener("resize",i)},[]);const r=j.useRef(null),o=i=>{if(!i.current)return;const a=i.current.offsetHeight,l=window.pageYOffset,s=a-l-50,u="now"in window.performance?performance.now():new Date().getTime(),d=(f,y,x,w)=>(f/=w/2,f<1?x/2*f*f+y:(f--,-x/2*(f*(f-2)-1)+y)),p=f=>{const y=f-u,x=d(y,l,s,500);window.scrollTo(0,x),y<500&&requestAnimationFrame(p)};requestAnimationFrame(p)};return c.jsxs(ci,{children:[c.jsx(el,{ref:r,"data-aos":"fade-zoom-in",children:c.jsxs(Bx,{children:[c.jsx(Hx,{}),c.jsxs(Vx,{children:[n&&c.jsx(Ye,{text:"Brasequip - Máquinas e equipamentos de elevação"}),c.jsx("h1",{style:{fontSize:"60px",lineHeight:"1",maxWidth:"600px"},"data-aos":"zoom-in",children:"Elevando Padrões Alcançando Alturas"}),c.jsx("p",{"data-aos":"zoom-in","data-aos-offset":"-100",children:"Especialistas em elevação, a BRASEQUIP oferece venda e locação de equipamentos de alta performance para sua obra. Nosso compromisso com a segurança e eficiência é inabalável. Descubra soluções ágeis para guindastes, mini-gruas e muito mais."}),c.jsx(lr,{text:"Ver mais",onClick:()=>o(r)})]})]})}),c.jsxs(ew,{children:[c.jsxs("h1",{style:{color:"black",textAlign:"center",margin:"2em 0",fontWeight:"700",lineHeight:"1.2"},"data-aos":"fade-zoom-in",children:["CONHEÇA OS",c.jsx("br",{})," SERVIÇOS"]}),c.jsxs(yf,{children:[c.jsx(Ii,{title:"Montagem e desmontagem",description:`Garantimos montagem e desmontagem eficientes de equipamentos,
+`;function tw(){const[e,t]=j.useState({width:window.innerWidth,height:window.innerHeight}),n=e.width>1100;j.useEffect(()=>{function i(){t({width:window.innerWidth,height:window.innerHeight})}return window.addEventListener("resize",i),i(),()=>window.removeEventListener("resize",i)},[]);const r=j.useRef(null),o=i=>{if(!i.current)return;const a=i.current.offsetHeight,l=window.pageYOffset,s=a-l-50,u="now"in window.performance?performance.now():new Date().getTime(),d=(f,y,x,w)=>(f/=w/2,f<1?x/2*f*f+y:(f--,-x/2*(f*(f-2)-1)+y)),p=f=>{const y=f-u,x=d(y,l,s,500);window.scrollTo(0,x),y<500&&requestAnimationFrame(p)};requestAnimationFrame(p)};return c.jsxs(ci,{children:[c.jsx(el,{ref:r,"data-aos":"fade-zoom-in",children:c.jsxs(Bx,{children:[c.jsx(Hx,{}),c.jsxs(Vx,{children:[n&&c.jsx(Ye,{text:"Brasequip - Máquinas e equipamentos de elevação"}),c.jsx("h1",{style:{fontSize:"60px",lineHeight:"1",maxWidth:"600px"},"data-aos":"zoom-in",children:"Elevando Padrões Alcançando Alturas"}),c.jsx("p",{"data-aos":"zoom-in","data-aos-offset":"-100",children:"Especialistas em elevação, a BRASEQUIP oferece venda e locação de equipamentos de alta performance para sua obra. Nosso compromisso com a segurança e eficiência é inabalável. Descubra soluções ágeis para guindastes, mini-gruas e muito mais."}),c.jsx(lr,{text:"Ver mais",onClick:()=>o(r)})]})]})}),c.jsxs(ew,{className:"padding",children:[c.jsxs("h1",{style:{color:"black",textAlign:"center",fontWeight:"700",lineHeight:"1.2"},"data-aos":"fade-zoom-in",children:["CONHEÇA OS",c.jsx("br",{})," SERVIÇOS"]}),c.jsxs(yf,{children:[c.jsx(Ii,{title:"Montagem e desmontagem",description:`Garantimos montagem e desmontagem eficientes de equipamentos,
               assegurando a excelência e a segurança que construíram nossa
-              reputação sólida.`,Icon:tx,fadeType:"right",linkTo:"servico/montagem"}),c.jsx(Ii,{title:"Manutenção preventiva e corretiva",description:"Com foco em durabilidade e performance, nossa manutenção preventiva e corretiva previne paradas não programadas, maximizando a produtividade de sua obra.",Icon:nx,fadeType:"left",linkTo:"servico/manutencao"})]}),c.jsxs(yf,{children:[c.jsx(Ii,{title:"Reforma de equipamentos",description:"Revitalizamos seus equipamentos com reformas detalhadas, prolongando a vida útil e otimizando o desempenho para atender às demandas do seu projeto.",Icon:zx,fadeType:"right",linkTo:"servico/reforma"}),c.jsx(Ii,{title:"Teste de END",description:"Os Ensaios Não Destrutivos (END), são técnicas de inspeção de peças e equipamentos que avaliam a existência de descontinuidades (mecanismos de falha) nas estruturas dos materiais sem danificá-los.",Icon:_x,fadeType:"left",linkTo:"servico/end"})]}),c.jsx("div",{style:{display:"flex",justifyContent:"center",margin:"2em 0"},children:c.jsx(lr,{text:"Ver todos",linkTo:"/servicos",onClick:()=>window.scrollTo(0,0)})})]}),c.jsx(Ux,{}),c.jsx(Zx,{})]})}const nw=D.div`
+              reputação sólida.`,Icon:tx,fadeType:"right",linkTo:"servico/montagem"}),c.jsx(Ii,{title:"Manutenção preventiva e corretiva",description:"Com foco em durabilidade e performance, nossa manutenção preventiva e corretiva previne paradas não programadas, maximizando a produtividade de sua obra.",Icon:nx,fadeType:"left",linkTo:"servico/manutencao"})]}),c.jsxs(yf,{children:[c.jsx(Ii,{title:"Reforma de equipamentos",description:"Revitalizamos seus equipamentos com reformas detalhadas, prolongando a vida útil e otimizando o desempenho para atender às demandas do seu projeto.",Icon:zx,fadeType:"right",linkTo:"servico/reforma"}),c.jsx(Ii,{title:"Teste de END",description:"Os Ensaios Não Destrutivos (END), são técnicas de inspeção de peças e equipamentos que avaliam a existência de descontinuidades (mecanismos de falha) nas estruturas dos materiais sem danificá-los.",Icon:_x,fadeType:"left",linkTo:"servico/end"})]}),c.jsx("div",{style:{display:"flex",justifyContent:"center"},children:c.jsx(lr,{text:"Ver todos",linkTo:"/servicos",onClick:()=>window.scrollTo(0,0)})})]}),c.jsx(Ux,{}),c.jsx(Zx,{})]})}const nw=D.div`
   display: flex;
   flex-direction: column;
   width: 100%;
