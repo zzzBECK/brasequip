@@ -45,7 +45,6 @@ export default function Header() {
       style={{
         display: "flex",
         width: "100vw",
-        maxWidth: "100%",
         height: isScrolled ? "4em" : "6em",
         flexDirection: "column",
         zIndex: 100000,
@@ -57,7 +56,12 @@ export default function Header() {
         transition: "background-color 0.4s ease-in-out",
       }}
     >
-      <ContainerHeader className="padding padding-header">
+      <ContainerHeader
+        className="padding padding-header"
+        style={{
+          paddingLeft: isScrolled ? "16vw" : "16.8vw",
+        }}
+      >
         <Column width="16%" justifyContent="flex-start">
           <NavLink
             to="/"

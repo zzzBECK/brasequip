@@ -16,7 +16,7 @@ function App() {
   }, []);
 
   return (
-    <>
+    <div style={{ position: "relative" }}>
       <Header />
       <TransitioningOutlet />
       <Footer />
@@ -41,7 +41,7 @@ function App() {
           }
         />
       </div>
-    </>
+    </div>
   );
 }
 
