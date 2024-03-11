@@ -47,28 +47,6 @@ export const Column = styled.div<IColumn>`
   height: 100%;
 `;
 
-interface IImageContainer {
-  isScrolled: boolean;
-}
-
-export const ImageContainer = styled.div<IImageContainer>`
-  display: flex;
-  height: 100%;
-  width: 10em;
-  cursor: pointer;
-  background-image: url("RASTER_LOGO.png");
-  background-size: ${({ isScrolled }) => (isScrolled ? "100%" : "140%")};
-  background-position: center;
-  background-repeat: no-repeat;
-
-  overflow-clip-margin: content-box;
-  overflow: clip;
-
-  @media (max-width: 768px) {
-    width: 8em;
-  }
-`;
-
 export const ItemContainer = styled.div`
   display: flex;
   width: 33.33%;

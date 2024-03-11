@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import SubHeader from "../SubHeader";
-import { Column, ContainerHeader, ImageContainer, WholeHeader } from "./styles";
+import { Column, ContainerHeader, WholeHeader } from "./styles";
 import SubHeaderMobile from "../SubHeaderMobile";
 
 export default function Header() {
@@ -53,7 +53,18 @@ export default function Header() {
               width: "10em",
             }}
           >
-            <ImageContainer isScrolled={isScrolled} />
+            <div
+              style={{
+                display: "flex",
+                height: "100%",
+                width: windowSize.width > 800 ? "10em" : "8em",
+                cursor: "pointer",
+                backgroundImage: "url('RASTER_LOGO.png')",
+                backgroundSize: isScrolled ? "100%" : "140%",
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
+              }}
+            />
           </NavLink>
         </Column>
         <Column width="80%">
