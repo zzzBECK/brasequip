@@ -26,6 +26,8 @@ export default function Servicos() {
     height: window.innerHeight,
   });
 
+
+
   const isThereButton = windowSize.width <= 620;
 
   useEffect(() => {
@@ -41,6 +43,14 @@ export default function Servicos() {
     handleResize();
 
     return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  useEffect(() => {
+    const savedScrollPosition = localStorage.getItem('scrollPosition');
+    if (savedScrollPosition) {
+      window.scrollTo(0, parseInt(savedScrollPosition, 10));
+      localStorage.removeItem('scrollPosition'); // Clear the saved position
+    }
   }, []);
 
   const headerRef = useRef(null);

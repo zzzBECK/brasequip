@@ -1,6 +1,7 @@
 import { IoHome } from "react-icons/io5";
 import { NavLink } from "react-router-dom";
 import { BreadContainer, BreadItem } from "./styles";
+import NavigateWithPosition from "../NavigateWithPosition";
 
 interface BreadScrumbProps {
   title: string;
@@ -28,22 +29,11 @@ export default function BreadScrumb({ title }: BreadScrumbProps) {
 
       <p style={{ fontSize: "clamp(0.8rem, 1.5vw, 1.2rem)" }}>{">"}</p>
 
-      <NavLink
-        to={"/servicos"}
-        style={{
-          textDecoration: "none",
-          color: "inherit",
-        }}
-      >
-        <BreadItem
-          isThereHover
-          style={{
-            opacity: "0.9",
-          }}
-        >
+      <NavigateWithPosition to="/servicos">
+        <BreadItem isThereHover style={{ opacity: "0.9" }}>
           <p>Serviços</p>
         </BreadItem>
-      </NavLink>
+      </NavigateWithPosition>
 
       <p style={{ fontSize: "clamp(0.8rem, 1.5vw, 1.2rem)" }}>{">"}</p>
 

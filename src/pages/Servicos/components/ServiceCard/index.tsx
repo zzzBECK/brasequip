@@ -1,24 +1,35 @@
 import { NavLink } from "react-router-dom";
 import { CardContainer, ImageOverlay } from "./styles";
 
-interface ServiceCard {
+interface ServiceCardProps {
   title: string;
   description: string;
   image: string;
   linkTo: string;
 }
 
-export default function ServiceCard({
+const ServiceCard = ({
   title,
   description,
   image,
   linkTo,
-}: ServiceCard) {
+}: ServiceCardProps) => {
+  const saveScrollPosition = () => {
+    const scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
+    localStorage.setItem('scrollPosition', scrollPosition.toString());
+  };
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+    });
+  };
+
   return (
     <NavLink
       to={linkTo}
       style={{ textDecoration: "none" }}
-      onClick={() => window.scrollTo(0, 0)}
+      onClick={() => { saveScrollPosition(); scrollToTop(); }} // Corrected this line
     >
       <CardContainer style={{ backgroundImage: `url(${image})` }}>
         <h4 style={{ zIndex: "100", marginLeft: "1em" }}>{title}</h4>
@@ -36,4 +47,6 @@ export default function ServiceCard({
       </CardContainer>
     </NavLink>
   );
-}
+};
+
+export default ServiceCard;
