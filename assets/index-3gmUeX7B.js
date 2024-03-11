@@ -251,7 +251,7 @@ Error generating stack: `+i.message+`
   scale: 2.5;
   user-select: none;
   min-width: 80px;
-  width: 86px;
+  max-width: 86px;
 `;b.div`
   display: flex;
   width: 33.33%;
