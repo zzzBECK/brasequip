@@ -57,7 +57,7 @@ export default function Header() {
         transition: "background-color 0.4s ease-in-out",
       }}
     >
-      <ContainerHeader className="padding">
+      <ContainerHeader className="padding padding-header">
         <Column width="16%" justifyContent="flex-start">
           <NavLink
             to="/"

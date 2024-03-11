@@ -65,4 +65,5 @@ export const IconsContainer = styled.div`
   height: 100%;
   align-items: center;
   gap: 1em;
+  justify-content: flex-end;
 `;

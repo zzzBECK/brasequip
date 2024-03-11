@@ -70,3 +70,31 @@
 
   transition: 300ms ease-in-out;
 }
+
+.padding-header {
+  padding-left: 16vw;
+}
+
+@media (max-width: 1280px) {
+  .padding-header {
+    padding-left: 7vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .padding-header {
+    padding-left: 4vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .padding-header {
+    padding-left: 2vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .padding-header {
+    padding-left: 0vw;
+  }
+}
