@@ -1,24 +1,6 @@
 import styled from "styled-components";
 import theme from "../../theme/theme";
 
-interface IWholeHeader {
-  isScrolled: boolean;
-}
-
-export const WholeHeader = styled.header<IWholeHeader>`
-  display: flex;
-  width: 100vw;
-  max-width: 100%;
-  height: ${({ isScrolled }) => (isScrolled ? "4em" : "6em")};
-  flex-direction: column;
-  z-index: 100000;
-  background-color: ${({ isScrolled }) =>
-    isScrolled ? "rgba(9, 18, 66, 1)" : "rgba(9, 18, 66, 0.1)"};
-  position: ${({ isScrolled }) => (isScrolled ? "fixed" : "absolute")};
-
-  transition: background-color 0.4s ease-in-out;
-`;
-
 export const ContainerHeader = styled.div`
   display: flex;
   width: 100%;

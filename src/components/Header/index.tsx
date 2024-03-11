@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import SubHeader from "../SubHeader";
-import { Column, ContainerHeader, WholeHeader } from "./styles";
 import SubHeaderMobile from "../SubHeaderMobile";
+import { Column, ContainerHeader } from "./styles";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -41,7 +41,22 @@ export default function Header() {
   };
 
   return (
-    <WholeHeader isScrolled={isScrolled}>
+    <header
+      style={{
+        display: "flex",
+        width: "100vw",
+        maxWidth: "100%",
+        height: isScrolled ? "4em" : "6em",
+        flexDirection: "column",
+        zIndex: 100000,
+        backgroundColor: isScrolled
+          ? "rgba(9, 18, 66, 1)"
+          : "rgba(9, 18, 66, 0.1)",
+        position: isScrolled ? "fixed" : "absolute",
+
+        transition: "background-color 0.4s ease-in-out",
+      }}
+    >
       <ContainerHeader className="padding">
         <Column width="16%" justifyContent="flex-start">
           <NavLink
@@ -75,6 +90,6 @@ export default function Header() {
           )}
         </Column>
       </ContainerHeader>
-    </WholeHeader>
+    </header>
   );
 }
