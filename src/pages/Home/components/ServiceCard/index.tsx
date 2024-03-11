@@ -23,7 +23,11 @@ export default function ServiceCard({
     });
   };
   return (
-    <Service data-aos={`fade-${fadeType}`} data-aos-duration="1000">
+    <Service
+      data-aos={`fade-${fadeType}`}
+      data-aos-duration="1000"
+      data-aos-offset="140"
+    >
       <Icon
         style={{
           color: "black",
