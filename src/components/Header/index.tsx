@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import SubHeader from "../SubHeader";
 import SubHeaderMobile from "../SubHeaderMobile";
 import { Column, ContainerHeader } from "./styles";
-import Logo from "../../../public/teste.png";
+import Logo from "../../../public/logo.webp";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
