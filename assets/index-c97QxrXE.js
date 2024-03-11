@@ -616,7 +616,7 @@ Error generating stack: `+i.message+`
     width: 100%;
     margin-bottom: 4em;
   }
-`;function Ii({title:e,description:t,Icon:n,fadeType:r,linkTo:o}){const i=()=>{window.scrollTo({top:0})};return c.jsxs(Jx,{"data-aos":`fade-${r}`,"data-aos-duration":"1000",children:[c.jsx(n,{style:{color:"black",fontSize:"2.4em",marginBottom:"0.8em",opacity:"0.8"}}),c.jsx(Ve,{to:o,onClick:i,style:{textDecoration:"none",color:"inherit"},children:c.jsx("h2",{style:{color:"black",fontWeight:"500",lineHeight:"1",marginBottom:"0.5em"},children:e})}),c.jsx("p",{style:{color:"black",textAlign:"inherit"},children:t})]})}const ew=D.div`
+`;function Ii({title:e,description:t,Icon:n,fadeType:r,linkTo:o}){const i=()=>{window.scrollTo({top:0})};return c.jsxs(Jx,{"data-aos":`fade-${r}`,"data-aos-duration":"1000","data-aos-offset":"140",children:[c.jsx(n,{style:{color:"black",fontSize:"2.4em",marginBottom:"0.8em",opacity:"0.8"}}),c.jsx(Ve,{to:o,onClick:i,style:{textDecoration:"none",color:"inherit"},children:c.jsx("h2",{style:{color:"black",fontWeight:"500",lineHeight:"1",marginBottom:"0.5em"},children:e})}),c.jsx("p",{style:{color:"black",textAlign:"inherit"},children:t})]})}const ew=D.div`
   display: flex;
   flex-direction: column;
   width: 100%;
