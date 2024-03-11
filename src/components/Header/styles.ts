@@ -43,32 +43,30 @@ export const Column = styled.div<IColumn>`
   width: ${({ width }) => width};
   align-items: center;
   justify-content: ${({ justifyContent }) => justifyContent || "flex-end"};
-  padding-left: ${({ justifyContent }) =>
-    justifyContent == null ? null : "1.6vw"};
-  min-width: 140px;
   position: relative;
   height: 100%;
 `;
 
-export const ImageContainer = styled.div`
-  display: flex;
-  height: 90%;
-  width: auto;
-  border-radius: 50%;
-  /* background-color: ${theme.colors.blue}; */
-  cursor: pointer;
-  user-select: none;
-`;
+interface IImageContainer {
+  isScrolled: boolean;
+}
 
-export const Image = styled.img`
-  width: 100%;
+export const ImageContainer = styled.div<IImageContainer>`
+  display: flex;
   height: 100%;
-  object-fit: cover;
-  border-radius: 50%;
-  scale: 2.5;
-  user-select: none;
-  min-width: 100%;
-  max-width: 100%;
+  width: 10em;
+  cursor: pointer;
+  background-image: url("RASTER_LOGO.png");
+  background-size: ${({ isScrolled }) => (isScrolled ? "100%" : "140%")};
+  background-position: center;
+  background-repeat: no-repeat;
+
+  overflow-clip-margin: content-box;
+  overflow: clip;
+
+  @media (max-width: 768px) {
+    width: 8em;
+  }
 `;
 
 export const ItemContainer = styled.div`

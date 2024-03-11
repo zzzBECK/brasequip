@@ -1,14 +1,7 @@
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
-import Logo from "../../assets/RASTER_LOGO.png";
 import SubHeader from "../SubHeader";
-import {
-  Column,
-  ContainerHeader,
-  Image,
-  ImageContainer,
-  WholeHeader,
-} from "./styles";
+import { Column, ContainerHeader, ImageContainer, WholeHeader } from "./styles";
 import SubHeaderMobile from "../SubHeaderMobile";
 
 export default function Header() {
@@ -51,22 +44,17 @@ export default function Header() {
     <WholeHeader isScrolled={isScrolled}>
       <ContainerHeader className="padding">
         <Column width="16%" justifyContent="flex-start">
-          <ImageContainer>
-            <NavLink
-              to="/"
-              end
-              style={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                height: "100%",
-                width: "100%",
-              }}
-              onClick={() => scrollToTop()}
-            >
-              <Image src={Logo} />
-            </NavLink>
-          </ImageContainer>
+          <NavLink
+            to="/"
+            onClick={scrollToTop}
+            style={{
+              display: "flex",
+              height: "90%",
+              width: "10em",
+            }}
+          >
+            <ImageContainer isScrolled={isScrolled} />
+          </NavLink>
         </Column>
         <Column width="80%">
           {windowSize.width > 800 ? (
