@@ -250,8 +250,8 @@ Error generating stack: `+i.message+`
   border-radius: 50%;
   scale: 2.5;
   user-select: none;
-  min-width: 80px;
-  max-width: 86px;
+  min-width: 100%;
+  max-width: 100%;
 `;b.div`
   display: flex;
   width: 33.33%;
