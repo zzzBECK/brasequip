@@ -68,7 +68,7 @@ export const Image = styled.img`
   scale: 2.5;
   user-select: none;
   min-width: 80px;
-  width: 86px;
+  max-width: 86px;
 `;
 
 export const ItemContainer = styled.div`
