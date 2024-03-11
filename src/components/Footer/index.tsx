@@ -2,7 +2,6 @@ import { CiMail } from "react-icons/ci";
 import { PiPhoneThin } from "react-icons/pi";
 import { SlClock } from "react-icons/sl";
 import { NavLink } from "react-router-dom";
-import Logo from "../../assets/RASTER_LOGO.png";
 import theme from "../../theme/theme";
 import {
   Column,
@@ -37,7 +36,7 @@ export default function Footer() {
         <Row className="padding">
           <LogoContainer>
             <Image
-              src={Logo}
+              src={"/logo.png"}
               style={{ cursor: "pointer" }}
               onClick={() => scrollToTopSmoothly()}
             />
