@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import SubHeader from "../SubHeader";
 import SubHeaderMobile from "../SubHeaderMobile";
@@ -33,12 +33,12 @@ export default function Header() {
     };
   }, []);
 
-  const scrollToTop = () => {
+  const scrollToTop = useCallback(() => {
     window.scrollTo({
       top: 0,
       behavior: "smooth",
     });
-  };
+  }, []);
 
   return (
     <header
@@ -74,7 +74,7 @@ export default function Header() {
                 height: "100%",
                 width: windowSize.width > 800 ? "10em" : "8em",
                 cursor: "pointer",
-                backgroundImage: "url('RASTER_LOGO.png')",
+                backgroundImage: "url('src/assets/RASTER_LOGO.png')",
                 backgroundSize: isScrolled ? "100%" : "140%",
                 backgroundPosition: "center",
                 backgroundRepeat: "no-repeat",
