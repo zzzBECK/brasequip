@@ -5,27 +5,10 @@ export const ServicesContainer = styled.div`
   flex-direction: column;
   width: 100%;
   height: fit-content;
-  min-height: 100vh;
   background-color: #fff;
-  padding: 0 18vw;
   gap: 4em;
-
-  @media (max-width: 1280px) {
-    padding: 0 10vw;
-  }
-
-  @media (max-width: 768px) {
-    padding: 0 8vw;
-    gap: 0;
-  }
-
-  @media (max-width: 480px) {
-    padding: 0 4vw;
-  }
-
-  @media (max-width: 340px) {
-    padding: 0;
-  }
+  padding-top: 4em;
+  padding-bottom: 4em;
 `;
 
 export const ServicesRow = styled.div`

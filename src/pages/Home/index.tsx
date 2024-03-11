@@ -107,12 +107,11 @@ export default function Home() {
           </TextPosition>
         </Image>
       </HeaderContainer>
-      <ServicesContainer>
+      <ServicesContainer className="padding">
         <h1
           style={{
             color: "black",
             textAlign: "center",
-            margin: "2em 0",
             fontWeight: "700",
             lineHeight: "1.2",
           }}
@@ -160,7 +159,6 @@ export default function Home() {
           style={{
             display: "flex",
             justifyContent: "center",
-            margin: "2em 0",
           }}
         >
           <Button
