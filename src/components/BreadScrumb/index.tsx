@@ -7,10 +7,17 @@ interface BreadScrumbProps {
 }
 
 export default function BreadScrumb({ title }: BreadScrumbProps) {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+    });
+  };
+
   return (
     <BreadContainer>
       <NavLink
         to={"/"}
+        onClick={scrollToTop}
         style={{
           textDecoration: "none",
           color: "inherit",

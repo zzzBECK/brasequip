@@ -20,6 +20,27 @@ export default function End() {
           qualquer irregularidade, promovendo a segurança e a longevidade dos
           seus equipamentos.
         </p>
+        <p>
+          Realizamos os Testes de END com Laudo assinado por profissional
+          habilitado, conforme a NR-18.11.7, “e”:{" "}
+          <i>
+            laudos dos ensaios não destrutivos dos eixos dos motofreios e dos
+            freios de emergência, sendo a periodicidade definida por
+            profissional legalmente habilitado, obedecidos os prazos máximos
+            previstos pelo fabricante no manual de manutenção do equipamento.
+          </i>
+        </p>
+        <p>
+          Os Ensaios Não Destrutivos (END), são técnicas de inspeção de peças e
+          equipamentos que avaliam a existência de descontinuidades (mecanismos
+          de falha) nas estruturas dos materiais sem danificá-los. Os testes são
+          feitos diretamente nas peças que serão colocadas em serviço, não
+          deixando dúvidas quanto a sua representatividade. Com a utilização dos
+          (END) é possível, garantir a qualidade do produto, prevenir acidentes,
+          perdas de vidas humanas, reduzir manutenções corretivas nos
+          equipamentos. Utilizamos as técnicas de END, a seguir: ultrassom,
+          partículas magnéticas e líquidos penetrantes.
+        </p>
         <h2>Tecnologias Avançadas para Diagnóstico Preciso</h2>
         <p>
           Utilizamos três métodos principais de END, que permitem uma avaliação

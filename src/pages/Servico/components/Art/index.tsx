@@ -11,13 +11,16 @@ export default function Art() {
           gap: "1em",
         }}
       >
-        <h2>Emissão de ART para Todos os Serviços</h2>
+        <h2>EMPRESA REGISTRADA NO CREA-DF SOB O N.º 11727</h2>
         <p>
-          Nosso compromisso com a excelência e a legalidade se reflete na
-          emissão de ART para todos os serviços contratados. Este documento,
-          essencial para a regulamentação da atividade profissional, valida a
-          responsabilidade técnica sobre a execução dos serviços, reforçando a
-          seriedade e o profissionalismo de nosso trabalho.
+          Empresa e responsável técnico habilitados junto ao CREA, para
+          desempenho das atividades de reforma e adequação, montagem, manutenção
+          e desmontagem de equipamentos para elevação. Nosso compromisso com a
+          excelência e a legalidade se reflete na emissão de ART para todos os
+          serviços contratados. Este documento, essencial para a regulamentação
+          da atividade profissional, valida a responsabilidade técnica sobre a
+          execução dos serviços, reforçando a seriedade e o profissionalismo de
+          nosso trabalho.
         </p>
         <p>
           Com a ART e o seguro de responsabilidade civil, você tem a garantia de

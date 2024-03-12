@@ -48,7 +48,7 @@ export default function Home() {
 
     const targetPosition = headerRef.current.offsetHeight;
     const startPosition = window.pageYOffset;
-    const distance = targetPosition - startPosition - 50;
+    const distance = targetPosition - startPosition - 30;
     const startTime =
       "now" in window.performance ? performance.now() : new Date().getTime();
 
@@ -97,8 +97,8 @@ export default function Home() {
             <p data-aos="zoom-in" data-aos-offset="-100">
               Especialistas em elevação, a BRASEQUIP oferece venda e locação de
               equipamentos de alta performance para sua obra. Nosso compromisso
-              com a segurança e eficiência é inabalável. Descubra soluções ágeis
-              para guindastes, mini-gruas e muito mais.
+              com a segurança e eficiência é inabalável. Oferecemos soluções
+              ágeis e orientações na escolha do equipamento ideal.
             </p>
             <Button
               text="Ver mais"
@@ -123,32 +123,30 @@ export default function Home() {
         <ServicesRow>
           <ServiceCard
             title="Montagem e desmontagem"
-            description="Garantimos montagem e desmontagem eficientes de equipamentos,
-              assegurando a excelência e a segurança que construíram nossa
-              reputação sólida."
+            description="Realizamos montagem e desmontagem de equipamentos de elevação, dentro das normas de segurança vigentes no país, com profissionais treinados e certificados."
             Icon={FaTools}
             fadeType="right"
             linkTo={"servico/montagem"}
           />
           <ServiceCard
-            title="Manutenção preventiva e corretiva"
-            description="Com foco em durabilidade e performance, nossa manutenção preventiva e corretiva previne paradas não programadas, maximizando a produtividade de sua obra."
-            Icon={MdSecurity}
-            fadeType="left"
-            linkTo={"servico/manutencao"}
-          />
-        </ServicesRow>
-        <ServicesRow>
-          <ServiceCard
             title="Reforma de equipamentos"
-            description="Revitalizamos seus equipamentos com reformas detalhadas, prolongando a vida útil e otimizando o desempenho para atender às demandas do seu projeto."
+            description="Revitalizamos seus equipamentos com reformas detalhadas, adequando-os de acordo com as normas vigentes, prolongando a vida útil e otimizando o desempenho para atender às demandas do seu projeto."
             Icon={GiGearHammer}
             fadeType="right"
             linkTo={"servico/reforma"}
           />
+        </ServicesRow>
+        <ServicesRow>
+          <ServiceCard
+            title="Manutenção preventiva e corretiva"
+            description="A manutenção preventiva envolve mensalmente a checagem e testes de todos os itens de segurança do equipamento, parte estrutural, mecânica e elétrica. Com foco em durabilidade e performance, nossa manutenção preventiva previne paradas não programadas, maximizando a produtividade de sua obra."
+            Icon={MdSecurity}
+            fadeType="left"
+            linkTo={"servico/manutencao"}
+          />
           <ServiceCard
             title="Teste de END"
-            description="Os Ensaios Não Destrutivos (END), são técnicas de inspeção de peças e equipamentos que avaliam a existência de descontinuidades (mecanismos de falha) nas estruturas dos materiais sem danificá-los."
+            description="Realizamos os Teste de END, com Laudo assinado por profissional habilitado, conforme a NR-18.11.7, “e”: laudos dos ensaios não destrutivos dos eixos dos motofreios e dos freios de emergência, sendo a periodicidade definida por profissional legalmente habilitado, obedecidos os prazos máximos previstos pelo fabricante no manual de manutenção do equipamento."
             Icon={SiGooglesearchconsole}
             fadeType="left"
             linkTo={"servico/end"}

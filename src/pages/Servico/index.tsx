@@ -53,7 +53,7 @@ function selectTitle(type: string) {
     case "fixacao":
       return "Projeto de Fixação";
     case "art":
-      return "ART";
+      return "EMPRESA REGISTRADA NO CREA-DF SOB O N.º 11727";
     case "end":
       return "Teste de END";
     case "elevador":
@@ -90,7 +90,14 @@ export default function Servico() {
       </HeaderContainer>
 
       <Content className="padding">
-        <BreadScrumb title={selectTitle(type as string)} />
+        <BreadScrumb
+          title={
+            selectTitle(type as string) ===
+            "EMPRESA REGISTRADA NO CREA-DF SOB O N.º 11727"
+              ? "ART"
+              : selectTitle(type as string)
+          }
+        />
         {selectService(type as string)}
       </Content>
     </WholePage>
