@@ -16,7 +16,7 @@ import Button from "./components/Button";
 import Flag from "./components/Flag";
 import Institucional from "./components/Institucional";
 import ServiceCard from "./components/ServiceCard";
-import { ServicesContainer, ServicesRow } from "./styles";
+import { ServicesContainer, ServicesRow, Title } from "./styles";
 
 export default function Home() {
   const [windowSize, setWindowSize] = useState({
@@ -108,7 +108,7 @@ export default function Home() {
         </Image>
       </HeaderContainer>
       <ServicesContainer className="padding">
-        <h1
+        <Title
           style={{
             color: "black",
             textAlign: "center",
@@ -119,7 +119,7 @@ export default function Home() {
         >
           CONHEÇA OS
           <br /> SERVIÇOS
-        </h1>
+        </Title>
         <ServicesRow>
           <ServiceCard
             title="Montagem e desmontagem"
@@ -132,7 +132,7 @@ export default function Home() {
             title="Reforma de equipamentos"
             description="Revitalizamos seus equipamentos com reformas detalhadas, adequando-os de acordo com as normas vigentes, prolongando a vida útil e otimizando o desempenho para atender às demandas do seu projeto."
             Icon={GiGearHammer}
-            fadeType="right"
+            fadeType="left"
             linkTo={"servico/reforma"}
           />
         </ServicesRow>
@@ -141,7 +141,7 @@ export default function Home() {
             title="Manutenção preventiva e corretiva"
             description="A manutenção preventiva envolve mensalmente a checagem e testes de todos os itens de segurança do equipamento, parte estrutural, mecânica e elétrica. Com foco em durabilidade e performance, nossa manutenção preventiva previne paradas não programadas, maximizando a produtividade de sua obra."
             Icon={MdSecurity}
-            fadeType="left"
+            fadeType="right"
             linkTo={"servico/manutencao"}
           />
           <ServiceCard
