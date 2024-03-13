@@ -19,14 +19,13 @@ import {
 } from "./styles";
 
 import { IoArrowDownCircleSharp } from "react-icons/io5";
+import { Helmet } from "react-helmet";
 
 export default function Servicos() {
   const [windowSize, setWindowSize] = useState({
     width: window.innerWidth,
     height: window.innerHeight,
   });
-
-
 
   const isThereButton = windowSize.width <= 620;
 
@@ -46,10 +45,10 @@ export default function Servicos() {
   }, []);
 
   useEffect(() => {
-    const savedScrollPosition = localStorage.getItem('scrollPosition');
+    const savedScrollPosition = localStorage.getItem("scrollPosition");
     if (savedScrollPosition) {
       window.scrollTo(0, parseInt(savedScrollPosition, 10));
-      localStorage.removeItem('scrollPosition'); // Clear the saved position
+      localStorage.removeItem("scrollPosition"); // Clear the saved position
     }
   }, []);
 
@@ -88,129 +87,139 @@ export default function Servicos() {
   };
 
   return (
-    <WholePage>
-      <HeaderContainer ref={headerRef}>
-        <Image>
-          <ImageOverlay />
-          <TextPosition>
-            <Flag text="Conheça nossos serviços" />
-            <h1
-              style={{
-                fontSize: "60px",
-                lineHeight: "1",
-                maxWidth: "600px",
-              }}
-            >
-              Serviços
-            </h1>
-          </TextPosition>
-          <div
-            style={{
-              position: "absolute",
-              bottom: "10%",
-              left: "50%",
-              transform: "translateX(-50%)",
-              width: "4em",
-              height: "4em",
-              zIndex: 1000,
-              display: isThereButton ? "flex" : "none",
-            }}
-            onClick={() => scrollToContent(headerRef)}
-          >
-            <IoArrowDownCircleSharp size={"100%"} color={theme.colors.red} />
-          </div>
-        </Image>
-      </HeaderContainer>
-      <ServicosContainer className="padding-services">
-        <ServicosTitle>
-          <h1>Nossos Serviços</h1>
-        </ServicosTitle>
-        <ServicosContent>
-          <ServiceCard
-            image="end.jpeg"
-            title="Teste de END"
-            description="(Ensaios Não Destrutivos) com Laudo Técnico"
-            linkTo="/servico/end"
-          />
-          <ServiceCard
-            image="locacao.jpeg"
-            title="Locação de equipamentos"
-            description="Máquinas e equipamentos para elevação"
-            linkTo="/servico/locacao"
-          />
-          <ServiceCard
-            image="museu.jpg"
-            title="ART dos serviços contratados"
-            description="Seguro de responsabilidade civil"
-            linkTo="/servico/art"
-          />
-          <ServiceCard
-            image="montagem.jpg"
-            title="Montagem e desmontagem"
-            description="Equipamentos para elevação"
-            linkTo="/servico/montagem"
-          />
-          <ServiceCard
-            image="manutencao.jpg"
-            title="Manutenção"
-            description="Preventiva e corretiva"
-            linkTo="/servico/manutencao"
-          />
-          <ServiceCard
-            image="aguasclaras.jpeg"
-            title="Reforma de equipamentos"
-            description="Reforma de elevadores e gruas"
-            linkTo="/servico/reforma"
-          />
-          <ServiceCard
-            image="fixacao.jpg"
-            title="Projeto de Fixação"
-            description="Emissão de laudo ART e estrutural"
-            linkTo="/servico/fixacao"
-          />
-          <ServiceCard
-            image="cremalheira.jpeg"
-            title="Elevador"
-            description="Cremalheira"
-            linkTo="/servico/elevador"
-          />
-        </ServicosContent>
-      </ServicosContainer>
-      <VisaoGeralContainer className="padding">
-        <VisaoGeralContent>
-          <VisaoGeralText>
-            <TextContent>
-              <Flag text="Sobre Nós" mode="light" />
-              <h1>Uma visão geral</h1>
-              <p>
-                A missão da BRASEQUIP é impulsionar a eficiência no setor de
-                construção e manutenção, oferecendo uma ampla gama de máquinas e
-                equipamentos para elevação, além de serviços especializados.
-              </p>
-              <div
+    <>
+      <Helmet>
+        <title>Brasequip - Serviços</title>
+        <meta
+          name="Serviços"
+          content="Listagem dos serviços prestados pela Brasquip."
+        />
+        <meta name="keywords" content="services, list" />
+      </Helmet>
+      <WholePage>
+        <HeaderContainer ref={headerRef}>
+          <Image>
+            <ImageOverlay />
+            <TextPosition>
+              <Flag text="Conheça nossos serviços" />
+              <h1
                 style={{
-                  border: "1px solid gray",
+                  fontSize: "60px",
+                  lineHeight: "1",
+                  maxWidth: "600px",
                 }}
-              />
-              <p>
-                Acreditamos que ao facilitar o acesso a equipamentos e serviços
-                de qualidade, promovemos o desenvolvimento econômico e a
-                segurança no setor. Estamos comprometidos em contribuir para a
-                evolução da indústria da construção, proporcionando uma base
-                sólida para a realização de projetos eficazes, seguros e
-                inovadores, atendendo empresas, governos e demais clientes em
-                todo o território brasileiro.
-              </p>
-            </TextContent>
-            <Button
-              text="Ver mais"
-              linkTo="/sobre"
-              onClick={() => window.scrollTo(0, 0)}
+              >
+                Serviços
+              </h1>
+            </TextPosition>
+            <div
+              style={{
+                position: "absolute",
+                bottom: "10%",
+                left: "50%",
+                transform: "translateX(-50%)",
+                width: "4em",
+                height: "4em",
+                zIndex: 1000,
+                display: isThereButton ? "flex" : "none",
+              }}
+              onClick={() => scrollToContent(headerRef)}
+            >
+              <IoArrowDownCircleSharp size={"100%"} color={theme.colors.red} />
+            </div>
+          </Image>
+        </HeaderContainer>
+        <ServicosContainer className="padding-services">
+          <ServicosTitle>
+            <h1>Nossos Serviços</h1>
+          </ServicosTitle>
+          <ServicosContent>
+            <ServiceCard
+              image="end.jpeg"
+              title="Teste de END"
+              description="(Ensaios Não Destrutivos) com Laudo Técnico"
+              linkTo="/servico/end"
             />
-          </VisaoGeralText>
-          <VisaoGeralImage />
-        </VisaoGeralContent>
-      </VisaoGeralContainer>
-    </WholePage>
+            <ServiceCard
+              image="locacao.jpeg"
+              title="Locação de equipamentos"
+              description="Máquinas e equipamentos para elevação"
+              linkTo="/servico/locacao"
+            />
+            <ServiceCard
+              image="museu.jpg"
+              title="ART dos serviços contratados"
+              description="Seguro de responsabilidade civil"
+              linkTo="/servico/art"
+            />
+            <ServiceCard
+              image="montagem.jpg"
+              title="Montagem e desmontagem"
+              description="Equipamentos para elevação"
+              linkTo="/servico/montagem"
+            />
+            <ServiceCard
+              image="manutencao.jpg"
+              title="Manutenção"
+              description="Preventiva e corretiva"
+              linkTo="/servico/manutencao"
+            />
+            <ServiceCard
+              image="aguasclaras.jpeg"
+              title="Reforma de equipamentos"
+              description="Reforma de elevadores e gruas"
+              linkTo="/servico/reforma"
+            />
+            <ServiceCard
+              image="fixacao.jpg"
+              title="Projeto de Fixação"
+              description="Emissão de laudo ART e estrutural"
+              linkTo="/servico/fixacao"
+            />
+            <ServiceCard
+              image="cremalheira.jpeg"
+              title="Elevador"
+              description="Cremalheira"
+              linkTo="/servico/elevador"
+            />
+          </ServicosContent>
+        </ServicosContainer>
+        <VisaoGeralContainer className="padding">
+          <VisaoGeralContent>
+            <VisaoGeralText>
+              <TextContent>
+                <Flag text="Sobre Nós" mode="light" />
+                <h1>Uma visão geral</h1>
+                <p>
+                  A missão da BRASEQUIP é impulsionar a eficiência no setor de
+                  construção e manutenção, oferecendo uma ampla gama de máquinas
+                  e equipamentos para elevação, além de serviços especializados.
+                </p>
+                <div
+                  style={{
+                    border: "1px solid gray",
+                  }}
+                />
+                <p>
+                  Acreditamos que ao facilitar o acesso a equipamentos e
+                  serviços de qualidade, promovemos o desenvolvimento econômico
+                  e a segurança no setor. Estamos comprometidos em contribuir
+                  para a evolução da indústria da construção, proporcionando uma
+                  base sólida para a realização de projetos eficazes, seguros e
+                  inovadores, atendendo empresas, governos e demais clientes em
+                  todo o território brasileiro.
+                </p>
+              </TextContent>
+              <Button
+                text="Ver mais"
+                linkTo="/sobre"
+                onClick={() => window.scrollTo(0, 0)}
+              />
+            </VisaoGeralText>
+            <VisaoGeralImage />
+          </VisaoGeralContent>
+        </VisaoGeralContainer>
+      </WholePage>
+    </>
   );
 }

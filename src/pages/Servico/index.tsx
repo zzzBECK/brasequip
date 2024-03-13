@@ -18,6 +18,7 @@ import {
 import BreadScrumb from "../../components/BreadScrumb";
 import Elevador from "./components/Elevador";
 import Locacao from "./components/Locacao";
+import { Helmet } from "react-helmet";
 
 function selectService(type: string) {
   switch (type) {
@@ -69,37 +70,47 @@ export default function Servico() {
   const { type } = useParams();
 
   return (
-    <WholePage>
-      <HeaderContainer>
-        <Image>
-          <ImageOverlay />
-          <BackgroundDark />
-          <TextPosition className="padding">
-            <Flag text="Informações gerais" />
-            <h1
-              style={{
-                fontSize: "clamp(2rem, 4vw, 3rem)",
-                lineHeight: "1",
-                maxWidth: "600px",
-              }}
-            >
-              {selectTitle(type as string)}
-            </h1>
-          </TextPosition>
-        </Image>
-      </HeaderContainer>
-
-      <Content className="padding">
-        <BreadScrumb
-          title={
-            selectTitle(type as string) ===
-            "EMPRESA REGISTRADA NO CREA-DF SOB O N.º 11727"
-              ? "ART"
-              : selectTitle(type as string)
-          }
+    <>
+      <Helmet>
+        <title>Brasequip - {selectTitle(type as string)}</title>
+        <meta
+          name={selectTitle(type as string)}
+          content="Informações sobre os serviços prestados pela Brasquip."
         />
-        {selectService(type as string)}
-      </Content>
-    </WholePage>
+        <meta name="keywords" content="service, description" />
+      </Helmet>
+      <WholePage>
+        <HeaderContainer>
+          <Image>
+            <ImageOverlay />
+            <BackgroundDark />
+            <TextPosition className="padding">
+              <Flag text="Informações gerais" />
+              <h1
+                style={{
+                  fontSize: "clamp(2rem, 4vw, 3rem)",
+                  lineHeight: "1",
+                  maxWidth: "600px",
+                }}
+              >
+                {selectTitle(type as string)}
+              </h1>
+            </TextPosition>
+          </Image>
+        </HeaderContainer>
+
+        <Content className="padding">
+          <BreadScrumb
+            title={
+              selectTitle(type as string) ===
+              "EMPRESA REGISTRADA NO CREA-DF SOB O N.º 11727"
+                ? "ART"
+                : selectTitle(type as string)
+            }
+          />
+          {selectService(type as string)}
+        </Content>
+      </WholePage>
+    </>
   );
 }

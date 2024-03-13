@@ -17,6 +17,7 @@ import Flag from "./components/Flag";
 import Institucional from "./components/Institucional";
 import ServiceCard from "./components/ServiceCard";
 import { ServicesContainer, ServicesRow, Title } from "./styles";
+import { Helmet } from "react-helmet";
 
 export default function Home() {
   const [windowSize, setWindowSize] = useState({
@@ -76,98 +77,111 @@ export default function Home() {
   };
 
   return (
-    <WholePage>
-      <HeaderContainer ref={headerRef} data-aos="fade-zoom-in">
-        <Image>
-          <ImageOverlay />
-          <TextPosition>
-            {isThereFlag && (
-              <Flag text={"Brasequip - Máquinas e equipamentos de elevação"} />
-            )}
-            <h1
-              style={{
-                fontSize: "60px",
-                lineHeight: "1",
-                maxWidth: "600px",
-              }}
-              data-aos="zoom-in"
-            >
-              Elevando Padrões Alcançando Alturas
-            </h1>
-            <p data-aos="zoom-in" data-aos-offset="-100">
-              Especialistas em elevação, a BRASEQUIP oferece venda e locação de
-              equipamentos de alta performance para sua obra. Nosso compromisso
-              com a segurança e eficiência é inabalável. Oferecemos soluções
-              ágeis e orientações na escolha do equipamento ideal.
-            </p>
-            <Button
-              text="Ver mais"
-              onClick={() => scrollToContent(headerRef)}
+    <>
+      <Helmet>
+        <title>Brasequip</title>
+        <meta
+          name="Página inicial"
+          content="Página inicial da Brasequip. Aqui você encontra informações sobre a empresa e seus serviços."
+        />
+        <meta name="keywords" content="home" />
+      </Helmet>
+      <WholePage>
+        <HeaderContainer ref={headerRef} data-aos="fade-zoom-in">
+          <Image>
+            <ImageOverlay />
+            <TextPosition>
+              {isThereFlag && (
+                <Flag
+                  text={"Brasequip - Máquinas e equipamentos de elevação"}
+                />
+              )}
+              <h1
+                style={{
+                  fontSize: "60px",
+                  lineHeight: "1",
+                  maxWidth: "600px",
+                }}
+                data-aos="zoom-in"
+              >
+                Elevando Padrões Alcançando Alturas
+              </h1>
+              <p data-aos="zoom-in" data-aos-offset="-100">
+                Especialistas em elevação, a BRASEQUIP oferece venda e locação
+                de equipamentos de alta performance para sua obra. Nosso
+                compromisso com a segurança e eficiência é inabalável.
+                Oferecemos soluções ágeis e orientações na escolha do
+                equipamento ideal.
+              </p>
+              <Button
+                text="Ver mais"
+                onClick={() => scrollToContent(headerRef)}
+              />
+            </TextPosition>
+          </Image>
+        </HeaderContainer>
+        <ServicesContainer className="padding">
+          <Title
+            style={{
+              color: "black",
+              textAlign: "center",
+              fontWeight: "700",
+              lineHeight: "1.2",
+            }}
+            data-aos="fade-zoom-in"
+          >
+            CONHEÇA OS
+            <br /> SERVIÇOS
+          </Title>
+          <ServicesRow>
+            <ServiceCard
+              title="Montagem e desmontagem"
+              description="Realizamos montagem e desmontagem de equipamentos de elevação, dentro das normas de segurança vigentes no país, com profissionais treinados e certificados."
+              Icon={FaTools}
+              fadeType="right"
+              linkTo={"servico/montagem"}
             />
-          </TextPosition>
-        </Image>
-      </HeaderContainer>
-      <ServicesContainer className="padding">
-        <Title
-          style={{
-            color: "black",
-            textAlign: "center",
-            fontWeight: "700",
-            lineHeight: "1.2",
-          }}
-          data-aos="fade-zoom-in"
-        >
-          CONHEÇA OS
-          <br /> SERVIÇOS
-        </Title>
-        <ServicesRow>
-          <ServiceCard
-            title="Montagem e desmontagem"
-            description="Realizamos montagem e desmontagem de equipamentos de elevação, dentro das normas de segurança vigentes no país, com profissionais treinados e certificados."
-            Icon={FaTools}
-            fadeType="right"
-            linkTo={"servico/montagem"}
-          />
-          <ServiceCard
-            title="Reforma de equipamentos"
-            description="Revitalizamos seus equipamentos com reformas detalhadas, adequando-os de acordo com as normas vigentes, prolongando a vida útil e otimizando o desempenho para atender às demandas do seu projeto."
-            Icon={GiGearHammer}
-            fadeType="left"
-            linkTo={"servico/reforma"}
-          />
-        </ServicesRow>
-        <ServicesRow>
-          <ServiceCard
-            title="Manutenção preventiva e corretiva"
-            description="A manutenção preventiva envolve mensalmente a checagem e testes de todos os itens de segurança do equipamento, parte estrutural, mecânica e elétrica. Com foco em durabilidade e performance, nossa manutenção preventiva previne paradas não programadas, maximizando a produtividade de sua obra."
-            Icon={MdSecurity}
-            fadeType="right"
-            linkTo={"servico/manutencao"}
-          />
-          <ServiceCard
-            title="Teste de END"
-            description="Realizamos os Teste de END, com Laudo assinado por profissional habilitado, conforme a NR-18.11.7, “e”: laudos dos ensaios não destrutivos dos eixos dos motofreios e dos freios de emergência, sendo a periodicidade definida por profissional legalmente habilitado, obedecidos os prazos máximos previstos pelo fabricante no manual de manutenção do equipamento."
-            Icon={SiGooglesearchconsole}
-            fadeType="left"
-            linkTo={"servico/end"}
-          />
-        </ServicesRow>
+            <ServiceCard
+              title="Reforma de equipamentos"
+              description="Revitalizamos seus equipamentos com reformas detalhadas, adequando-os de acordo com as normas vigentes, prolongando a vida útil e otimizando o desempenho para atender às demandas do seu projeto."
+              Icon={GiGearHammer}
+              fadeType="left"
+              linkTo={"servico/reforma"}
+            />
+          </ServicesRow>
+          <ServicesRow>
+            <ServiceCard
+              title="Manutenção preventiva e corretiva"
+              description="A manutenção preventiva envolve mensalmente a checagem e testes de todos os itens de segurança do equipamento, parte estrutural, mecânica e elétrica. Com foco em durabilidade e performance, nossa manutenção preventiva previne paradas não programadas, maximizando a produtividade de sua obra."
+              Icon={MdSecurity}
+              fadeType="right"
+              linkTo={"servico/manutencao"}
+            />
+            <ServiceCard
+              title="Teste de END"
+              description="Realizamos os Teste de END, com Laudo assinado por profissional habilitado, conforme a NR-18.11.7, “e”: laudos dos ensaios não destrutivos dos eixos dos motofreios e dos freios de emergência, sendo a periodicidade definida por profissional legalmente habilitado, obedecidos os prazos máximos previstos pelo fabricante no manual de manutenção do equipamento."
+              Icon={SiGooglesearchconsole}
+              fadeType="left"
+              linkTo={"servico/end"}
+            />
+          </ServicesRow>
 
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-          }}
-        >
-          <Button
-            text="Ver todos"
-            linkTo="/servicos"
-            onClick={() => window.scrollTo(0, 0)}
-          />
-        </div>
-      </ServicesContainer>
-      <Form />
-      <Institucional />
-    </WholePage>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+            }}
+          >
+            <Button
+              text="Ver todos"
+              linkTo="/servicos"
+              onClick={() => window.scrollTo(0, 0)}
+            />
+          </div>
+        </ServicesContainer>
+        <Form />
+        <Institucional />
+      </WholePage>
+    </>
   );
 }
