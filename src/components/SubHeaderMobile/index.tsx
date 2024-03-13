@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { FaFacebook, FaInstagram } from "react-icons/fa";
-import { IoMdClose, IoMdMenu } from "react-icons/io";
+import { IoMdMenu } from "react-icons/io";
 import { MdDarkMode } from "react-icons/md";
 import { NavLink } from "react-router-dom";
 import theme from "../../theme/theme";
@@ -57,28 +57,7 @@ export default function SubHeaderMobile({ height }: ISubHeaderMobile) {
 
   return (
     <div>
-      {isMenuOpen ? (
-        <IoMdClose
-          size="2em"
-          style={{
-            cursor: "pointer",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        />
-      ) : (
-        <IoMdMenu
-          size="2em"
-          onClick={toggleMenu}
-          style={{
-            cursor: "pointer",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        />
-      )}
+      <IoMdMenu size="2em" onClick={toggleMenu} style={{ cursor: "pointer" }} />
       {isMenuOpen && (
         <div
           ref={menuRef}
