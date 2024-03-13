@@ -1,12 +1,11 @@
-import { useEffect, useRef, useState } from "react";
-import { Helmet } from "react-helmet";
+import { useState, useEffect, useRef } from "react";
 import { IoArrowDownCircleSharp } from "react-icons/io5";
 import theme from "../../theme/theme";
 import Flag from "../Home/components/Flag";
 import { HeaderContainer, WholePage } from "../styles";
 import Form from "./components/Form";
 
-import { Body, Image, ImageOverlay, TextPosition } from "./styles";
+import { Image, ImageOverlay, Body, TextPosition } from "./styles";
 
 export default function Contato() {
   const [windowSize, setWindowSize] = useState({
@@ -65,52 +64,42 @@ export default function Contato() {
     requestAnimationFrame(animation);
   };
   return (
-    <>
-      <Helmet>
-        <title>Brasquip - Contato</title>
-        <meta
-          name="Contato"
-          content="Formulário de contato para entrar em contato com a Brasquip."
-        />
-        <meta name="keywords" content="contact, forms" />
-      </Helmet>
-      <WholePage>
-        <HeaderContainer ref={headerRef}>
-          <Image>
-            <ImageOverlay />
-            <TextPosition>
-              <Flag text="Fale Conosco" />
-              <h1
-                style={{
-                  fontSize: "60px",
-                  lineHeight: "1",
-                  maxWidth: "600px",
-                }}
-              >
-                Contato
-              </h1>
-            </TextPosition>
-            <div
+    <WholePage>
+      <HeaderContainer ref={headerRef}>
+        <Image>
+          <ImageOverlay />
+          <TextPosition>
+            <Flag text="Fale Conosco" />
+            <h1
               style={{
-                position: "absolute",
-                bottom: "10%",
-                left: "50%",
-                transform: "translateX(-50%)",
-                width: "4em",
-                height: "4em",
-                zIndex: 1000,
-                display: isThereButton ? "flex" : "none",
+                fontSize: "60px",
+                lineHeight: "1",
+                maxWidth: "600px",
               }}
-              onClick={() => scrollToContent(headerRef)}
             >
-              <IoArrowDownCircleSharp size={"100%"} color={theme.colors.red} />
-            </div>
-          </Image>
-        </HeaderContainer>
-        <Body className="padding">
-          <Form />
-        </Body>
-      </WholePage>
-    </>
+              Contato
+            </h1>
+          </TextPosition>
+          <div
+            style={{
+              position: "absolute",
+              bottom: "10%",
+              left: "50%",
+              transform: "translateX(-50%)",
+              width: "4em",
+              height: "4em",
+              zIndex: 1000,
+              display: isThereButton ? "flex" : "none",
+            }}
+            onClick={() => scrollToContent(headerRef)}
+          >
+            <IoArrowDownCircleSharp size={"100%"} color={theme.colors.red} />
+          </div>
+        </Image>
+      </HeaderContainer>
+      <Body className="padding">
+        <Form />
+      </Body>
+    </WholePage>
   );
 }
