@@ -26,8 +26,6 @@ export default function Servicos() {
     height: window.innerHeight,
   });
 
-
-
   const isThereButton = windowSize.width <= 620;
 
   useEffect(() => {
@@ -46,10 +44,10 @@ export default function Servicos() {
   }, []);
 
   useEffect(() => {
-    const savedScrollPosition = localStorage.getItem('scrollPosition');
+    const savedScrollPosition = localStorage.getItem("scrollPosition");
     if (savedScrollPosition) {
       window.scrollTo(0, parseInt(savedScrollPosition, 10));
-      localStorage.removeItem('scrollPosition'); // Clear the saved position
+      localStorage.removeItem("scrollPosition"); // Clear the saved position
     }
   }, []);
 
@@ -199,7 +197,7 @@ export default function Servicos() {
                 evolução da indústria da construção, proporcionando uma base
                 sólida para a realização de projetos eficazes, seguros e
                 inovadores, atendendo empresas, governos e demais clientes em
-                todo o território brasileiro.
+                Brasília.
               </p>
             </TextContent>
             <Button
