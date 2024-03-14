@@ -196,8 +196,8 @@ export default function Servicos() {
                 segurança no setor. Estamos comprometidos em contribuir para a
                 evolução da indústria da construção, proporcionando uma base
                 sólida para a realização de projetos eficazes, seguros e
-                inovadores, atendendo empresas, governos e demais clientes em
-                Brasília.
+                inovadores, atendendo empresas, orgãos públicos e demais
+                clientes em Brasília.
               </p>
             </TextContent>
             <Button
