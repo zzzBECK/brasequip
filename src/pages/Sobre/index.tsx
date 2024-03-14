@@ -158,12 +158,10 @@ export default function Sobre() {
         <h1 style={{ marginTop: "1em" }}>Venha nos Conhecer</h1>
         <p data-nosnippet>
           Estamos localizados às margens da BR-070, em Ceilândia-DF, em uma área
-          de 10.000 m², onde nossos clientes podem visitar nosso pátio de
+          de 20.000 m², onde nossos clientes podem visitar nosso pátio de
           montagem e conhecer nossa gama de equipamentos para pronta entrega. A
-          BRASEQUIP possui seguro de responsabilidade civil para todos os seus
-          equipamentos e serviços, além de seguro de vida para todos os seus
-          colaboradores, refletindo nosso compromisso com a responsabilidade e a
-          excelência.
+          BRASEQUIP possui seguro de vida para todos os seus colaboradores,
+          refletindo nosso compromisso com a responsabilidade e a excelência.
         </p>
       </SobreContainer>
     </WholePage>
