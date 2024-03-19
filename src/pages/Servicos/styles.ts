@@ -23,7 +23,7 @@ export const Image = styled.div`
 
 export const TextPosition = styled.div`
   display: flex;
-  width: 36%; // Width as a percentage works well for responsiveness
+  width: 36%;
   position: absolute;
   left: 14%; // Use percentages to position from the right
   top: 60%;
