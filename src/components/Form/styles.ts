@@ -51,6 +51,7 @@ export const TitleContainer = styled.div`
   flex-direction: column;
   height: 100%;
   gap: 1em;
+  color: #fff;
 `;
 
 export const Column2 = styled.div`

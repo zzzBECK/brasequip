@@ -162,7 +162,7 @@ export default function Form() {
           data-aos="fade-zoom-in"
           data-aos-duration="800"
         >
-          <div style={{ display: "flex", gap: "4%" }}>
+          <div style={{ display: "flex", gap: "4%", color: "#fff" }}>
             <div style={{ width: "50%" }}>
               <label>Nome</label>
               <div>
@@ -196,7 +196,13 @@ export default function Form() {
               </div>
             </div>
           </div>
-          <label>Email</label>
+          <label
+            style={{
+              color: "#fff",
+            }}
+          >
+            Email
+          </label>
           <div>
             <Input
               type="email"
@@ -212,7 +218,13 @@ export default function Form() {
           </div>
           {/* Remova a exibição de erro do campo honeypot e subject pois eles são ocultos e não precisam de validação visual */}
           <div>
-            <label>Descrição</label>
+            <label
+              style={{
+                color: "#fff",
+              }}
+            >
+              Descrição
+            </label>
             <div>
               <TextArea
                 placeholder="Descrição"
