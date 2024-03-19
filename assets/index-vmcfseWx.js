@@ -772,7 +772,7 @@ Error generating stack: `+i.message+`
   }
 `,ww=L.div`
   display: flex;
-  width: 36%; // Width as a percentage works well for responsiveness
+  width: 36%;
   position: absolute;
   left: 14%; // Use percentages to position from the right
   top: 60%;
