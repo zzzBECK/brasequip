@@ -1,9 +1,13 @@
 import Flag from "../../../Home/components/Flag";
 
-export default function End() {
+interface Props {
+  flagMode: "light" | "dark";
+}
+
+export default function End({ flagMode }: Props) {
   return (
     <>
-      <Flag text="Prevenção e Segurança na Construção Civil" mode="light" />
+      <Flag text="Prevenção e Segurança na Construção Civil" mode={flagMode} />
       <div
         style={{
           display: "flex",

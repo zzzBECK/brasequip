@@ -8,6 +8,7 @@ import Sobre from "./pages/Sobre/index.tsx";
 import Servicos from "./pages/Servicos/index.tsx";
 import Contato from "./pages/Contato/index.tsx";
 import Servico from "./pages/Servico/index.tsx";
+import { ThemeProvider } from "./ThemeContext.tsx";
 
 const router = createBrowserRouter([
   {
@@ -38,8 +39,18 @@ const router = createBrowserRouter([
   },
 ]);
 
-ReactDOM.createRoot(document.getElementById("root")!).render(
+const rootElement = document.getElementById("root");
+
+// Check if the root element exists and is an HTMLElement
+if (!(rootElement instanceof HTMLElement)) {
+  throw new Error("No root element found");
+}
+
+// Now we are sure that rootElement is not null
+ReactDOM.createRoot(rootElement).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <ThemeProvider>
+      <RouterProvider router={router} />
+    </ThemeProvider>
   </React.StrictMode>
 );

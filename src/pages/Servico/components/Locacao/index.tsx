@@ -1,9 +1,16 @@
 import Flag from "../../../Home/components/Flag";
 
-export default function Locacao() {
+interface LocacaoProps {
+  flagMode: "light" | "dark";
+}
+
+export default function Locacao({ flagMode }: LocacaoProps) {
   return (
     <>
-      <Flag text="Soluções Completas em Locação de Equipamentos" mode="light" />
+      <Flag
+        text="Soluções Completas em Locação de Equipamentos"
+        mode={flagMode}
+      />
       <div
         style={{
           display: "flex",

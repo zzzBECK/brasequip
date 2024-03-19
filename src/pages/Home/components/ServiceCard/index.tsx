@@ -30,7 +30,7 @@ export default function ServiceCard({
     >
       <Icon
         style={{
-          color: "black",
+          color: "inherit",
           fontSize: "2.4em",
           marginBottom: "0.8em",
           opacity: "0.8",
@@ -46,7 +46,7 @@ export default function ServiceCard({
       >
         <h2
           style={{
-            color: "black",
+            color: "inherit",
             fontWeight: "500",
             lineHeight: "1",
             marginBottom: "0.5em",
@@ -57,7 +57,7 @@ export default function ServiceCard({
       </NavLink>
       <p
         style={{
-          color: "black",
+          color: "inherit",
           textAlign: "inherit",
         }}
       >

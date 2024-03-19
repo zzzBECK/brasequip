@@ -1,9 +1,13 @@
 import Flag from "../../../Home/components/Flag";
 
-export default function Fixacao() {
+interface FixacaoProps {
+  flagMode: "light" | "dark";
+}
+
+export default function Fixacao({ flagMode }: FixacaoProps) {
   return (
     <>
-      <Flag text="Segurança e Conformidade Técnica" mode="light" />
+      <Flag text="Segurança e Conformidade Técnica" mode={flagMode} />
       <div
         style={{
           display: "flex",

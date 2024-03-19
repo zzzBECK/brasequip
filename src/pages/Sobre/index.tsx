@@ -1,10 +1,12 @@
 // Importação de componentes necessários
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useContext } from "react";
 import Flag from "../Home/components/Flag";
 import { HeaderContainer, WholePage } from "../styles";
 import { Image, ImageOverlay, SobreContainer, TextPosition } from "./styles";
 import { IoArrowDownCircleSharp } from "react-icons/io5";
 import theme from "../../theme/theme";
+import { ThemeContext } from "../../ThemeContext";
+import darkTheme from "../../theme/darkTheme";
 
 export default function Sobre() {
   const [windowSize, setWindowSize] = useState({
@@ -63,8 +65,10 @@ export default function Sobre() {
     requestAnimationFrame(animation);
   };
 
+  const { isDarkMode } = useContext(ThemeContext);
+
   return (
-    <WholePage>
+    <WholePage theme={isDarkMode ? darkTheme : theme}>
       <HeaderContainer ref={headerRef}>
         <Image>
           <ImageOverlay />

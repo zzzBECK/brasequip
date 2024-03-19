@@ -221,7 +221,19 @@ export default function Footer() {
           backgroundColor: theme.colors.darkBlue,
         }}
       >
-        Copyright © Brasequip - Desenvolvido por Alexandre Beck
+        Copyright © Brasequip - Desenvolvido por
+        <a
+          href="https://www.linkedin.com/in/alexandre-de-santana-beck-b7336420b/"
+          target="_blank"
+          rel="noreferrer"
+          className="name"
+          style={{
+            textDecoration: "none",
+            marginLeft: "0.4em",
+          }}
+        >
+          Alexandre Beck
+        </a>
       </p>
     </>
   );

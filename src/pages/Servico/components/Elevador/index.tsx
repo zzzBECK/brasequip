@@ -1,9 +1,13 @@
 import Flag from "../../../Home/components/Flag";
 
-export default function Elevador() {
+interface ElevadorProps {
+  flagMode: "light" | "dark";
+}
+
+export default function Elevador({ flagMode }: ElevadorProps) {
   return (
     <>
-      <Flag text="Elevadores Cremalheira" mode="light" />
+      <Flag text="Elevadores Cremalheira" mode={flagMode} />
       <div
         style={{
           display: "flex",

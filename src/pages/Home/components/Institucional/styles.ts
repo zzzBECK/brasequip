@@ -8,7 +8,8 @@ export const Container = styled.div`
   min-height: 100vh;
   position: relative;
   align-items: center;
-  background-color: white;
+  background-color: ${({ theme }) => theme.colors.background};
+  color: ${({ theme }) => theme.colors.text};
 `;
 
 export const Image = styled.div`
@@ -56,10 +57,10 @@ export const Content = styled.div`
   display: flex;
   width: 100%;
   height: 100%;
-  background-color: white;
+  background-color: ${({ theme }) => theme.colors.background};
+  color: ${({ theme }) => theme.colors.text};
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
   padding: 6vw;
-  color: black;
   gap: 6%;
 
   @media (max-width: 1100px) {

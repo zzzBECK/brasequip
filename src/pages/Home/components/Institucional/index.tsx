@@ -1,3 +1,5 @@
+import { useContext } from "react";
+import { ThemeContext } from "../../../../ThemeContext";
 import Flag from "../Flag";
 import {
   Container,
@@ -8,15 +10,19 @@ import {
   Column2,
   ImagemColuna2,
 } from "./styles";
+import darkTheme from "../../../../theme/darkTheme";
+import theme from "../../../../theme/theme";
 
 export default function Institucional() {
+  const { isDarkMode } = useContext(ThemeContext);
+
   return (
-    <Container>
+    <Container theme={isDarkMode ? darkTheme : theme}>
       <Image />
       <ContentContainer>
-        <Content>
+        <Content theme={isDarkMode ? darkTheme : theme}>
           <Column1 data-aos="fade-zoom-in" data-aos-duration="800">
-            <Flag text="Quem somos" mode="light" />
+            <Flag text="Quem somos" mode={isDarkMode ? "dark" : "light"} />
             <h1>INSTITUCIONAL</h1>
             <p>
               Fundada em julho de 2005, a BRASEQUIP se destaca na venda e

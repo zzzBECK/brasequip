@@ -5,10 +5,13 @@ export const ServicesContainer = styled.div`
   flex-direction: column;
   width: 100%;
   height: fit-content;
-  background-color: #fff;
   gap: 4em;
   padding-top: 4em;
   padding-bottom: 4em;
+
+  /* Use the theme provided by the ThemeProvider */
+  background-color: ${({ theme }) => theme.colors.background};
+  color: ${({ theme }) => theme.colors.text};
 
   @media (max-width: 768px) {
     gap: 0;

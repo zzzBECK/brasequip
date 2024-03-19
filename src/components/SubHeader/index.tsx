@@ -1,4 +1,5 @@
 import { FaFacebook, FaInstagram } from "react-icons/fa";
+import { MdSunny } from "react-icons/md";
 import { MdDarkMode } from "react-icons/md";
 import { NavLink } from "react-router-dom";
 import {
@@ -7,6 +8,8 @@ import {
   SubHeaderContainer,
   SubHeaderItem,
 } from "./styles";
+import { useContext } from "react";
+import { ThemeContext } from "../../ThemeContext";
 
 export default function SubHeader() {
   const scrollToTop = () => {
@@ -15,6 +18,8 @@ export default function SubHeader() {
       behavior: "auto",
     });
   };
+
+  const { toggleTheme, isDarkMode } = useContext(ThemeContext);
 
   return (
     <SubHeaderContainer>
@@ -118,7 +123,22 @@ export default function SubHeader() {
               window.open("https://pt-br.facebook.com/brasequip/", "_blank")
             }
           />
-          <MdDarkMode size="1.6em" className="icon" />
+          {isDarkMode && (
+            <MdSunny
+              alt="Light mode"
+              size="1.6em"
+              className="icon"
+              onClick={toggleTheme}
+            />
+          )}
+          {!isDarkMode && (
+            <MdDarkMode
+              alt="Dark mode"
+              size="1.6em"
+              className="icon"
+              onClick={toggleTheme}
+            />
+          )}
         </IconsContainer>
       </Column>
     </SubHeaderContainer>

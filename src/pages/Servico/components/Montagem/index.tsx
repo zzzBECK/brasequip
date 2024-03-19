@@ -1,9 +1,13 @@
 import Flag from "../../../Home/components/Flag";
 
-export default function Montagem() {
+interface MontagemProps {
+  flagMode: "light" | "dark";
+}
+
+export default function Montagem({ flagMode }: MontagemProps) {
   return (
     <>
-      <Flag text="Soluções Completas em Elevação" mode="light" />
+      <Flag text="Soluções Completas em Elevação" mode={flagMode} />
       <div
         style={{
           display: "flex",

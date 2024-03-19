@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import { FaTools } from "react-icons/fa";
 import { GiGearHammer } from "react-icons/gi";
 import { MdSecurity } from "react-icons/md";
@@ -17,6 +17,9 @@ import Flag from "./components/Flag";
 import Institucional from "./components/Institucional";
 import ServiceCard from "./components/ServiceCard";
 import { ServicesContainer, ServicesRow, Title } from "./styles";
+import { ThemeContext } from "../../ThemeContext";
+import darkTheme from "../../theme/darkTheme";
+import theme from "../../theme/theme";
 
 export default function Home() {
   const [windowSize, setWindowSize] = useState({
@@ -75,11 +78,17 @@ export default function Home() {
     requestAnimationFrame(animation);
   };
 
+  const { isDarkMode } = useContext(ThemeContext);
+
   return (
     <WholePage>
       <HeaderContainer ref={headerRef} data-aos="fade-zoom-in">
         <Image>
-          <ImageOverlay />
+          <ImageOverlay
+            style={{
+              display: isDarkMode ? "flex" : "none",
+            }}
+          />
           <TextPosition>
             {isThereFlag && (
               <Flag text={"Brasequip - Máquinas e equipamentos de elevação"} />
@@ -107,10 +116,13 @@ export default function Home() {
           </TextPosition>
         </Image>
       </HeaderContainer>
-      <ServicesContainer className="padding">
+      <ServicesContainer
+        className="padding"
+        theme={isDarkMode ? darkTheme : theme}
+      >
         <Title
           style={{
-            color: "black",
+            color: "inherit",
             textAlign: "center",
             fontWeight: "700",
             lineHeight: "1.2",

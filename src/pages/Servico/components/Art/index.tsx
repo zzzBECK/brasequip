@@ -1,9 +1,13 @@
 import Flag from "../../../Home/components/Flag";
 
-export default function Art() {
+interface ArtProps {
+  flagMode: "light" | "dark";
+}
+
+export default function Art({ flagMode }: ArtProps) {
   return (
     <>
-      <Flag text="Compromisso e Proteção Total" mode="light" />
+      <Flag text="Compromisso e Proteção Total" mode={flagMode} />
       <div
         style={{
           display: "flex",

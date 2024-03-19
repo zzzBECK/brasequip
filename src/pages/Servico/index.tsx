@@ -18,27 +18,31 @@ import {
 import BreadScrumb from "../../components/BreadScrumb";
 import Elevador from "./components/Elevador";
 import Locacao from "./components/Locacao";
+import { useContext } from "react";
+import { ThemeContext } from "../../ThemeContext";
+import darkTheme from "../../theme/darkTheme";
+import theme from "../../theme/theme";
 
-function selectService(type: string) {
+function selectService(type: string, flagMode: "light" | "dark") {
   switch (type) {
     case "manutencao":
-      return <Manutencao />;
+      return <Manutencao flagMode={flagMode} />;
     case "montagem":
-      return <Montagem />;
+      return <Montagem flagMode={flagMode} />;
     case "reforma":
-      return <Reforma />;
+      return <Reforma flagMode={flagMode} />;
     case "fixacao":
-      return <Fixacao />;
+      return <Fixacao flagMode={flagMode} />;
     case "art":
-      return <Art />;
+      return <Art flagMode={flagMode} />;
     case "end":
-      return <End />;
+      return <End flagMode={flagMode} />;
     case "elevador":
-      return <Elevador />;
+      return <Elevador flagMode={flagMode} />;
     case "locacao":
-      return <Locacao />;
+      return <Locacao flagMode={flagMode} />;
     default:
-      return <End />;
+      return <End flagMode={flagMode} />;
   }
 }
 
@@ -68,8 +72,10 @@ function selectTitle(type: string) {
 export default function Servico() {
   const { type } = useParams();
 
+  const { isDarkMode } = useContext(ThemeContext);
+
   return (
-    <WholePage>
+    <WholePage theme={isDarkMode ? darkTheme : theme}>
       <HeaderContainer>
         <Image>
           <ImageOverlay />
@@ -98,7 +104,7 @@ export default function Servico() {
               : selectTitle(type as string)
           }
         />
-        {selectService(type as string)}
+        {selectService(type as string, isDarkMode ? "dark" : "light")}
       </Content>
     </WholePage>
   );

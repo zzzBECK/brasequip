@@ -1,12 +1,9 @@
 import styled from "styled-components";
-import theme from "../../theme/theme";
 
 export const SobreContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  background-color: ${theme.colors.white};
-  color: ${theme.colors.black};
   text-align: justify;
   padding-top: 6em;
   padding-bottom: 6em;

@@ -1,14 +1,13 @@
 import styled from "styled-components";
-import theme from "../../theme/theme";
 
 export const Body = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  background-color: ${theme.colors.white};
   padding-top: 4em;
   padding-bottom: 4em;
   min-height: 20em;
+  color: #fff;
 `;
 
 export const Image = styled.div`

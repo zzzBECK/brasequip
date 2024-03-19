@@ -1,9 +1,10 @@
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useContext, useEffect, useRef, useState } from "react";
 import { FaFacebook, FaInstagram } from "react-icons/fa";
 import { IoMdClose, IoMdMenu } from "react-icons/io";
-import { MdDarkMode } from "react-icons/md";
+import { MdDarkMode, MdSunny } from "react-icons/md";
 import { NavLink } from "react-router-dom";
 import theme from "../../theme/theme";
+import { ThemeContext } from "../../ThemeContext";
 
 interface ISubHeaderMobile {
   height: string;
@@ -54,6 +55,8 @@ export default function SubHeaderMobile({ height }: ISubHeaderMobile) {
 
     setIsMenuOpen(false);
   };
+
+  const { toggleTheme, isDarkMode } = useContext(ThemeContext);
 
   return (
     <div>
@@ -181,29 +184,6 @@ export default function SubHeaderMobile({ height }: ISubHeaderMobile) {
           >
             Contato
           </NavLink>
-          {/* <NavLink
-            to="/brasequip"
-            end
-            style={({ isActive }) => ({
-              height: "4em",
-              width: "100%",
-              justifyContent: "center",
-              alignItems: "center",
-              display: "flex",
-              textDecoration: "none",
-              color: "white",
-              gap: "0.5em",
-              backgroundColor: isActive
-                ? theme.colors.darkBlue
-                : theme.colors.blue,
-              transition: "border-bottom 0.4s ease-in-out",
-              fontSize: "clamp(0.8rem, 1vw, 1.2rem)",
-            })}
-            onClick={() => scrollToTop()}
-          >
-            Outros
-            <IoIosArrowDown />
-          </NavLink> */}
           <div
             style={{
               display: "flex",
@@ -228,7 +208,22 @@ export default function SubHeaderMobile({ height }: ISubHeaderMobile) {
                 window.open("https://pt-br.facebook.com/brasequip/", "_blank")
               }
             />
-            <MdDarkMode size="1.6em" className="icon" />
+            {isDarkMode && (
+              <MdSunny
+                alt="Light mode"
+                size="1.6em"
+                className="icon"
+                onClick={toggleTheme}
+              />
+            )}
+            {!isDarkMode && (
+              <MdDarkMode
+                alt="Dark mode"
+                size="1.6em"
+                className="icon"
+                onClick={toggleTheme}
+              />
+            )}
           </div>
         </div>
       )}

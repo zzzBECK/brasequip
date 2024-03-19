@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useContext } from "react";
 import theme from "../../theme/theme";
 import Button from "../Home/components/Button";
 import Flag from "../Home/components/Flag";
@@ -19,6 +19,8 @@ import {
 } from "./styles";
 
 import { IoArrowDownCircleSharp } from "react-icons/io5";
+import { ThemeContext } from "../../ThemeContext";
+import darkTheme from "../../theme/darkTheme";
 
 export default function Servicos() {
   const [windowSize, setWindowSize] = useState({
@@ -85,8 +87,10 @@ export default function Servicos() {
     requestAnimationFrame(animation);
   };
 
+  const { isDarkMode } = useContext(ThemeContext);
+
   return (
-    <WholePage>
+    <WholePage theme={isDarkMode ? darkTheme : theme}>
       <HeaderContainer ref={headerRef}>
         <Image>
           <ImageOverlay />
@@ -178,7 +182,7 @@ export default function Servicos() {
         <VisaoGeralContent>
           <VisaoGeralText>
             <TextContent>
-              <Flag text="Sobre Nós" mode="light" />
+              <Flag text="Sobre Nós" mode={isDarkMode ? "dark" : "light"} />
               <h1>Uma visão geral</h1>
               <p>
                 A missão da BRASEQUIP é impulsionar a eficiência no setor de

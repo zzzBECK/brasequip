@@ -6,6 +6,8 @@ export const WholePage = styled.div`
   min-height: 100vh;
   min-height: 100svh;
   flex-direction: column;
+  background-color: ${({ theme }) => theme.colors.background};
+  color: ${({ theme }) => theme.colors.text};
 `;
 
 export const Image = styled.div`

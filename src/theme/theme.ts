@@ -5,6 +5,8 @@ const theme = {
     white: "#fff",
     black: "#000",
     red: "#c71e23",
+    text: "#000", // dark gray for text
+    background: "#FFFFFF", // white for backgrounds
   },
 };
 

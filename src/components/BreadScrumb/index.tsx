@@ -2,6 +2,10 @@ import { IoHome } from "react-icons/io5";
 import { NavLink } from "react-router-dom";
 import { BreadContainer, BreadItem } from "./styles";
 import NavigateWithPosition from "../NavigateWithPosition";
+import { useContext } from "react";
+import { ThemeContext } from "../../ThemeContext";
+import darkTheme from "../../theme/darkTheme";
+import theme from "../../theme/theme";
 
 interface BreadScrumbProps {
   title: string;
@@ -14,8 +18,17 @@ export default function BreadScrumb({ title }: BreadScrumbProps) {
     });
   };
 
+  const { isDarkMode } = useContext(ThemeContext);
+
   return (
-    <BreadContainer>
+    <BreadContainer
+      style={{
+        boxShadow: isDarkMode
+          ? "0px 0px 10px 0px rgba(255, 255, 255, 0.1)"
+          : "0 0 10px 0 rgba(0, 0, 0, 0.1)",
+      }}
+      theme={isDarkMode ? darkTheme : theme}
+    >
       <NavLink
         to={"/"}
         onClick={scrollToTop}

@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import theme from "../../theme/theme";
 
 export const Image = styled.div`
   display: flex;
@@ -85,10 +84,8 @@ export const BackgroundDark = styled.div`
 export const Content = styled.div`
   display: flex;
   flex-direction: column;
-  background-color: ${theme.colors.white};
   min-height: 42em;
   padding-top: 2em;
   padding-bottom: 4em;
-  color: ${theme.colors.black};
   gap: 2em;
 `;

@@ -1,9 +1,13 @@
 import Flag from "../../../Home/components/Flag";
 
-export default function Reforma() {
+interface ReformaProps {
+  flagMode: "light" | "dark";
+}
+
+export default function Reforma({ flagMode }: ReformaProps) {
   return (
     <>
-      <Flag text="Qualidade e Confiabilidade em Elevação" mode="light" />
+      <Flag text="Qualidade e Confiabilidade em Elevação" mode={flagMode} />
       <div
         style={{
           display: "flex",

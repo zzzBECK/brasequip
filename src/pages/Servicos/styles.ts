@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import theme from "../../theme/theme";
 
 export const Image = styled.div`
   display: flex;
@@ -94,7 +93,6 @@ export const VisaoGeralContainer = styled.div`
   display: flex;
   width: 100%;
   min-height: 55em;
-  background-color: #fff;
 `;
 
 export const VisaoGeralImage = styled.div`
@@ -126,7 +124,6 @@ export const VisaoGeralText = styled.div`
   min-height: 30em;
   flex-direction: column;
   justify-content: space-between;
-  color: #000;
   text-align: justify;
 
   @media (max-width: 1100px) {
@@ -159,8 +156,6 @@ export const ServicosContainer = styled.div`
   flex-direction: column;
   width: 100%;
   min-height: 40em;
-  background-color: ${theme.colors.white};
-  color: ${theme.colors.black};
   justify-content: center;
   gap: 2em;
 `;

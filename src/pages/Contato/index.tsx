@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useContext } from "react";
 import { IoArrowDownCircleSharp } from "react-icons/io5";
 import theme from "../../theme/theme";
 import Flag from "../Home/components/Flag";
@@ -6,6 +6,8 @@ import { HeaderContainer, WholePage } from "../styles";
 import Form from "./components/Form";
 
 import { Image, ImageOverlay, Body, TextPosition } from "./styles";
+import { ThemeContext } from "../../ThemeContext";
+import darkTheme from "../../theme/darkTheme";
 
 export default function Contato() {
   const [windowSize, setWindowSize] = useState({
@@ -63,8 +65,11 @@ export default function Contato() {
 
     requestAnimationFrame(animation);
   };
+
+  const { isDarkMode } = useContext(ThemeContext);
+
   return (
-    <WholePage>
+    <WholePage theme={isDarkMode ? darkTheme : theme}>
       <HeaderContainer ref={headerRef}>
         <Image>
           <ImageOverlay />

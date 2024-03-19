@@ -8,6 +8,8 @@
   margin: 0;
   padding: 0;
   font-family: Rubik, Montserrat, sans-serif;
+
+  transition: background-color 300ms ease-in-out;
 }
 
 .padding {
@@ -55,7 +57,7 @@
 
 .icon:hover {
   cursor: pointer;
-  color: #091242;
+  color: #c71e23;
   transition: color 300ms ease-in-out;
 }
 
@@ -97,4 +99,13 @@
   .padding-header {
     padding-left: 0vw;
   }
+}
+
+.name {
+  color: #fff;
+}
+
+.name:hover {
+  color: #c71e23;
+  transition: color 300ms ease-in-out;
 }

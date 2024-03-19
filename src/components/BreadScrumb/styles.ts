@@ -7,9 +7,8 @@ export const BreadContainer = styled.div`
   gap: 1em;
   font-size: clamp(0.8rem, 1.5vw, 1.2rem);
   font-weight: 500;
-  /* background-color: darkgray; */
-  color: ${theme.colors.darkBlue};
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  background-color: ${({ theme }) => theme.colors.background};
+  color: ${({ theme }) => theme.colors.darkBlue};
   padding: 0.3em;
   padding-left: 0.6em;
   border-radius: 10px;

@@ -1,9 +1,13 @@
 import Flag from "../../../Home/components/Flag";
 
-export default function Manutencao() {
+interface ManutencaoProps {
+  flagMode: "light" | "dark";
+}
+
+export default function Manutencao({ flagMode }: ManutencaoProps) {
   return (
     <>
-      <Flag text="Garantia de Performance e Segurança" mode="light" />
+      <Flag text="Garantia de Performance e Segurança" mode={flagMode} />
       <div
         style={{
           display: "flex",

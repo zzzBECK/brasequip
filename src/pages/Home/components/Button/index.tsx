@@ -18,7 +18,10 @@ export default function Button({
   // Conditionally render NavLink if linkTo is provided
   if (linkTo) {
     return (
-      <NavLink to={linkTo} style={{ textDecoration: "none" }}>
+      <NavLink
+        to={linkTo}
+        style={{ textDecoration: "none", width: "fit-content" }}
+      >
         <ButtonStyle type={type} onClick={onClick} disabled={disabled}>
           {text}
         </ButtonStyle>
