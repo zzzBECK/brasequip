@@ -86,7 +86,7 @@ export default function Home() {
         <Image>
           <ImageOverlay
             style={{
-              display: isDarkMode ? "flex" : "none",
+              display: isDarkMode || windowSize.width < 1200 ? "flex" : "none",
             }}
           />
           <TextPosition>
