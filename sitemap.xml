@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/siteindex.xsd"
-        xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        >
+        xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>https://www.brasequip.com.br/</loc>
         <lastmod>2024-03-27</lastmod>
@@ -24,7 +22,6 @@
         <lastmod>2024-03-27</lastmod>
         <priority>0.8</priority>
     </url>
-    <!-- Exemplo de URLs para páginas de serviço dinâmicas -->
     <url>
         <loc>https://www.brasequip.com.br/servico/end</loc>
         <lastmod>2024-03-27</lastmod>
@@ -40,31 +37,27 @@
         <lastmod>2024-03-27</lastmod>
         <priority>0.6</priority>
     </url>
-        <url>
+    <url>
         <loc>https://www.brasequip.com.br/servico/montagem</loc>
         <lastmod>2024-03-27</lastmod>
         <priority>0.6</priority>
     </url>
-    </url>
-        <url>
+    <url>
         <loc>https://www.brasequip.com.br/servico/manutencao</loc>
         <lastmod>2024-03-27</lastmod>
         <priority>0.6</priority>
     </url>
-    </url>
-        <url>
+    <url>
         <loc>https://www.brasequip.com.br/servico/reforma</loc>
         <lastmod>2024-03-27</lastmod>
         <priority>0.6</priority>
     </url>
-    </url>
-        <url>
+    <url>
         <loc>https://www.brasequip.com.br/servico/fixacao</loc>
         <lastmod>2024-03-27</lastmod>
         <priority>0.6</priority>
     </url>
-    </url>
-        <url>
+    <url>
         <loc>https://www.brasequip.com.br/servico/elevador</loc>
         <lastmod>2024-03-27</lastmod>
         <priority>0.6</priority>
