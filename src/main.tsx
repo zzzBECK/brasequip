@@ -9,6 +9,7 @@ import Servicos from "./pages/Servicos/index.tsx";
 import Contato from "./pages/Contato/index.tsx";
 import Servico from "./pages/Servico/index.tsx";
 import { ThemeProvider } from "./ThemeContext.tsx";
+import NotFoundPage from "./pages/NotFoundPage/index.tsx";
 
 const router = createBrowserRouter([
   {
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
       {
         path: "/servico/:type",
         element: <Servico />,
+      },
+      {
+        path: "*", // Esta rota captura qualquer caminho não reconhecido
+        element: <NotFoundPage />,
       },
     ],
   },
