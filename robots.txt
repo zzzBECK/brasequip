@@ -1,8 +1,4 @@
 User-agent: *
-
-Disallow: /servico/*
-Disallow: /*.html
-Disallow: */*.html
-Disallow: *.html
+Disallow:
 
 Sitemap: https://www.brasequip.com.br/sitemap.xml
