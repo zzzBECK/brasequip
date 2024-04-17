@@ -27,8 +27,6 @@ export default function Home() {
     height: window.innerHeight,
   });
 
-  const isThereFlag = windowSize.width > 1100;
-
   useEffect(() => {
     function handleResize() {
       setWindowSize({
@@ -90,20 +88,36 @@ export default function Home() {
             }}
           />
           <TextPosition>
-            {isThereFlag && (
-              <Flag text={"Brasequip - Máquinas e equipamentos de elevação"} />
-            )}
+            <Flag text={"BRASEQUIP"} />
             <h1
               style={{
-                fontSize: "60px",
+                fontSize: "clamp(2.5rem, 4vw, 3.4rem)", // "clamp(2.5rem, 5vw, 4rem)
+                lineHeight: "1",
+                textAlign: "center"
+              }}
+              data-aos="zoom-in"
+            >
+              EQUIPAMENTOS PARA ELEVAÇÃO
+            </h1>
+            <h2
+              style={{
+                fontSize: "clamp(1.5rem, 2vw, 2rem)",
                 lineHeight: "1",
                 maxWidth: "600px",
               }}
               data-aos="zoom-in"
             >
-              Elevando Padrões Alcançando Alturas
-            </h1>
-            <p data-aos="zoom-in" data-aos-offset="-100">
+              VENDA - LOCAÇÃO - REFORMA
+            </h2>
+            <p style={{
+
+              fontSize: "clamp(1rem, 1.5vw, 1.2rem)", // "clamp(1rem, 1.5vw, 1.2rem)
+              lineHeight: "1.2",
+              maxWidth: "600px",
+              textAlign: "center"
+            }}
+              data-aos="zoom-in"
+              data-aos-offset="-100">
               Especialistas em elevação, a BRASEQUIP oferece venda e locação de
               equipamentos de alta performance para sua obra. Nosso compromisso
               com a segurança e eficiência é inabalável. Oferecemos soluções

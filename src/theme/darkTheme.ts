@@ -6,7 +6,7 @@ const darkTheme = {
     black: "",
     red: "#c71e23",
     text: "#E0E0E0", // soft white for text
-    background: "#121212", // deep gray for backgrounds
+    background: "#222222", // deep gray for backgrounds
   },
 };
 

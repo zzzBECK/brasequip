@@ -39,7 +39,7 @@ export const Image = styled.div`
   display: flex;
   width: 100%;
   height: 40em;
-  background-image: url("sobrenos.jpg");
+  background-image: url("bce.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
@@ -49,6 +49,7 @@ export const Image = styled.div`
     height: 100vh;
     height: 100svh;
     min-height: 45em;
+    background-image: url("bceMobile.jpg");
   }
 
   @media (max-height: 700px) {

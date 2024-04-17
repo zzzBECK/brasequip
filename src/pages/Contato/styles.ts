@@ -14,17 +14,16 @@ export const Image = styled.div`
   display: flex;
   width: 100%;
   height: 40em;
-  background-image: url("contato.jpeg");
+  background-image: url("contato.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
-  /* background-position: center; */
-  background-position: 50% 70%;
 
   @media (max-width: 620px) {
     height: 100vh;
     height: 100svh;
     min-height: 45em;
+    background-image: url("contatoMobile.jpg");
   }
 
   @media (max-height: 700px) {

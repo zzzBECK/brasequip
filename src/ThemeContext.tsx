@@ -10,7 +10,7 @@ interface ThemeContextProps {
 
 const defaultValue: ThemeContextProps = {
   isDarkMode: false,
-  toggleTheme: () => {},
+  toggleTheme: () => { },
 };
 
 export const ThemeContext = createContext<ThemeContextProps>(defaultValue);
@@ -22,9 +22,7 @@ interface ThemeProviderProps {
 export const ThemeProvider = ({ children }: ThemeProviderProps) => {
   // Use local storage and system preference to determine initial theme
   const [isDarkMode, setIsDarkMode] = useState(
-    localStorage.getItem("theme") === "dark"
-      ? true
-      : window.matchMedia("(prefers-color-scheme: dark)").matches
+    () => localStorage.getItem("theme") === "dark"
   );
 
   // Update local storage when the theme changes
@@ -38,6 +36,8 @@ export const ThemeProvider = ({ children }: ThemeProviderProps) => {
 
   // Listen to system theme changes
   useEffect(() => {
+    if (localStorage.getItem("theme")) return;
+
     const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
     const handleChange = (e: MediaQueryListEvent) => {
       setIsDarkMode(e.matches);

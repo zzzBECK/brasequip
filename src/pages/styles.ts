@@ -65,24 +65,20 @@ export const HeaderContainer = styled.div`
 `;
 
 export const TextPosition = styled.div`
+  align-items: center;
   display: flex;
-  width: 36%; // Width as a percentage works well for responsiveness
+  width: 50%; // Width as a percentage works well for responsiveness
   position: absolute;
   right: 8%; // Use percentages to position from the right
   top: 55%;
   transform: translateY(-50%); // Adjust vertically by half its own height
   flex-direction: column;
   justify-content: space-between;
-  gap: 1rem;
+  gap: 1.2rem;
   z-index: 3; // Higher than the overlay
 
   color: #fff; // Or another color that contrasts well with your overlay
   text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
-
-  @media (max-width: 1532px) {
-    // Adjust for smaller screens
-    width: 45%; // Increase the width on smaller screens
-  }
 
   @media (max-width: 1280px) {
     // Adjust for smaller screens
@@ -111,10 +107,6 @@ export const TextPosition = styled.div`
   @media (max-width: 480px) {
     padding: 0 4vw;
     top: 50%;
-  }
-
-  @media (max-height: 700px) {
-    gap: 0.4rem;
   }
 
   @media (max-width: 340px) {
